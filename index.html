@@ -1,38 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Transforme sua presença digital com a TryWebDesign. Especialistas em criação de sites modernos, landing pages focadas em vendas e design responsivo para o seu negócio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- SEO Avançado -->
+  <title>TryWebDesign | Sites Profissionais & Landing Pages de Alta Performance</title>
+  <meta name="description" content="Especialistas em criação de sites modernos, UI/UX design e landing pages focadas em conversão. Eleve o patamar digital do seu negócio com a TryWebDesign.">
+  <meta name="keywords" content="criação de sites, landing pages, design web, agência digital, ui/ux, site profissional, trywebdesign, marketing digital">
+  <meta name="author" content="TryWebDesign">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.trywebdesign.com.br/">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="trywebdesign">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <!-- Preconnect para Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.trywebdesign.com.br/">
+  <meta property="og:title" content="TryWebDesign | Design que Converte">
+  <meta property="og:description" content="Transformamos visitantes em clientes através de design estratégico e tecnologia de ponta.">
+  <meta property="og:image" content="https://www.trywebdesign.com.br/favicon.png"> <!-- Recomendo criar esta imagem 1200x630 -->
 
-  <title>TryWebDesign | Criação de Sites e Landing Pages</title>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="TryWebDesign | Web Design de qualidade">
+  <meta property="twitter:description" content="Criação de sites e landing pages de alta conversão.">
+  <meta property="twitter:image" content="https://www.trywebdesign.com.br/favicon.png">
+
+  <!-- Favicons & PWA -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+
+  <!-- JSON-LD: Dados Estruturados para o Google (Essencial para SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TryWebDesign",
+    "url": "https://www.trywebdesign.com.br/",
+    "logo": "https://www.trywebdesign.com.br/favicon.png",
+    "image": "https://www.trywebdesign.com.br/favicon.png",
+    "description": "Agência especializada em criação de sites, landing pages e UI/UX design.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR"
+    },
+    "serviceType": ["Web Design", "Landing Pages", "SEO"]
+  }
+  </script>
+
+  <style>
+    /* Estilo Crítico: Loader Minimalista e Premium */
+    :root {
+      --primary-color: #007AFF; /* Cor de destaque */
+      --bg-color: #050505;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .loader-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: opacity 0.6s ease-out;
+    }
+
+    .logo-pulse {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    /* Círculo pulsante moderno */
+    .pulse {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--primary-color);
+      box-shadow: 0 0 0 rgba(0, 122, 255, 0.4);
+      animation: pulse-animation 2s infinite;
+    }
+
+    @keyframes pulse-animation {
+      0% { box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(0, 122, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 122, 255, 0); }
+    }
+
+    .loading-text {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.8;
+      animation: fadeInOut 2s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.9; }
+    }
+
+    /* Classe para remover o loader suavemente */
+    .loaded .loader-wrapper {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
+  
+  <div id="loading-indicator" class="loader-wrapper">
+    <div class="logo-pulse">
+      <div class="pulse"></div>
+    </div>
+    <p class="loading-text">Iniciando TryWebDesign</p>
+  </div>
+
+  <script>
+    // Gerenciamento Inteligente do Carregamento Flutter
+    window.addEventListener('load', function(ev) {
+      const loader = document.getElementById('loading-indicator');
+      
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            // Pequeno delay para garantir que o motor está pronto antes de remover o loader
+            setTimeout(() => {
+              document.body.classList.add('loaded');
+              setTimeout(() => loader.remove(), 600); // Remove do DOM após o fade
+              appRunner.runApp();
+            }, 200);
+          });
+        }
+      });
+    });
+  </script>
+  
+  <!-- Início assíncrono do bootstrap do Flutter -->
   <script src="flutter_bootstrap.js" async></script>
+
+  <!-- Noscript para SEO e Acessibilidade -->
+  <noscript>
+    <div style="color: white; text-align: center; padding: 20px;">
+      <h1>TryWebDesign</h1>
+      <p>Seu navegador não suporta JavaScript ou ele está desativado. Para uma experiência completa, por favor, ative o JavaScript.</p>
+    </div>
+  </noscript>
 </body>
 </html>
