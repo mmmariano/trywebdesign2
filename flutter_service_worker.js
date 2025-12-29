@@ -3,8 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "bd77ee19302b6526e4f3f2d606c44c08",
-"assets/AssetManifest.bin.json": "3640abaca8dd954b95b41f902d7c3a14",
+const RESOURCES = {"assets/AssetManifest.bin": "ebde1f19d62a03b2b9dbd8c9a99f8964",
+"assets/AssetManifest.bin.json": "ee867a7c2d41661fbab24f90b3dbe39d",
 "assets/FontManifest.json": "c75f7af11fb9919e042ad2ee704db319",
 "assets/fonts/MaterialIcons-Regular.otf": "08a3c2b78d54d1284f0672f41fe9d16e",
 "assets/lib/assets/advogado.png": "c75c4822f5d924c805af7c4cdf63526a",
@@ -14,7 +14,6 @@ const RESOURCES = {"assets/AssetManifest.bin": "bd77ee19302b6526e4f3f2d606c44c08
 "assets/lib/assets/img3.jpeg": "94ee1b2851bc213f3aa7778d60721fd8",
 "assets/lib/assets/logo%2520-%2520Copia.png": "64088798772f22b66ff19705f3221d2e",
 "assets/lib/assets/logo.png": "3111c511f94455ded0e6682fb3174912",
-"assets/lib/assets/pc%2520-%2520Copia.jpg": "052712847f0b7a4e3e92a9fb1d45deb3",
 "assets/lib/assets/pc.jpg": "0d664e8d18598ce74c6c49c5164ff796",
 "assets/lib/assets/portifolio_psicologia.png": "df9f68cea5e2cdd07ae3270bafcb5614",
 "assets/lib/assets/profile_pic.jpeg": "e9c8e954ca156d157c3ce9e6d92cf55b",
@@ -41,7 +40,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "bd77ee19302b6526e4f3f2d606c44c08
 "canvaskit/skwasm_heavy.wasm": "b0be7910760d205ea4e011458df6ee01",
 "favicon.png": "aa243143b5e4c920c4d63d926f0d6ca8",
 "flutter.js": "24bc71911b75b5f8135c949e27a2984e",
-"flutter_bootstrap.js": "9835e7e642d63a48c14e30d5006b6b14",
+"flutter_bootstrap.js": "c6223d6c05803b8f288ecb53500c774f",
 "icons/Icon-192.png": "aa243143b5e4c920c4d63d926f0d6ca8",
 "icons/Icon-512.png": "aa243143b5e4c920c4d63d926f0d6ca8",
 "icons/Icon-maskable-192.png": "aa243143b5e4c920c4d63d926f0d6ca8",
@@ -49,7 +48,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "bd77ee19302b6526e4f3f2d606c44c08
 "index.html": "28565655ffac4bba9bd95ea9b5764859",
 "/": "28565655ffac4bba9bd95ea9b5764859",
 "logo.png": "64088798772f22b66ff19705f3221d2e",
-"main.dart.js": "f9a205988f2b5672e31f788a45b9a724",
+"main.dart.js": "8aeb3caba236a489829b07ac6b13aaf3",
 "manifest.json": "7c18a6b581cb35508ec636601befdf33",
 "portifolio_academia.png": "ffb60e5a88cd867c3d6a67552111c5b8",
 "portifolio_advogado.png": "695333fce20650a7cd8e03422a9fb5a5",
