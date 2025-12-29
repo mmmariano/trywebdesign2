@@ -1,38 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  
+  <!-- SEO Básico -->
+  <title>TryWebDesign | Criação de Sites Profissionais e Landing Pages de Alta Conversão</title>
+  <meta name="description" content="Transforme sua presença digital com a TryWebDesign. Especialistas em criação de sites modernos, landing pages focadas em vendas e design responsivo para o seu negócio.">
+  <meta name="keywords" content="criação de sites, landing pages, design web, agência digital, ui/ux, site profissional, trywebdesign">
+  <meta name="author" content="TryWebDesign">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.trywebdesign.com.br/">
+
+  <!-- Open Graph / Facebook (Para quando compartilhar o link) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.trywebdesign.com.br/">
+  <meta property="og:title" content="TryWebDesign | Criação de Sites e Landing Pages">
+  <meta property="og:description" content="Sites de alta performance que convertem visitantes em clientes. Conheça a TryWebDesign.">
+  <meta property="og:image" content="https://www.trywebdesign.com.br/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.trywebdesign.com.br/">
+  <meta property="twitter:title" content="TryWebDesign | Criação de Sites">
+  <meta property="twitter:description" content="Sites modernos e focados em resultados. Seu negócio em outro nível.">
+  <meta property="twitter:image" content="https://www.trywebdesign.com.br/assets/og-image.png">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="trywebdesign">
+  <meta name="apple-mobile-web-app-title" content="TryWebDesign">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>TryWebDesign | Criação de Sites e Landing Pages</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Estilo para o Loader (Melhora a velocidade percebida) -->
+  <style>
+    body {
+      background-color: #000000; /* Cor de fundo da sua marca */
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .loading-container {
+      text-align: center;
+      font-family: sans-serif;
+      color: white;
+    }
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db; /* Cor de destaque da sua marca */
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .fade-in {
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
+  <!-- Indicador de carregamento para o usuário não ver uma tela branca -->
+  <div id="loading-indicator" class="loading-container">
+    <div class="loader"></div>
+    <p class="fade-in">Carregando experiência TryWebDesign...</p>
+  </div>
+
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Remove o loader assim que o Flutter estiver pronto
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            document.getElementById('loading-indicator').remove();
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
