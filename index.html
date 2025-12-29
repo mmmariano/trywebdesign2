@@ -137,7 +137,7 @@
     <p class="loading-text">Iniciando</p>
   </div>
 
-<script>
+  <script>
     // Gerenciamento Inteligente do Carregamento Flutter
     window.addEventListener('load', function(ev) {
       const loader = document.getElementById('loading-indicator');
@@ -147,10 +147,7 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
-          // --- ALTERAÇÃO AQUI: Adicionamos o objeto de configuração com o renderer ---
-          engineInitializer.initializeEngine({
-            renderer: "html" 
-          }).then(function(appRunner) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
             // Pequeno delay para garantir que o motor está pronto antes de remover o loader
             setTimeout(() => {
               document.body.classList.add('loaded');
@@ -161,7 +158,8 @@
         }
       });
     });
-  </script>  
+  </script>
+  
   <!-- Início assíncrono do bootstrap do Flutter -->
   <script src="flutter_bootstrap.js" async></script>
 
