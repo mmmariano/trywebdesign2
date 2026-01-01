@@ -87795,39 +87795,38 @@ A.Eu.prototype={
 ae(){var s=$.av()
 return new A.Ev(new A.b2(null,t.am),new A.lE(B.fW,s),new A.lE(B.fW,s),new A.lE(B.fW,s))}}
 A.Ev.prototype={
-wU(){var s=0,r=A.O(t.H),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g,f,e,d,c,b
-var $async$wU=A.J(function(a,a0){if(a===1){o.push(a0)
-s=p}for(;;)switch(s){case 0:c=m.d.gM()
-c.e=!0
-c.O0()
-k=c.c
+wU(){var s=0,r=A.O(t.H),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g,f,e,d,c
+var $async$wU=A.J(function(a,b){if(a===1){o.push(b)
+s=p}for(;;)switch(s){case 0:d=m.d.gM()
+d.e=!0
+d.O0()
+k=d.c
 k.toString
 j=A.jf(k)
 j.toString
-if(!c.FI(j)){s=1
+if(!d.FI(j)){s=1
 break}m.ah(new A.amZ(m))
 p=4
-c=A.dw("https://api.web3forms.com/submit",0,null)
+d=A.dw("https://api.web3forms.com/submit",0,null)
 k=t.N
-i=A.al(["Content-Type","application/json"],k,k)
+i=A.al(["Content-Type","application/json","Accept","application/json"],k,k)
 h=m.e
-g=h.a.a
-f=m.f
-e=m.r
+g=m.f
+f=m.r
 s=7
-return A.P(A.aUu(c,B.dK.Vt(A.al(["access_key","0b16ed46-9c5c-4f5b-b192-89c76fce3640","name",g,"email",f.a.a,"message",e.a.a,"from_name","Site TryWebDesign","subject","\ud83d\ude80 NOVO LEAD: "+g],k,k),null),i),$async$wU)
-case 7:l=a0
+return A.P(A.aUu(d,B.dK.Vt(A.al(["access_key","0b16ed46-9c5c-4f5b-b192-89c76fce3640","name",h.a.a,"email",g.a.a,"message",f.a.a],k,k),null),i),$async$wU)
+case 7:l=b
 if(l.b===200){if(m.c!=null){h.lQ(B.m9)
+g.lQ(B.m9)
 f.lQ(B.m9)
-e.lQ(B.m9)
-m.c.ar(t.Pu).f.KI(B.Sc)}}else{c=A.dr("Erro ao enviar")
-throw A.i(c)}n.push(6)
+m.c.ar(t.Pu).f.KI(B.Sc)}}else{d=A.dr("Erro ao enviar")
+throw A.i(d)}n.push(6)
 s=5
 break
 case 4:p=3
-b=o.pop()
-c=m.c
-if(c!=null)c.ar(t.Pu).f.KI(B.Sb)
+c=o.pop()
+d=m.c
+if(d!=null)d.ar(t.Pu).f.KI(B.Sb)
 n.push(6)
 s=5
 break
