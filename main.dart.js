@@ -85943,7 +85943,7 @@ s.toString
 A.ld(s,0,B.cm,B.bO,B.eJ)}},
 K(a){var s,r,q,p,o=this,n=null,m=A.br(a,n,t.w).w.a.a,l=m<900,k=t.p,j=A.ep(A.b([B.Hd,B.QH,A.aX("MENEZES & ASSOCIADOS",n,n,n,A.r5().$4$color$fontSize$fontWeight$letterSpacing(B.h,l?14:18,B.cH,1.5),n,n)],k),B.v,B.u,B.w,0),i=A.b([],k),h=!l
 if(h)B.b.T(i,A.b([A.C0(A.aX("Sobre",n,n,n,B.lK,n,n),new A.amS(o),n),A.C0(A.aX("Atua\xe7\xe3o",n,n,n,B.lK,n,n),new A.amT(o),n),A.C0(A.aX("D\xfavidas",n,n,n,B.lK,n,n),new A.amU(o),n)],k))
-i.push(new A.c4(B.G8,A.ot(B.WW,new A.amV(o,l),A.ou(n,n,B.cD,n,n,n,n,n,n,B.h,n,n,n,n,new A.ch(A.bH(4),B.n),n,n,n,n,n)),n))
+i.push(new A.c4(B.G8,A.ot(B.WX,new A.amV(o,l),A.ou(n,n,B.cD,n,n,n,n,n,n,B.h,n,n,n,n,new A.ch(A.bH(4),B.n),n,n,n,n,n)),n))
 s=l?550:750
 r=A.avp(A.f9(A.dr(A.aX("PROTE\xc7\xc3O JUR\xcdDICA DE ALTA PERFORMANCE",n,n,n,A.r5().$4$color$fontSize$fontWeight$letterSpacing(B.cD,12,B.F,3),n,n),n,n),A.bC(2e5,0),n),0.3)
 s=A.b8(n,A.f6(new A.c4(B.Gh,A.bN(A.b([r,B.c1,A.pW(A.f9(A.dr(A.aX("Justi\xe7a e Seguran\xe7a para\no seu Patrim\xf4nio",n,n,n,A.YG().$4$color$fontSize$fontWeight$height(B.h,l?38:75,B.aX,1.1),B.ap,n),n,n),n,A.bC(8e5,0)),B.vf,n,n,n,n),B.c1,o.a5x("MARCAR REUNI\xc3O AGORA",l,!0)],k),B.v,B.hV,B.w),n),n,n),B.m,n,n,B.BS,n,s,n,n,n,n,n,n)
@@ -85954,7 +85954,7 @@ p=A.bH(8)
 j=A.b([new A.Bw(j,i,10,B.cF,B.cF,80,!0,!0,n),new A.lk(s,n),new A.lk(A.b8(n,A.hx(B.bm,A.b([q,A.rB(p,A.auI("https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=600",n,n,l?m:500))],k),B.fA,40,60),B.m,n,n,n,n,n,n,n,new A.aa(r,100,r,100),n,n,n),o.f),new A.lk(A.b8(n,A.bN(A.b([o.xh("ESPECIALIDADES"),B.dl,A.aX("\xc1reas de Atua\xe7\xe3o",n,n,n,A.YG().$2$fontSize$fontWeight(36,B.F),n,n),B.iA,A.hx(B.cy,A.b([o.Eu("Direito Empresarial","Assessoria completa para empresas, contratos e fus\xf5es.",B.ox,l),o.Eu("C\xedvel e Fam\xedlia","Sucess\xf5es, div\xf3rcios e causas patrimoniais complexas.",B.GI,l),o.Eu("Direito Digital","Seguran\xe7a de dados, LGPD e crimes de alta tecnologia.",B.GJ,l)],k),B.bJ,30,30)],k),B.v,B.u,B.w),B.m,B.n2,n,n,n,n,n,n,B.Gg,n,n,n),o.r)],k)
 if(h){i=A.bH(12)
 h=A.b([new A.cb(0,B.ax,A.ac(13,B.l.q()>>>16&255,B.l.q()>>>8&255,B.l.q()&255),B.f,30)],t.V)
-j.push(new A.lk(A.b8(n,A.f6(A.b8(n,A.auz(A.bN(A.b([o.xh("CONTATO"),B.bc,A.aX("Solicite um Or\xe7amento",n,n,n,A.YG().$2$fontSize$fontWeight(32,B.F),n,n),B.ec,A.ep(A.b([A.is(o.LI("Nome"),1,n),B.zX,A.is(o.LI("E-mail"),1,n)],k),B.v,B.u,B.w,0),B.bc,o.LJ("Mensagem",4),B.c1,A.e9(A.ot(B.WO,new A.amW(),A.ou(n,n,B.cF,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)),60,1/0)],k),B.v,B.u,B.w),o.e),B.m,n,B.mw,new A.bv(B.h,n,n,i,h,n,B.Y),n,n,n,n,B.nV,n,n,n),n,n),B.m,n,n,n,n,n,n,n,B.FW,n,n,n),o.x))}i=l?24:200
+j.push(new A.lk(A.b8(n,A.f6(A.b8(n,A.auz(A.bN(A.b([o.xh("CONTATO"),B.bc,A.aX("Solicite um Or\xe7amento",n,n,n,A.YG().$2$fontSize$fontWeight(32,B.F),n,n),B.ec,A.ep(A.b([A.is(o.LI("Nome"),1,n),B.zX,A.is(o.LI("E-mail"),1,n)],k),B.v,B.u,B.w,0),B.bc,o.LJ("Mensagem",4),B.c1,A.e9(A.ot(B.WP,new A.amW(),A.ou(n,n,B.cF,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)),60,1/0)],k),B.v,B.u,B.w),o.e),B.m,n,B.mw,new A.bv(B.h,n,n,i,h,n,B.Y),n,n,n,n,B.nV,n,n,n),n,n),B.m,n,n,n,n,n,n,n,B.FW,n,n,n),o.x))}i=l?24:200
 j.push(new A.lk(A.b8(n,A.bN(A.b([o.xh("FAQ"),B.bc,A.aX("Perguntas Comuns",n,n,n,A.YG().$2$fontSize$fontWeight(32,B.F),n,n),B.ec,o.N5("Como agendar uma consulta?","Voc\xea pode agendar diretamente pelo nosso WhatsApp ou preenchendo o formul\xe1rio ao lado."),o.N5("O escrit\xf3rio atende outros estados?","Sim, nossa estrutura digital permite atendimento jur\xeddico em todo o territ\xf3rio nacional.")],k),B.v,B.u,B.w),B.m,n,n,n,n,n,n,n,new A.aa(i,100,i,100),n,n,n),o.w))
 j.push(new A.lk(A.b8(n,A.bN(A.b([B.Hj,B.bc,A.aX("\xa9 2025 Menezes & Associados. Todos os direitos reservados.",n,n,n,A.eY(n,n,A.ac(B.d.aC(127.5),B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255),n,n,n,n,n,n,n,n,13,n,n,n,n,n,!0,n,n,n,n,n,n,n,n),n,n)],k),B.v,B.u,B.w),B.m,B.cF,n,n,n,n,n,n,B.Gj,n,n,n),n))
 return A.avg(n,B.h,A.hY(B.bz,A.b([new A.Jb(j,B.aq,!1,o.d,n,n,n,!1,n,0,n,n,B.A0,B.aa,n,n,B.R,B.at,n),A.l5(30,new A.Q_(o.ga3f(),n),n,n,n,30,n,n)],k),B.R,B.bH),!1,n)},
@@ -86090,10 +86090,10 @@ o=q?B.ap:B.am
 o=A.f9(A.dr(A.e9(A.aX("N\xe3o entregamos apenas um site bonito. Entregamos uma ferramenta de alta performance para empresas que buscam autoridade e resultados reais.",r,r,r,A.eY(r,r,B.N,r,r,r,r,r,r,r,r,20,r,r,r,r,1.6,!0,r,r,r,r,r,r,r,r),o,r),r,600),A.bC(4e5,0),r),r,r)
 q=q?B.bm:B.cy
 s=t.p
-return A.b([B.A_,p,B.c1,o,B.zZ,A.f9(A.dr(A.hx(q,A.b([A.azW(B.Hb,B.X2,this.d,A.azY(r,r,r,r,r,r,r,r,r,B.h,r,r,B.jS,r,new A.ch(A.bH(20),B.n),B.BA,r,r,r,r)),A.azW(B.Hf,B.WN,this.e,A.azY(r,r,r,r,r,r,r,r,r,B.h,r,r,B.jS,r,new A.ch(A.bH(20),B.n),B.Bx,r,r,r,r))],s),B.bJ,20,20),A.bC(6e5,0),r),r,r)],s)}}
+return A.b([B.A_,p,B.c1,o,B.zZ,A.f9(A.dr(A.hx(q,A.b([A.azW(B.Hb,B.X2,this.d,A.azY(r,r,r,r,r,r,r,r,r,B.h,r,r,B.jS,r,new A.ch(A.bH(20),B.n),B.BA,r,r,r,r)),A.azW(B.Hf,B.WO,this.e,A.azY(r,r,r,r,r,r,r,r,r,B.h,r,r,B.jS,r,new A.ch(A.bH(20),B.n),B.Bx,r,r,r,r))],s),B.bJ,20,20),A.bC(6e5,0),r),r,r)],s)}}
 A.Vd.prototype={
 K(a){var s=null,r=this.c?20:60
-return A.b8(s,A.bN(A.b([B.X0,B.bc,B.WI,B.A_,A.azm(new A.apR(this))],t.p),B.v,B.u,B.w),B.m,s,s,s,s,s,s,s,new A.aa(r,50,r,50),s,s,s)}}
+return A.b8(s,A.bN(A.b([B.WF,B.bc,B.WC,B.A_,A.azm(new A.apR(this))],t.p),B.v,B.u,B.w),B.m,s,s,s,s,s,s,s,new A.aa(r,50,r,50),s,s,s)}}
 A.apR.prototype={
 $2(a,b){var s,r=null,q=b.b
 if(q<700)s=1
@@ -86120,7 +86120,7 @@ o=A.b8(k,A.ep(A.b([A.b8(k,k,B.m,k,k,new A.bv(B.DT,k,k,k,k,k,B.bp),k,8,k,B.jQ,k,k
 n=l.d?1.05:1
 n=A.b8(k,A.axz(A.auH(l.a.c.a,B.j4,k,k,B.hr,B.dy,k),B.nD,B.eJ,n),B.m,B.Ef,k,k,k,1/0,k,k,k,k,k,1/0)
 m=A.ac(102,B.l.q()>>>16&255,B.l.q()>>>8&255,B.l.q()&255)
-m=A.is(A.rB(B.a6,A.hY(B.bz,A.b([n,A.aA8(0,A.b8(k,A.f6(A.b8(k,B.WQ,B.m,k,k,new A.bv(k,k,A.rm(A.ac(204,B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255),2),A.bH(12),k,k,B.Y),k,k,k,k,B.Gd,k,k,k),k,k),B.m,m,k,k,k,k,k,k,k,k,k,k))],p),B.R,B.bH)),1,k)
+m=A.is(A.rB(B.a6,A.hY(B.bz,A.b([n,A.aA8(0,A.b8(k,A.f6(A.b8(k,B.WR,B.m,k,k,new A.bv(k,k,A.rm(A.ac(204,B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255),2),A.bH(12),k,k,B.Y),k,k,k,k,B.Gd,k,k,k),k,k),B.m,m,k,k,k,k,k,k,k,k,k,k))],p),B.R,B.bH)),1,k)
 n=l.a.c
 return A.hj(A.iw(k,A.Zp(A.bN(A.b([o,m,new A.c4(B.nU,A.bN(A.b([A.aX(n.b,k,k,k,B.Vx,k,k),B.QO,A.aX(n.c,k,k,k,B.V3,k,k)],p),B.v,B.u,B.w),k)],p),B.v,B.u,B.w),k,B.nD,new A.bv(B.h,k,k,r,q,k,B.Y),B.d1,k,k,s,k),B.aa,!1,k,k,k,k,k,k,k,k,k,k,k,k,k,k,new A.ajC(l,a),k,k,k,k,k,k),B.bw,k,new A.ajD(l),new A.ajE(l),k)}}
 A.ajD.prototype={
@@ -86190,7 +86190,7 @@ case 6:case 1:return A.M(q,r)
 case 2:return A.L(o.at(-1),r)}})
 return A.N($async$wq,r)},
 K(a){var s,r,q,p,o,n,m=this,l=null,k=m.a.c?20:100,j=A.ayf(B.j5,new A.ow(A.ac(153,B.l.q()>>>16&255,B.l.q()>>>8&255,B.l.q()&255),B.Bo,l,B.mV),B.dy,B.Bc,l),i=t.p,h=A.b([],i)
-if(!m.a.c)h.push(A.e9(A.bN(A.b([A.afl(A.f9(A.dr(B.WE,l,l),l,A.bC(8e5,0)),-0.2,l),B.c1,new A.vo(B.GR,"Design focado em faturamento real.",l),new A.vo(B.GQ,"Velocidade que o Google ama.",l),new A.vo(B.H1,"Sua marca com autoridade de l\xedder.",l),B.ec],i),B.aV,B.u,B.ch),l,500))
+if(!m.a.c)h.push(A.e9(A.bN(A.b([A.afl(A.f9(A.dr(B.WG,l,l),l,A.bC(8e5,0)),-0.2,l),B.c1,new A.vo(B.GR,"Design focado em faturamento real.",l),new A.vo(B.GQ,"Velocidade que o Google ama.",l),new A.vo(B.H1,"Sua marca com autoridade de l\xedder.",l),B.ec],i),B.aV,B.u,B.ch),l,500))
 s=m.a.c
 r=s?600:500
 q=A.bH(40)
@@ -86227,10 +86227,10 @@ K(a){var s=this,r=null,q=A.iy(s.e,B.M,r,20),p=A.ac(5,B.h.q()>>>16&255,B.h.q()>>>
 return A.avv(s.d,A.a5J(r,r,r,r,r,r,r,r,!0,new A.ff(4,A.bH(15),new A.aF(A.ac(B.d.aC(25.5),B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255),1,B.t,-1)),r,r,r,r,r,p,!0,r,r,r,r,new A.ff(4,A.bH(15),B.BB),r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,B.T9,s.c,!0,!0,r,q,r,r,r,r,r,r,r,r,r,r,r,r),s.f,B.Th,s.r)}}
 A.PW.prototype={
 K(a){var s=null,r=A.bH(15)
-return A.e9(A.ot(B.WK,this.d,A.ou(s,s,B.M,s,s,s,15,s,s,s,s,s,s,A.ac(102,B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),new A.ch(r,B.n),s,s,s,s,s)),65,1/0)}}
+return A.e9(A.ot(B.WL,this.d,A.ou(s,s,B.M,s,s,s,15,s,s,s,s,s,s,A.ac(102,B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),new A.ch(r,B.n),s,s,s,s,s)),65,1/0)}}
 A.RP.prototype={
 K(a){var s=this,r=null,q=t.p
-return A.b8(r,A.bN(A.b([A.ep(A.b([new A.FN(B.ou,u.d,r),B.QI,new A.FN(B.ot,u._,r)],q),B.v,B.hV,B.w,0),B.c0,A.hx(B.bm,A.b([new A.qO("In\xedcio",new A.alr(s),r),new A.qO("Sobre",new A.als(s),r),new A.qO("Servi\xe7os",new A.alt(s),r),new A.qO("Portf\xf3lio",new A.alu(s),r)],q),B.bJ,10,25),B.c0,A.hx(B.bm,B.Jj,B.bJ,15,30),B.c1,B.Fv,B.c0,A.auH("lib/assets/logo.webp",B.P,B.h,new A.alv(),B.br,r,35),B.dl,B.WG,B.QP,B.WJ],q),B.v,B.u,B.w),B.m,B.cZ,r,r,r,r,r,r,B.Gi,r,r,1/0)}}
+return A.b8(r,A.bN(A.b([A.ep(A.b([new A.FN(B.ou,u.d,r),B.QI,new A.FN(B.ot,u._,r)],q),B.v,B.hV,B.w,0),B.c0,A.hx(B.bm,A.b([new A.qO("In\xedcio",new A.alr(s),r),new A.qO("Sobre",new A.als(s),r),new A.qO("Servi\xe7os",new A.alt(s),r),new A.qO("Portf\xf3lio",new A.alu(s),r)],q),B.bJ,10,25),B.c0,A.hx(B.bm,B.Jj,B.bJ,15,30),B.c1,B.Fv,B.c0,A.auH("lib/assets/logo.webp",B.P,B.h,new A.alv(),B.br,r,35),B.dl,B.WI,B.QP,B.WK],q),B.v,B.u,B.w),B.m,B.cZ,r,r,r,r,r,r,B.Gi,r,r,1/0)}}
 A.alr.prototype={
 $0(){return this.a.c.$1(0)},
 $S:0}
@@ -86286,7 +86286,7 @@ $0(){return A.nU(A.dK(this.a.d,0,null),B.dT)},
 $S:0}
 A.PX.prototype={
 K(a){var s=null
-return A.ot(B.WY,this.c,A.ou(s,s,B.EC,s,s,s,s,s,s,B.h,s,s,s,s,new A.ch(A.bH(10),B.n),s,s,s,s,s))}}
+return A.ot(B.WZ,this.c,A.ou(s,s,B.EC,s,s,s,s,s,s,B.h,s,s,s,s,new A.ch(A.bH(10),B.n),s,s,s,s,s))}}
 A.TZ.prototype={
 K(a){var s=null
 return A.b8(s,A.ep(B.JE,B.v,B.hV,B.w,0),B.m,B.EN,s,s,s,s,s,s,B.FZ,s,s,s)}}
@@ -86297,10 +86297,10 @@ A.vw.prototype={
 K(a){var s=null
 return A.e9(A.bN(A.b([A.iy(this.c,B.M,s,50),B.bc,A.aX(this.d,s,s,s,B.We,B.ap,s),A.aX(this.e,s,s,s,B.UF,B.ap,s)],t.p),B.v,B.u,B.w),s,300)}}
 A.VO.prototype={
-K(a){var s=null,r=this.c,q=r?20:80,p=A.f9(A.dr(B.WP,s,s),s,s)
+K(a){var s=null,r=this.c,q=r?20:80,p=A.f9(A.dr(B.WQ,s,s),s,s)
 return A.b8(s,A.f6(A.b8(s,A.bN(A.b([p,B.iA,r?A.bN(this.LG(),B.v,B.u,B.w):A.ep(this.LG(),B.v,B.u,B.w,0)],t.p),B.v,B.u,B.w),B.m,s,B.BL,s,s,s,s,s,s,s,s,s),s,s),B.m,B.cc,s,s,s,s,s,s,new A.aa(q,100,q,100),s,s,1/0)},
 LG(){var s,r,q,p,o=null,n=this.c,m=n?0:2,l=t.p
-m=A.b([A.is(A.bN(A.b([A.pW(A.dr(A.b8(o,B.Dk,B.m,o,o,new A.bv(o,o,A.rm(B.M,3),o,A.b([new A.cb(5,B.ax,A.ac(B.d.aC(76.5),B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),B.f,30)],t.V),o,B.bp),o,o,o,o,o,o,o,o),o,o),o,o,A.bC(2e5,0),o,o),B.c0,A.aX("Mateus",o,o,o,A.Hj().$3$color$fontSize$fontWeight(B.h,28,B.aX),o,o),B.WR],l),B.v,B.u,B.w),m,o)],l)
+m=A.b([A.is(A.bN(A.b([A.pW(A.dr(A.b8(o,B.Dk,B.m,o,o,new A.bv(o,o,A.rm(B.M,3),o,A.b([new A.cb(5,B.ax,A.ac(B.d.aC(76.5),B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),B.f,30)],t.V),o,B.bp),o,o,o,o,o,o,o,o),o,o),o,o,A.bC(2e5,0),o,o),B.c0,A.aX("Mateus",o,o,o,A.Hj().$3$color$fontSize$fontWeight(B.h,28,B.aX),o,o),B.WS],l),B.v,B.u,B.w),m,o)],l)
 if(!n)m.push(B.QJ)
 else m.push(B.zZ)
 s=n?0:3
@@ -86316,7 +86316,7 @@ A.nE.prototype={
 K(a){var s=null,r=A.ac(13,B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255),q=A.bH(10),p=A.rm(B.nc,1)
 return A.b8(s,A.aX(this.c,s,s,s,B.Ur,s,s),B.m,s,s,new A.bv(r,s,p,q,s,s,B.Y),s,s,s,s,B.nT,s,s,s)}}
 A.Ve.prototype={
-K(a){var s=null,r=this.c,q=r?20:60,p=A.f9(A.dr(A.b8(s,B.WV,B.m,s,s,new A.bv(A.ac(B.d.aC(25.5),B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),s,s,A.bH(100),s,s,B.Y),s,s,s,s,B.nT,s,s,s),s,s),s,s),o=t.p,n=t.s
+K(a){var s=null,r=this.c,q=r?20:60,p=A.f9(A.dr(A.b8(s,B.WW,B.m,s,s,new A.bv(A.ac(B.d.aC(25.5),B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),s,s,A.bH(100),s,s,B.Y),s,s,s,s,B.nT,s,s,s),s,s),s,s),o=t.p,n=t.s
 return A.b8(s,A.bN(A.b([A.bN(A.b([p,B.c0,A.avp(A.f9(A.dr(A.aX("Como impulsionamos seu neg\xf3cio",s,s,s,A.Hj().$5$color$fontSize$fontWeight$height$letterSpacing(B.cc,r?34:52,B.aX,1.1,-1),B.ap,s),s,s),A.bC(2e5,0),s),0.2),B.bc,A.f9(A.dr(A.aX("Unimos tecnologia de ponta e design estrat\xe9gico para criar produtos que convertem.",s,s,s,A.eY(s,s,B.fW,s,s,s,s,s,s,s,s,18,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s),B.ap,s),s,s),A.bC(3e5,0),s)],o),B.v,B.u,B.w),B.c1,A.f6(A.hx(B.bm,A.b([new A.qA(B.GM,"Web Design Premium","Interfaces exclusivas focadas em experi\xeancia do usu\xe1rio (UX) e est\xe9tica de alto padr\xe3o.",A.b(["Layout Exclusivo","Prototipagem Hi-Fi","Design Responsivo"],n),r,s),new A.qA(B.GK,"Landing Pages de Alta Convers\xe3o","P\xe1ginas otimizadas para transformar visitantes em leads e clientes reais em tempo recorde.",A.b(["Copywriting Estrat\xe9gico","Otimiza\xe7\xe3o de SEO","Bot\xf5es de Convers\xe3o"],n),r,s),new A.qA(B.GN,"Sistemas & Dashboards","Desenvolvimento de plataformas robustas com Flutter para gest\xe3o e automa\xe7\xe3o do seu neg\xf3cio.",A.b(["Integra\xe7\xe3o de APIs","Pain\xe9is Gerenciais","Seguran\xe7a de Dados"],n),r,s)],o),B.bJ,30,30),s,s)],o),B.v,B.u,B.w),B.m,B.ni,s,s,s,s,s,s,new A.aa(q,120,q,120),s,s,s)}}
 A.qA.prototype={
 ah(){return new A.Qa()}}
@@ -86351,8 +86351,8 @@ K(a){var s,r,q=null,p=A.pW(A.dr(A.b8(q,q,B.m,q,q,new A.bv(A.ac(B.d.aC(76.5),B.b7
 p=p.pI(A.ayC(1,q,q,o,0))
 o=t.V
 s=A.pW(A.dr(A.b8(q,B.mS,B.m,q,q,new A.bv(q,q,q,q,A.b([new A.cb(0,B.ax,A.ac(102,B.b7.q()>>>16&255,B.b7.q()>>>8&255,B.b7.q()&255),B.i0,20)],o),B.oN,B.bp),q,65,q,q,q,q,q,65),q,new A.aiT()),B.e0,B.bO,q,A.bC(1e6,0),B.MJ)
-r=A.dr(A.b8(q,B.WZ,B.m,q,B.BJ,B.BT,q,q,q,q,B.nW,q,q,q),q,new A.aiU())
-return new A.hU(A.iw(q,A.hY(B.P,A.b([p,s,A.l5(q,r.pI(new A.NH(B.f,0.1,2,q,q,B.bO,0,1)),q,q,q,0,0,q),A.l5(q,A.afl(A.f9(A.dr(A.b8(q,B.WX,B.m,q,q,new A.bv(B.h,q,q,A.bH(12),A.b([B.BZ],o),q,B.Y),q,q,q,q,B.nS,q,q,q),q,q),A.bC(3e6,0),q),0.2,0),q,q,q,80,q,q)],t.p),B.m,B.bH),B.aa,!1,q,q,q,q,q,q,q,q,q,q,q,q,q,q,new A.aiV(),q,q,q,q,q,q),q)}}
+r=A.dr(A.b8(q,B.X_,B.m,q,B.BJ,B.BT,q,q,q,q,B.nW,q,q,q),q,new A.aiU())
+return new A.hU(A.iw(q,A.hY(B.P,A.b([p,s,A.l5(q,r.pI(new A.NH(B.f,0.1,2,q,q,B.bO,0,1)),q,q,q,0,0,q),A.l5(q,A.afl(A.f9(A.dr(A.b8(q,B.WY,B.m,q,q,new A.bv(B.h,q,q,A.bH(12),A.b([B.BZ],o),q,B.Y),q,q,q,q,B.nS,q,q,q),q,q),A.bC(3e6,0),q),0.2,0),q,q,q,80,q,q)],t.p),B.m,B.bH),B.aa,!1,q,q,q,q,q,q,q,q,q,q,q,q,q,q,new A.aiV(),q,q,q,q,q,q),q)}}
 A.aiV.prototype={
 $0(){return A.nU(A.dK(u.m,0,null),B.dT)},
 $S:0}
@@ -86388,9 +86388,9 @@ else{s=$.W.a3$.x.h(0,this.r)
 s.toString
 A.ld(s,0,B.cm,B.hd,B.bP)}},
 K(a){var s=this,r=null,q=A.br(a,r,t.w).w.a.a<850,p=s.a46(a,q),o=t.p,n=A.b8(r,A.hx(B.bm,A.b([A.bN(A.b([A.aX("15+",r,r,r,B.lI,r,r),A.aX("Anos de Experi\xeancia",r,r,r,B.lH,r,r)],o),B.v,B.u,B.w),A.bN(A.b([A.aX("5000+",r,r,r,B.lI,r,r),A.aX("Pacientes Atendidos",r,r,r,B.lH,r,r)],o),B.v,B.u,B.w),A.bN(A.b([A.aX("100%",r,r,r,B.lI,r,r),A.aX("Satisfa\xe7\xe3o",r,r,r,B.lH,r,r)],o),B.v,B.u,B.w)],o),B.bJ,40,100),B.m,B.bC,r,r,r,r,r,r,B.G_,r,r,1/0),m=A.bH(20)
-p=A.b([p,n,A.b8(r,A.hx(B.bm,A.b([A.rB(m,A.auI("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053",B.dy,350,q?1/0:500)),A.b8(r,A.bN(A.b([B.WH,B.bc,A.aX("Ambiente acolhedor e tecnologia de ponta",r,r,r,A.awH().$3$color$fontSize$fontWeight(B.bC,32,B.F),r,r),B.bc,B.WF,B.c1,s.Ce("Estacionamento no local"),s.Ce("Pr\xf3ximo ao Metr\xf4"),s.Ce("Ambiente Climatizado")],o),B.aV,B.u,B.w),B.m,r,B.BO,r,r,r,r,r,r,r,r,r)],o),B.fA,40,80),B.m,r,r,r,r,r,s.e,r,B.jR,r,r,r),A.b8(r,A.bN(A.b([A.aX("NOSSAS ESPECIALIDADES",r,r,r,A.r5().$3$color$fontWeight$letterSpacing(B.M3,B.F,4),r,r),B.iA,A.hx(B.bm,A.b([s.E7(B.GV,"Cardiologia","Preven\xe7\xe3o e diagn\xf3stico com exames de \xfaltima gera\xe7\xe3o."),s.E7(B.GO,"Longevidade","Planejamento focado no envelhecimento saud\xe1vel."),s.E7(B.GP,"Medicina Preventiva","Check-ups completos para identificar riscos precocemente.")],o),B.bJ,30,30)],o),B.v,B.u,B.w),B.m,B.ni,r,r,r,r,s.f,r,B.jR,r,r,1/0)],o)
+p=A.b([p,n,A.b8(r,A.hx(B.bm,A.b([A.rB(m,A.auI("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053",B.dy,350,q?1/0:500)),A.b8(r,A.bN(A.b([B.WJ,B.bc,A.aX("Ambiente acolhedor e tecnologia de ponta",r,r,r,A.awH().$3$color$fontSize$fontWeight(B.bC,32,B.F),r,r),B.bc,B.WH,B.c1,s.Ce("Estacionamento no local"),s.Ce("Pr\xf3ximo ao Metr\xf4"),s.Ce("Ambiente Climatizado")],o),B.aV,B.u,B.w),B.m,r,B.BO,r,r,r,r,r,r,r,r,r)],o),B.fA,40,80),B.m,r,r,r,r,r,s.e,r,B.jR,r,r,r),A.b8(r,A.bN(A.b([A.aX("NOSSAS ESPECIALIDADES",r,r,r,A.r5().$3$color$fontWeight$letterSpacing(B.M3,B.F,4),r,r),B.iA,A.hx(B.bm,A.b([s.E7(B.GV,"Cardiologia","Preven\xe7\xe3o e diagn\xf3stico com exames de \xfaltima gera\xe7\xe3o."),s.E7(B.GO,"Longevidade","Planejamento focado no envelhecimento saud\xe1vel."),s.E7(B.GP,"Medicina Preventiva","Check-ups completos para identificar riscos precocemente.")],o),B.bJ,30,30)],o),B.v,B.u,B.w),B.m,B.ni,r,r,r,r,s.f,r,B.jR,r,r,1/0)],o)
 if(!q)p.push(s.a40())
-p.push(A.b8(r,A.bN(A.b([B.WM,B.QM,B.WL,B.c1,B.WC],o),B.v,B.u,B.w),B.m,B.bC,r,r,r,r,r,r,B.Gl,r,r,1/0))
+p.push(A.b8(r,A.bN(A.b([B.WN,B.QM,B.WM,B.c1,B.WD],o),B.v,B.u,B.w),B.m,B.bC,r,r,r,r,r,r,B.Gl,r,r,1/0))
 return new A.Cm("Dra. Ana Beatriz | Cl\xednica M\xe9dica de Excel\xeancia",B.fT,A.avg(r,B.h,A.hY(B.bz,A.b([A.aAH(A.bN(p,B.v,B.u,B.w),r,r,r),s.ae3(a,q),A.l5(30,new A.PZ(s.gae2(),r),r,r,r,30,r,r)],o),B.R,B.bH),!1,r),r)},
 ae3(a,b){var s,r=this,q=null,p=A.ac(B.d.aC(229.5),B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255),o=b?20:40,n=A.aX("DRA. ANA BEATRIZ",q,q,q,A.r5().$4$color$fontSize$fontWeight$letterSpacing(B.bC,b?16:20,B.cH,1.2),q,q),m=t.p,l=A.b([],m)
 if(!b)B.b.T(l,A.b([r.DQ("In\xedcio",new A.ajP(r)),r.DQ("Sobre",new A.ajQ(r)),r.DQ("Servi\xe7os",new A.ajR(r))],m))
@@ -86406,7 +86406,7 @@ l=b?B.ap:B.am
 l=A.afl(A.f9(A.dr(A.aX("Sua sa\xfade tratada com excel\xeancia e carinho.",q,q,q,A.awH().$4$color$fontSize$fontWeight$height(B.bC,b?36:55,B.F,1.1),l,q),q,q),A.bC(2e5,0),q),-0.1,q)
 s=b?B.ap:B.am
 r=t.p
-n=A.b8(q,A.bN(A.b([k,B.bc,l,B.c0,A.aX("A Dra. Ana Beatriz combina tecnologia de ponta com um olhar atento ao seu bem-estar integral.",q,q,q,A.awI().$3$color$fontSize$height(B.Q,18,1.6),s,q),B.ec,A.pW(A.dr(A.ot(B.WD,new A.ajT(this,b),A.ou(q,q,B.bC,q,q,q,10,q,q,q,q,q,B.jS,q,new A.ch(A.bH(15),B.n),q,q,q,q,q)),q,q),q,q,A.bC(4e5,0),q,q)],r),n,B.u,B.w),B.m,q,B.BM,q,q,q,q,q,q,q,q,q)
+n=A.b8(q,A.bN(A.b([k,B.bc,l,B.c0,A.aX("A Dra. Ana Beatriz combina tecnologia de ponta com um olhar atento ao seu bem-estar integral.",q,q,q,A.awI().$3$color$fontSize$height(B.Q,18,1.6),s,q),B.ec,A.pW(A.dr(A.ot(B.WE,new A.ajT(this,b),A.ou(q,q,B.bC,q,q,q,10,q,q,q,q,q,B.jS,q,new A.ch(A.bH(15),B.n),q,q,q,q,q)),q,q),q,q,A.bC(4e5,0),q,q)],r),n,B.u,B.w),B.m,q,B.BM,q,q,q,q,q,q,q,q,q)
 s=A.bH(30)
 m=A.b([new A.cb(0,B.ax,A.ac(m,B.l.q()>>>16&255,B.l.q()>>>8&255,B.l.q()&255),B.l1,30)],t.V)
 l=A.bH(30)
@@ -86417,7 +86417,7 @@ return new A.c4(B.nR,A.ep(A.b([B.Hg,B.fp,A.aX(a,s,s,s,B.U3,s,s)],t.p),B.v,B.u,B.
 E7(a,b,c){var s=null,r=A.bH(20),q=A.b([new A.cb(0,B.ax,A.ac(13,B.l.q()>>>16&255,B.l.q()>>>8&255,B.l.q()&255),B.f,20)],t.V)
 return A.b8(s,A.bN(A.b([A.iy(a,B.cj,s,45),B.c0,A.aX(b,s,s,s,B.W4,s,s),B.dl,A.aX(c,s,s,s,B.VL,B.ap,s)],t.p),B.v,B.u,B.w),B.m,s,s,new A.bv(B.h,s,s,r,q,s,B.Y),s,s,s,s,B.jT,s,s,320)},
 a40(){var s=this,r=null,q=A.aX("CONTATO",r,r,r,A.r5().$3$color$fontWeight$letterSpacing(B.cj,B.F,2),r,r),p=A.aX("Solicite seu Agendamento",r,r,r,A.awH().$3$color$fontSize$fontWeight(B.bC,35,B.F),r,r),o=A.bH(25),n=A.b([new A.cb(0,B.ax,A.ac(20,B.l.q()>>>16&255,B.l.q()>>>8&255,B.l.q()&255),B.f,30)],t.V),m=t.p
-return A.b8(r,A.bN(A.b([q,B.bc,p,B.iA,A.b8(r,A.auz(A.bN(A.b([A.ep(A.b([A.is(s.PD("Nome",B.GY),1,r),B.zX,A.is(s.PD("Telefone",B.H0),1,r)],m),B.v,B.u,B.w,0),B.bc,s.PE("Mensagem",B.oz,4),B.ec,A.e9(A.ot(B.WT,new A.ajO(),A.ou(r,r,B.fT,r,r,r,r,r,r,r,r,r,r,r,new A.ch(A.bH(12),B.n),r,r,r,r,r)),65,1/0)],m),B.v,B.u,B.w),s.w),B.m,r,B.mw,new A.bv(B.h,r,r,o,n,r,B.Y),r,r,r,r,B.nV,r,r,r)],m),B.v,B.u,B.w),B.m,r,r,r,r,r,s.r,r,B.Ge,r,r,1/0)},
+return A.b8(r,A.bN(A.b([q,B.bc,p,B.iA,A.b8(r,A.auz(A.bN(A.b([A.ep(A.b([A.is(s.PD("Nome",B.GY),1,r),B.zX,A.is(s.PD("Telefone",B.H0),1,r)],m),B.v,B.u,B.w,0),B.bc,s.PE("Mensagem",B.oz,4),B.ec,A.e9(A.ot(B.WU,new A.ajO(),A.ou(r,r,B.fT,r,r,r,r,r,r,r,r,r,r,r,new A.ch(A.bH(12),B.n),r,r,r,r,r)),65,1/0)],m),B.v,B.u,B.w),s.w),B.m,r,B.mw,new A.bv(B.h,r,r,o,n,r,B.Y),r,r,r,r,B.nV,r,r,r)],m),B.v,B.u,B.w),B.m,r,r,r,r,r,s.r,r,B.Ge,r,r,1/0)},
 PE(a,b,c){var s=null,r=A.iy(b,B.cj,s,s)
 return A.avv(s,A.a5J(s,new A.ff(4,A.bH(12),B.n),s,s,s,s,s,s,!0,s,s,s,s,s,s,B.js,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,a,!0,!0,s,r,s,s,s,s,s,s,s,s,s,s,s,s),c,s,s)},
 PD(a,b){return this.PE(a,b,1)}}
@@ -90871,8 +90871,8 @@ B.M1=new A.kS(B.LX,1,1,0.7568627450980392,0.027450980392156862,B.e)
 B.Hi=new A.eB(B.H3,20,B.M1,null,null)
 B.fp=new A.cN(10,null,null,null)
 B.Tp=new A.j(!0,B.cZ,null,null,null,null,null,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WU=new A.cd("A ARTE DE SER INESQUEC\xcdVEL.",null,B.Tp,null,null,null,null,null,null)
-B.JE=s([B.Hi,B.fp,B.WU],t.p)
+B.WV=new A.cd("A ARTE DE SER INESQUEC\xcdVEL.",null,B.Tp,null,null,null,null,null,null)
+B.JE=s([B.Hi,B.fp,B.WV],t.p)
 B.JM=s([],t.QP)
 B.oY=s([],A.as("z<aTl>"))
 B.JQ=s([],t.D)
@@ -92212,7 +92212,7 @@ B.QY=new A.jR(3,"hide")
 B.a_r=new A.jR(4,"remove")
 B.QZ=new A.jR(5,"timeout")
 B.R_=new A.uo(null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.X_=new A.cd("Mensagem enviada com sucesso! Entraremos em contato.",null,null,null,null,null,null,null,null)
+B.X0=new A.cd("Mensagem enviada com sucesso! Entraremos em contato.",null,null,null,null,null,null,null,null)
 B.EK=new A.o(1,0.9098039215686274,0.9607843137254902,0.9137254901960784,B.e)
 B.DS=new A.o(1,0.7843137254901961,0.9019607843137255,0.788235294117647,B.e)
 B.EB=new A.o(1,0.6470588235294118,0.8392156862745098,0.6549019607843137,B.e)
@@ -92226,9 +92226,9 @@ B.DN=new A.o(1,0.10588235294117647,0.3686274509803922,0.12549019607843137,B.e)
 B.LY=new A.cT([50,B.EK,100,B.DS,200,B.EB,300,B.ES,400,B.El,500,B.EM,600,B.EQ,700,B.Dw,800,B.E9,900,B.DN],t.pl)
 B.M2=new A.kS(B.LY,1,0.2980392156862745,0.6862745098039216,0.3137254901960784,B.e)
 B.nP=new A.aQ(4e6)
-B.R0=new A.nc(B.X_,B.M2,null,null,null,null,null,null,null,null,null,null,null,B.nP,!1,null,null,null,B.R,null)
-B.WS=new A.cd("Ops! Ocorreu um erro ao enviar. Entre em contato pelo whatsapp.",null,null,null,null,null,null,null,null)
-B.R1=new A.nc(B.WS,B.v3,null,null,null,null,null,null,null,null,null,null,null,B.nP,!1,null,null,null,B.R,null)
+B.R0=new A.nc(B.X0,B.M2,null,null,null,null,null,null,null,null,null,null,null,B.nP,!1,null,null,null,B.R,null)
+B.WT=new A.cd("Ops! Ocorreu um erro ao enviar. Entre em contato pelo whatsapp.",null,null,null,null,null,null,null,null)
+B.R1=new A.nc(B.WT,B.v3,null,null,null,null,null,null,null,null,null,null,null,B.nP,!1,null,null,null,B.R,null)
 B.A1=new A.BA(0,"permissive")
 B.R2=new A.BA(1,"normal")
 B.R3=new A.BA(2,"forced")
@@ -92611,49 +92611,49 @@ B.Va=new A.j(!0,B.T,null,".AppleSystemUIFont",null,null,null,null,null,null,null
 B.Vz=new A.j(!0,B.l,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.i,null,null,null,"blackRedwoodCity labelMedium",null,null,null,null)
 B.Sd=new A.j(!0,B.l,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.i,null,null,null,"blackRedwoodCity labelSmall",null,null,null,null)
 B.WB=new A.d5(B.Ua,B.T5,B.Ub,B.UJ,B.SF,B.SP,B.Ts,B.Uy,B.TF,B.Vh,B.S5,B.Sl,B.Va,B.Vz,B.Sd)
+B.Vu=new A.j(!0,B.cc,null,null,null,null,32,B.F,null,-1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.WC=new A.cd("Comprometido com a entrega de valor em cada etapa do processo.",null,B.Vu,B.ap,null,null,null,null,null)
 B.SN=new A.j(!0,B.h1,null,null,null,null,12,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WC=new A.cd("\xa9 2025 Dra. Ana Beatriz Silva.",null,B.SN,null,null,null,null,null,null)
+B.WD=new A.cd("\xa9 2025 Dra. Ana Beatriz Silva.",null,B.SN,null,null,null,null,null,null)
 B.lJ=new A.j(!0,B.h,null,null,null,null,null,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WD=new A.cd("QUERO AGENDAR UMA AVALIA\xc7\xc3O",null,B.lJ,null,null,null,null,null,null)
+B.WE=new A.cd("QUERO AGENDAR UMA AVALIA\xc7\xc3O",null,B.lJ,null,null,null,null,null,null)
+B.T7=new A.j(!0,B.M,null,null,null,null,null,B.F,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.WF=new A.cd("NOSSOS CLIENTES",null,B.T7,null,null,null,null,null,null)
 B.U7=new A.j(!0,B.h,null,null,null,null,50,B.aX,null,-2,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WE=new A.cd("EST\xc1 NA HORA DE\nDEIXAR DE SER\nINVIS\xcdVEL.",null,B.U7,null,null,null,null,null,null)
+B.WG=new A.cd("EST\xc1 NA HORA DE\nDEIXAR DE SER\nINVIS\xcdVEL.",null,B.U7,null,null,null,null,null,null)
 B.V_=new A.j(!0,B.Q,null,null,null,null,17,null,null,null,null,null,1.8,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WF=new A.cd("Nossa cl\xednica foi projetada para oferecer uma experi\xeancia de paz e seguran\xe7a, com profissionais dedicados a cuidar de voc\xea.",null,B.V_,null,null,null,null,null,null)
+B.WH=new A.cd("Nossa cl\xednica foi projetada para oferecer uma experi\xeancia de paz e seguran\xe7a, com profissionais dedicados a cuidar de voc\xea.",null,B.V_,null,null,null,null,null,null)
 B.E8=new A.o(0.5411764705882353,1,1,1,B.e)
 B.Uq=new A.j(!0,B.E8,null,null,null,null,14,B.eN,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WG=new A.cd("TryWebDesign - Transformando ideias em lucro digital.",null,B.Uq,B.ap,null,null,null,null,null)
+B.WI=new A.cd("TryWebDesign - Transformando ideias em lucro digital.",null,B.Uq,B.ap,null,null,null,null,null)
 B.UT=new A.j(!0,B.cj,null,null,null,null,null,B.F,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WH=new A.cd("SOBRE N\xd3S",null,B.UT,null,null,null,null,null,null)
-B.Vu=new A.j(!0,B.cc,null,null,null,null,32,B.F,null,-1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WI=new A.cd("Projetos Conceito: Estruturas premium personaliz\xe1veis para o seu nicho.",null,B.Vu,B.ap,null,null,null,null,null)
+B.WJ=new A.cd("SOBRE N\xd3S",null,B.UT,null,null,null,null,null,null)
 B.VE=new A.j(!0,B.nv,null,null,null,null,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WJ=new A.cd("\xa9 2025 Todos os direitos reservados.",null,B.VE,null,null,null,null,null,null)
+B.WK=new A.cd("\xa9 2025 Todos os direitos reservados.",null,B.VE,null,null,null,null,null,null)
 B.VX=new A.j(!0,B.h,null,null,null,null,null,B.F,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WK=new A.cd("ENVIAR MENSAGEM",null,B.VX,null,null,null,null,null,null)
+B.WL=new A.cd("ENVIAR MENSAGEM",null,B.VX,null,null,null,null,null,null)
 B.RX=new A.j(!0,B.N,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WL=new A.cd("Av. Paulista, 1000 - S\xe3o Paulo/SP",null,B.RX,null,null,null,null,null,null)
+B.WM=new A.cd("Av. Paulista, 1000 - S\xe3o Paulo/SP",null,B.RX,null,null,null,null,null,null)
 B.Tw=new A.j(!0,B.h,null,null,null,null,18,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WM=new A.cd("Dra. Ana Beatriz Silva - CRM 123456 SP",null,B.Tw,null,null,null,null,null,null)
-B.WN=new A.cd("VER PORTF\xd3LIO",null,B.fv,null,null,null,null,null,null)
-B.WO=new A.cd("ENVIAR AGORA",null,B.lJ,null,null,null,null,null,null)
+B.WN=new A.cd("Dra. Ana Beatriz Silva - CRM 123456 SP",null,B.Tw,null,null,null,null,null,null)
+B.WO=new A.cd("VER PORTF\xd3LIO",null,B.fv,null,null,null,null,null,null)
+B.WP=new A.cd("ENVIAR AGORA",null,B.lJ,null,null,null,null,null,null)
 B.T_=new A.j(!0,B.M,null,null,null,null,12,B.F,null,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WP=new A.cd("O ESPECIALISTA POR TR\xc1S DO SEU PROJETO",null,B.T_,null,null,null,null,null,null)
+B.WQ=new A.cd("O ESPECIALISTA POR TR\xc1S DO SEU PROJETO",null,B.T_,null,null,null,null,null,null)
 B.SI=new A.j(!0,B.h,null,null,null,null,13,B.F,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WQ=new A.cd("VER PROJETO",null,B.SI,null,null,null,null,null,null)
+B.WR=new A.cd("VER PROJETO",null,B.SI,null,null,null,null,null,null)
 B.UU=new A.j(!0,B.M,null,null,null,null,null,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WR=new A.cd("Fundador & Fullstack Developer",null,B.UU,null,null,null,null,null,null)
-B.WT=new A.cd("ENVIAR SOLICITA\xc7\xc3O",null,B.lJ,null,null,null,null,null,null)
+B.WS=new A.cd("Fundador & Fullstack Developer",null,B.UU,null,null,null,null,null,null)
+B.WU=new A.cd("ENVIAR SOLICITA\xc7\xc3O",null,B.lJ,null,null,null,null,null,null)
 B.Vo=new A.j(!0,B.M,null,null,null,null,11,B.cH,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WV=new A.cd("SOLU\xc7\xd5ES ESPECIALIZADAS",null,B.Vo,null,null,null,null,null,null)
-B.WW=new A.cd("CONSULTORIA",null,null,null,null,null,null,null,null)
+B.WW=new A.cd("SOLU\xc7\xd5ES ESPECIALIZADAS",null,B.Vo,null,null,null,null,null,null)
+B.WX=new A.cd("CONSULTORIA",null,null,null,null,null,null,null,null)
 B.V4=new A.j(!0,B.cZ,null,null,null,null,12,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WX=new A.cd("Online agora! \ud83d\udc4b",null,B.V4,null,null,null,null,null,null)
+B.WY=new A.cd("Online agora! \ud83d\udc4b",null,B.V4,null,null,null,null,null,null)
 B.Ss=new A.j(!0,null,null,null,null,null,11,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WY=new A.cd("CONTATO",null,B.Ss,null,null,null,null,null,null)
+B.WZ=new A.cd("CONTATO",null,B.Ss,null,null,null,null,null,null)
 B.Ap=new A.j(!0,B.h,null,null,null,null,10,B.F,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.WZ=new A.cd("1",null,B.Ap,B.ap,null,null,null,null,null)
-B.T7=new A.j(!0,B.M,null,null,null,null,null,B.F,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.X0=new A.cd("NOSSO PORTF\xd3LIO",null,B.T7,null,null,null,null,null,null)
+B.X_=new A.cd("1",null,B.Ap,B.ap,null,null,null,null,null)
 B.X1=new A.cd("PROJETO EXCLUSIVO",null,B.Ap,null,null,null,null,null,null)
 B.X2=new A.cd("ENTRAR EM CONTATO",null,B.fv,null,null,null,null,null,null)
 B.a_s=new A.agZ(0,"system")
@@ -93616,7 +93616,7 @@ s($,"aVf","HC",()=>new A.ahq(A.cs("/",!0,!1),A.cs("(^[a-zA-Z][-+.a-zA-Z\\d]*://|
 s($,"aVd","ax0",()=>A.aMG())
 s($,"aUK","atG",()=>A.ayA())
 s($,"aXP","axk",()=>{var q="Landing Page"
-return A.b([A.a5O("lib/assets/ima_portifolio.webp","I.M.A Solu\xe7\xf5es","Tecnologia - Automa\xe7\xe3o - Perfomance","https://www.ima-marketing-digital.com.br",q),A.a5O("lib/assets/vrinda_portifolio.jpg","Vrinda Bhumi","Eco Vila Yoga.","https://www.vrindabhumi.org","Web Design"),A.a5O("lib/assets/portifolio_psicologia.webp","Dra. Ana Luiza","Capta\xe7\xe3o de pacientes e blog.","/psicologos",q),A.a5O("lib/assets/advogado.webp","Menezes Advogados","Portal jur\xeddico de alta autoridade.","/advogados","Institucional")],A.as("z<KO>"))})
+return A.b([A.a5O("lib/assets/ima_portifolio.webp","I.M.A Solu\xe7\xf5es","Tecnologia - Automa\xe7\xe3o - Perfomance","https://www.ima-marketing-digital.com.br",q),A.a5O("lib/assets/vrinda_portifolio.jpg","Vrinda Bhumi","Eco Vila Yoga.","https://www.vrindabhumi.org","Web Design"),A.a5O("lib/assets/psikarina_portifolio.jpg","Psic\xf3loga Karina","Site de atendimento online.","https://www.psikarina.com.br",q),A.a5O("lib/assets/advogado.webp","Menezes Advogados","Portal jur\xeddico de alta autoridade.","/advogados","Institucional")],A.as("z<KO>"))})
 s($,"aVw","ax2",()=>new A.G())
 r($,"aNu","ax1",()=>{var q=new A.a9s()
 q.a2W($.ax2())
