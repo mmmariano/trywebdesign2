@@ -18753,7 +18753,7 @@ r.toString
 A.ed(r)
 q=a.h(0,"swipeEdge")
 q.toString
-return new A.mo(s,r,B.Hx[A.ew(q)])},
+return new A.mo(s,r,B.Hw[A.ew(q)])},
 AO:function AO(a,b){this.a=a
 this.b=b},
 mo:function mo(a,b,c){this.a=a
@@ -27417,7 +27417,7 @@ l.push(new A.eJ(n[0],n[1],n[2],n[3],B.jN[m]))}return l},
 d2(a){var s,r,q=this.a
 q===$&&A.a()
 s=q.a.getGlyphPositionAtCoordinate(a.a,a.b)
-r=B.Hz[J.ab(s.affinity.value)]
+r=B.Hy[J.ab(s.affinity.value)]
 return new A.a8(J.ab(s.pos),r)},
 HZ(a){var s=this.a
 s===$&&A.a()
@@ -27760,7 +27760,7 @@ A.nH.prototype={
 H(){return"CanvasKitVariant."+this.b}}
 A.a0L.prototype={
 glA(){var s=this.b,r=s==null?null:s.canvasKitVariant
-return A.aFv(B.HG,r==null?"auto":r)},
+return A.aFv(B.HF,r==null?"auto":r)},
 gRz(){var s=this.b
 s=s==null?null:s.canvasKitForceCpuOnly
 return s==null?!1:s},
@@ -41663,7 +41663,7 @@ r=A.rZ(B.KQ,B.f,r==null?1:r)
 r.toString
 q=p.a9(q.gu())
 if(q==null)q=1
-return A.arX(A.awB(null,B.r,new A.rM(q,B.Hw,new A.cB(B.A8,this.e)),s,1,B.OO),r)}}
+return A.arX(A.awB(null,B.r,new A.rM(q,B.Hv,new A.cB(B.A8,this.e)),s,1,B.OO),r)}}
 A.Fy.prototype={
 l(){var s=this,r=s.bj$
 if(r!=null)r.I(s.gi9())
@@ -82543,7 +82543,7 @@ $0(){return this.a.Nm(!0)},
 $S:0}
 A.BV.prototype={
 K(a){var s=null,r=A.ah(B.d.aA(229.5),B.i.v()>>>16&255,B.i.v()>>>8&255,B.i.v()&255)
-return A.c6(s,A.a2N(s,s,A.lV(this.c,B.z,s,20),s,s,this.d,s,s,s),B.r,s,s,new A.c3(r,s,s,s,B.HH,s,B.ch),s,s,s,s,s,s,s)}}
+return A.c6(s,A.a2N(s,s,A.lV(this.c,B.z,s,20),s,s,this.d,s,s,s),B.r,s,s,new A.c3(r,s,s,s,B.HG,s,B.ch),s,s,s,s,s,s,s)}}
 A.On.prototype={
 K(a){var s,r,q,p,o=null,n=A.d3(20),m=A.c([new A.cw(0,B.bd,A.ah(10,B.l.v()>>>16&255,B.l.v()>>>8&255,B.l.v()&255),B.KM,20)],t.R),l=this.d?160:250,k=this.c
 l=A.c6(o,A.ar7(k.a,o,o,B.fY,B.lB,o),B.r,o,o,new A.c3(B.ml,o,o,B.A7,o,o,B.ae),o,l,o,B.bY,o,o,1/0)
@@ -82664,7 +82664,7 @@ K(a){var s=null,r=A.d3(15)
 return A.er(A.auO(B.Uy,this.d,A.auP(s,s,B.z,s,s,s,15,s,s,s,s,s,s,A.ah(102,B.z.v()>>>16&255,B.z.v()>>>8&255,B.z.v()&255),new A.cB(r,B.q),s,s,s,s,s)),65,1/0)}}
 A.Q0.prototype={
 K(a){var s=this,r=null,q=t.p
-return A.c6(r,A.e3(A.c([A.ig(A.c([new A.Ex(B.nx,u.d,r),B.OS,new A.Ex(B.nw,u._,r)],q),B.O,B.k4,B.a4,0),B.d0,A.pT(B.cv,A.c([new A.q8("In\xedcio",new A.aib(s),r),new A.q8("Sobre",new A.aic(s),r),new A.q8("Servi\xe7os",new A.aid(s),r),new A.q8("Portf\xf3lio",new A.aie(s),r)],q),B.cw,10,25),B.d0,A.pT(B.cv,B.Hu,B.cw,15,30),B.d1,B.DQ,B.d0,A.ar7("lib/assets/logo.webp",B.i,new A.aif(),B.bs,r,35),B.eZ,B.Uw,B.OZ,B.Ux],q),B.O,B.a4),B.r,B.cI,r,r,r,r,r,B.Ev,r,r,1/0)}}
+return A.c6(r,A.e3(A.c([A.ig(A.c([new A.Ex(B.nx,u.d,r),B.OS,new A.Ex(B.nw,u._,r)],q),B.O,B.k4,B.a4,0),B.d0,A.pT(B.cv,A.c([new A.q8("In\xedcio",new A.aib(s),r),new A.q8("Sobre",new A.aic(s),r),new A.q8("Servi\xe7os",new A.aid(s),r),new A.q8("Portf\xf3lio",new A.aie(s),r)],q),B.cw,10,25),B.d0,A.pT(B.cv,B.HI,B.cw,15,30),B.d1,B.DQ,B.d0,A.ar7("lib/assets/logo.webp",B.i,new A.aif(),B.bs,r,35),B.eZ,B.Uw,B.OZ,B.Ux],q),B.O,B.a4),B.r,B.cI,r,r,r,r,r,B.Ev,r,r,1/0)}}
 A.aib.prototype={
 $0(){return this.a.c.$1(0)},
 $S:0}
@@ -86813,8 +86813,8 @@ B.FR=new A.j2(B.FJ,!1,0,"png")
 B.FH=new A.kn(B.If,B.FR,0,"png")
 B.Ig=s([71,73,70,56,55,97],t.Z)
 B.FG=new A.kn(B.Ig,B.h5,1,"gif87a")
-B.HI=s([71,73,70,56,57,97],t.Z)
-B.FF=new A.kn(B.HI,B.h5,2,"gif89a")
+B.HH=s([71,73,70,56,57,97],t.Z)
+B.FF=new A.kn(B.HH,B.h5,2,"gif89a")
 B.Gs=s([255,216,255],t.Z)
 B.FK=new A.lY(2,"jpeg")
 B.FV=new A.j2(B.FK,!1,3,"jpeg")
@@ -86855,12 +86855,12 @@ B.I6=s([2.33888662,1.28698796],t.n)
 B.I8=s([2.48660575,1.36351941],t.n)
 B.Hd=s([2.62226596,1.44717976],t.n)
 B.Hf=s([2.7514899,1.53385819],t.n)
-B.HF=s([3.36298265,1.98288283],t.n)
+B.HE=s([3.36298265,1.98288283],t.n)
 B.Hn=s([4.08649929,2.23811846],t.n)
-B.Hy=s([4.85481134,2.47563463],t.n)
+B.Hx=s([4.85481134,2.47563463],t.n)
 B.He=s([5.62945551,2.72948597],t.n)
 B.Hl=s([6.43023796,2.98020421],t.n)
-B.nL=s([B.Hk,B.Gu,B.I6,B.I8,B.Hd,B.Hf,B.HF,B.Hn,B.Hy,B.He,B.Hl],t.zg)
+B.nL=s([B.Hk,B.Gu,B.I6,B.I8,B.Hd,B.Hf,B.HE,B.Hn,B.Hx,B.He,B.Hl],t.zg)
 B.Hc=s([B.ix,B.iy],A.ap("y<vX>"))
 B.Hh=s([1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635748,2870763221,3624381080,310598401,607225278,1426881987,1925078388,2162078206,2614888103,3248222580,3835390401,4022224774,264347078,604807628,770255983,1249150122,1555081692,1996064986,2554220882,2821834349,2952996808,3210313671,3336571891,3584528711,113926993,338241895,666307205,773529912,1294757372,1396182291,1695183700,1986661051,2177026350,2456956037,2730485921,2820302411,3259730800,3345764771,3516065817,3600352804,4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298],t.t)
 B.aw=new A.eb(0,"icon")
@@ -86884,32 +86884,32 @@ B.WD=new A.l8(6,0.11)
 B.WB=new A.l8(8,0.12)
 B.WA=new A.l8(12,0.14)
 B.nN=s([B.Wz,B.WE,B.WC,B.WD,B.WB,B.WA],A.ap("y<l8>"))
-B.Fl=new A.cY(58530,"MaterialIcons",null,!1)
-B.WK=new A.uB(B.Fl,"(21) 97925-0528",null)
-B.Fi=new A.cY(58283,"MaterialIcons",null,!1)
-B.WM=new A.uB(B.Fi,"Rua Campos Sales 873, Marialva - PR, 86990-000",null)
-B.Fh=new A.cY(57898,"MaterialIcons",null,!1)
-B.WL=new A.uB(B.Fh,"atendimentotrywebdesign@gmail.com",null)
-B.Hu=s([B.WK,B.WM,B.WL],t.p)
-B.Hv=s([-1,0,0,1,0,0,-1,0,1,0,0,0,-1,1,0,1,1,1,1,0],t.n)
+B.Hu=s([-1,0,0,1,0,0,-1,0,1,0,0,0,-1,1,0,1,1,1,1,0],t.n)
 B.A5=new A.GW(2,"outer")
 B.mc=new A.v(0.09803921568627451,0,0,0,B.e)
 B.Av=new A.cw(0.2,B.A5,B.mc,B.f,11)
-B.Hw=s([B.Av],t.R)
+B.Hv=s([B.Av],t.R)
 B.yO=new A.AO(0,"left")
 B.yP=new A.AO(1,"right")
-B.Hx=s([B.yO,B.yP],A.ap("y<AO>"))
+B.Hw=s([B.yO,B.yP],A.ap("y<AO>"))
 B.ab=new A.B_(0,"upstream")
-B.Hz=s([B.ab,B.k],A.ap("y<B_>"))
+B.Hy=s([B.ab,B.k],A.ap("y<B_>"))
 B.aK=new A.B3(0,"rtl")
 B.ac=new A.B3(1,"ltr")
 B.jN=s([B.aK,B.ac],A.ap("y<B3>"))
 B.BM=new A.nH(0,"auto")
 B.BN=new A.nH(1,"full")
 B.BO=new A.nH(2,"chromium")
-B.HG=s([B.BM,B.BN,B.BO,B.ck],A.ap("y<nH>"))
+B.HF=s([B.BM,B.BN,B.BO,B.ck],A.ap("y<nH>"))
 B.Aw=new A.cw(1,B.bd,B.iL,B.f,10)
-B.HH=s([B.Aw],t.R)
+B.HG=s([B.Aw],t.R)
+B.Fl=new A.cY(58530,"MaterialIcons",null,!1)
+B.WK=new A.uB(B.Fl,"(44) 99976-1842",null)
+B.Fi=new A.cY(58283,"MaterialIcons",null,!1)
+B.WM=new A.uB(B.Fi,"Rua Campos Sales 873, Marialva - PR, 86990-000",null)
+B.Fh=new A.cY(57898,"MaterialIcons",null,!1)
+B.WL=new A.uB(B.Fh,"atendimentotrywebdesign@gmail.com",null)
+B.HI=s([B.WK,B.WM,B.WL],t.p)
 B.bx=new A.eI(1,"fuchsia")
 B.HJ=s([B.ah,B.bx,B.H,B.bm,B.aI,B.bn],A.ap("y<eI>"))
 B.zm=new A.uj(0,"topLeft")
@@ -87540,28 +87540,28 @@ B.GV=s([54,null,null,8589935158],t.Z)
 B.GW=s([55,null,null,8589935159],t.Z)
 B.GX=s([56,null,null,8589935160],t.Z)
 B.GZ=s([57,null,null,8589935161],t.Z)
-B.HA=s([8589934852,8589934852,8589934853,null],t.Z)
+B.Hz=s([8589934852,8589934852,8589934853,null],t.Z)
 B.Gx=s([4294967555,null,4294967555,null],t.Z)
 B.Gy=s([4294968065,null,null,8589935154],t.Z)
 B.Gz=s([4294968066,null,null,8589935156],t.Z)
 B.GA=s([4294968067,null,null,8589935158],t.Z)
 B.GB=s([4294968068,null,null,8589935160],t.Z)
 B.GG=s([4294968321,null,null,8589935157],t.Z)
-B.HB=s([8589934848,8589934848,8589934849,null],t.Z)
+B.HA=s([8589934848,8589934848,8589934849,null],t.Z)
 B.Gw=s([4294967423,null,null,8589935150],t.Z)
 B.GC=s([4294968069,null,null,8589935153],t.Z)
 B.Gv=s([4294967309,null,null,8589935117],t.Z)
 B.GD=s([4294968070,null,null,8589935159],t.Z)
 B.GH=s([4294968327,null,null,8589935152],t.Z)
-B.HC=s([8589934854,8589934854,8589934855,null],t.Z)
+B.HB=s([8589934854,8589934854,8589934855,null],t.Z)
 B.GE=s([4294968071,null,null,8589935155],t.Z)
 B.GF=s([4294968072,null,null,8589935161],t.Z)
-B.HD=s([8589934850,8589934850,8589934851,null],t.Z)
-B.tS=new A.cW(["*",B.GI,"+",B.GJ,"-",B.GK,".",B.GL,"/",B.GM,"0",B.GN,"1",B.GO,"2",B.GQ,"3",B.GS,"4",B.GT,"5",B.GU,"6",B.GV,"7",B.GW,"8",B.GX,"9",B.GZ,"Alt",B.HA,"AltGraph",B.Gx,"ArrowDown",B.Gy,"ArrowLeft",B.Gz,"ArrowRight",B.GA,"ArrowUp",B.GB,"Clear",B.GG,"Control",B.HB,"Delete",B.Gw,"End",B.GC,"Enter",B.Gv,"Home",B.GD,"Insert",B.GH,"Meta",B.HC,"PageDown",B.GE,"PageUp",B.GF,"Shift",B.HD],A.ap("cW<r,S<n?>>"))
+B.HC=s([8589934850,8589934850,8589934851,null],t.Z)
+B.tS=new A.cW(["*",B.GI,"+",B.GJ,"-",B.GK,".",B.GL,"/",B.GM,"0",B.GN,"1",B.GO,"2",B.GQ,"3",B.GS,"4",B.GT,"5",B.GU,"6",B.GV,"7",B.GW,"8",B.GX,"9",B.GZ,"Alt",B.Hz,"AltGraph",B.Gx,"ArrowDown",B.Gy,"ArrowLeft",B.Gz,"ArrowRight",B.GA,"ArrowUp",B.GB,"Clear",B.GG,"Control",B.HA,"Delete",B.Gw,"End",B.GC,"Enter",B.Gv,"Home",B.GD,"Insert",B.GH,"Meta",B.HB,"PageDown",B.GE,"PageUp",B.GF,"Shift",B.HC],A.ap("cW<r,S<n?>>"))
 B.GY=s([B.nZ,null,null,B.tF],t.L)
 B.I4=s([B.tr,null,null,B.tG],t.L)
 B.Hi=s([B.ts,null,null,B.tH],t.L)
-B.HE=s([B.tt,null,null,B.cR],t.L)
+B.HD=s([B.tt,null,null,B.cR],t.L)
 B.Gp=s([B.tu,null,null,B.tI],t.L)
 B.Ih=s([B.tv,null,null,B.k0],t.L)
 B.Ie=s([B.tw,null,null,B.eE],t.L)
@@ -87590,7 +87590,7 @@ B.H6=s([B.eD,B.eD,B.hk,null],t.L)
 B.Ht=s([B.ez,null,null,B.eF],t.L)
 B.HQ=s([B.eA,null,null,B.eH],t.L)
 B.H7=s([B.co,B.co,B.cQ,null],t.L)
-B.K2=new A.cW(["*",B.GY,"+",B.I4,"-",B.Hi,".",B.HE,"/",B.Gp,"0",B.Ih,"1",B.Ie,"2",B.H3,"3",B.Ik,"4",B.Id,"5",B.H1,"6",B.Gt,"7",B.Hb,"8",B.I5,"9",B.I7,"Alt",B.H4,"AltGraph",B.Ii,"ArrowDown",B.Ho,"ArrowLeft",B.Hp,"ArrowRight",B.Hq,"ArrowUp",B.Ij,"Clear",B.Ia,"Control",B.H5,"Delete",B.HL,"End",B.Hr,"Enter",B.H0,"Home",B.Hs,"Insert",B.Ib,"Meta",B.H6,"PageDown",B.Ht,"PageUp",B.HQ,"Shift",B.H7],A.ap("cW<r,S<e?>>"))
+B.K2=new A.cW(["*",B.GY,"+",B.I4,"-",B.Hi,".",B.HD,"/",B.Gp,"0",B.Ih,"1",B.Ie,"2",B.H3,"3",B.Ik,"4",B.Id,"5",B.H1,"6",B.Gt,"7",B.Hb,"8",B.I5,"9",B.I7,"Alt",B.H4,"AltGraph",B.Ii,"ArrowDown",B.Ho,"ArrowLeft",B.Hp,"ArrowRight",B.Hq,"ArrowUp",B.Ij,"Clear",B.Ia,"Control",B.H5,"Delete",B.HL,"End",B.Hr,"Enter",B.H0,"Home",B.Hs,"Insert",B.Ib,"Meta",B.H6,"PageDown",B.Ht,"PageUp",B.HQ,"Shift",B.H7],A.ap("cW<r,S<e?>>"))
 B.KF={KeyA:0,KeyB:1,KeyC:2,KeyD:3,KeyE:4,KeyF:5,KeyG:6,KeyH:7,KeyI:8,KeyJ:9,KeyK:10,KeyL:11,KeyM:12,KeyN:13,KeyO:14,KeyP:15,KeyQ:16,KeyR:17,KeyS:18,KeyT:19,KeyU:20,KeyV:21,KeyW:22,KeyX:23,KeyY:24,KeyZ:25,Digit1:26,Digit2:27,Digit3:28,Digit4:29,Digit5:30,Digit6:31,Digit7:32,Digit8:33,Digit9:34,Digit0:35,Minus:36,Equal:37,BracketLeft:38,BracketRight:39,Backslash:40,Semicolon:41,Quote:42,Backquote:43,Comma:44,Period:45,Slash:46}
 B.tT=new A.bI(B.KF,["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","-","=","[","]","\\",";","'","`",",",".","/"],t.li)
 B.KB={Abort:0,Again:1,AltLeft:2,AltRight:3,ArrowDown:4,ArrowLeft:5,ArrowRight:6,ArrowUp:7,AudioVolumeDown:8,AudioVolumeMute:9,AudioVolumeUp:10,Backquote:11,Backslash:12,Backspace:13,BracketLeft:14,BracketRight:15,BrightnessDown:16,BrightnessUp:17,BrowserBack:18,BrowserFavorites:19,BrowserForward:20,BrowserHome:21,BrowserRefresh:22,BrowserSearch:23,BrowserStop:24,CapsLock:25,Comma:26,ContextMenu:27,ControlLeft:28,ControlRight:29,Convert:30,Copy:31,Cut:32,Delete:33,Digit0:34,Digit1:35,Digit2:36,Digit3:37,Digit4:38,Digit5:39,Digit6:40,Digit7:41,Digit8:42,Digit9:43,DisplayToggleIntExt:44,Eject:45,End:46,Enter:47,Equal:48,Escape:49,Esc:50,F1:51,F10:52,F11:53,F12:54,F13:55,F14:56,F15:57,F16:58,F17:59,F18:60,F19:61,F2:62,F20:63,F21:64,F22:65,F23:66,F24:67,F3:68,F4:69,F5:70,F6:71,F7:72,F8:73,F9:74,Find:75,Fn:76,FnLock:77,GameButton1:78,GameButton10:79,GameButton11:80,GameButton12:81,GameButton13:82,GameButton14:83,GameButton15:84,GameButton16:85,GameButton2:86,GameButton3:87,GameButton4:88,GameButton5:89,GameButton6:90,GameButton7:91,GameButton8:92,GameButton9:93,GameButtonA:94,GameButtonB:95,GameButtonC:96,GameButtonLeft1:97,GameButtonLeft2:98,GameButtonMode:99,GameButtonRight1:100,GameButtonRight2:101,GameButtonSelect:102,GameButtonStart:103,GameButtonThumbLeft:104,GameButtonThumbRight:105,GameButtonX:106,GameButtonY:107,GameButtonZ:108,Help:109,Home:110,Hyper:111,Insert:112,IntlBackslash:113,IntlRo:114,IntlYen:115,KanaMode:116,KeyA:117,KeyB:118,KeyC:119,KeyD:120,KeyE:121,KeyF:122,KeyG:123,KeyH:124,KeyI:125,KeyJ:126,KeyK:127,KeyL:128,KeyM:129,KeyN:130,KeyO:131,KeyP:132,KeyQ:133,KeyR:134,KeyS:135,KeyT:136,KeyU:137,KeyV:138,KeyW:139,KeyX:140,KeyY:141,KeyZ:142,KeyboardLayoutSelect:143,Lang1:144,Lang2:145,Lang3:146,Lang4:147,Lang5:148,LaunchApp1:149,LaunchApp2:150,LaunchAssistant:151,LaunchControlPanel:152,LaunchMail:153,LaunchScreenSaver:154,MailForward:155,MailReply:156,MailSend:157,MediaFastForward:158,MediaPause:159,MediaPlay:160,MediaPlayPause:161,MediaRecord:162,MediaRewind:163,MediaSelect:164,MediaStop:165,MediaTrackNext:166,MediaTrackPrevious:167,MetaLeft:168,MetaRight:169,MicrophoneMuteToggle:170,Minus:171,NonConvert:172,NumLock:173,Numpad0:174,Numpad1:175,Numpad2:176,Numpad3:177,Numpad4:178,Numpad5:179,Numpad6:180,Numpad7:181,Numpad8:182,Numpad9:183,NumpadAdd:184,NumpadBackspace:185,NumpadClear:186,NumpadClearEntry:187,NumpadComma:188,NumpadDecimal:189,NumpadDivide:190,NumpadEnter:191,NumpadEqual:192,NumpadMemoryAdd:193,NumpadMemoryClear:194,NumpadMemoryRecall:195,NumpadMemoryStore:196,NumpadMemorySubtract:197,NumpadMultiply:198,NumpadParenLeft:199,NumpadParenRight:200,NumpadSubtract:201,Open:202,PageDown:203,PageUp:204,Paste:205,Pause:206,Period:207,Power:208,PrintScreen:209,PrivacyScreenToggle:210,Props:211,Quote:212,Resume:213,ScrollLock:214,Select:215,SelectTask:216,Semicolon:217,ShiftLeft:218,ShiftRight:219,ShowAllWindows:220,Slash:221,Sleep:222,Space:223,Super:224,Suspend:225,Tab:226,Turbo:227,Undo:228,WakeUp:229,ZoomToggle:230}
@@ -89163,7 +89163,7 @@ r($,"aM9","aCo",()=>A.aLC())
 r($,"aTi","aCQ",()=>A.cU().gSW()+"roboto/v32/KFOmCnqEu92Fr1Me4GZLCzYlKw.woff2")
 r($,"aSF","aCl",()=>A.aLm(A.vk(A.vk(A.jR(),"window"),"FinalizationRegistry"),A.jL(new A.aoB())))
 r($,"aU5","aDk",()=>new A.a7o())
-s($,"aSM","aCq",()=>A.aGT(B.Hv))
+s($,"aSM","aCq",()=>A.aGT(B.Hu))
 s($,"aSL","aq7",()=>A.a48(A.aE9($.aCq())))
 s($,"aPR","d1",()=>{var q,p=A.B(A.B(A.jR(),"window"),"screen")
 p=p==null?null:A.B(p,"width")
