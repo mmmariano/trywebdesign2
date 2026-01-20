@@ -1,6 +1,6 @@
 {
-    "name": "trywebdesign",
-    "short_name": "trywebdesign",
+    "name": "try_web_design",
+    "short_name": "try_web_design",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
