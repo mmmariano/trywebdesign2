@@ -813,3 +813,247 @@ input:focus { border-color: var(--gold); }
     .wa-text { display: none; }
     .wa-content { padding: 15px; border-radius: 50%; }
 }
+/* --- BOTÃO TITANIUM AMBER COM EFEITO ESPECIAL --- */
+/* Container que envolve o botão */
+.faq-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralização horizontal no Flexbox */
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* O Botão (Seu código com um pequeno ajuste de flex) */
+.btn-special-effect {
+    position: relative;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 1.3rem 3rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin: 0 auto; /* Centralização extra */
+}
+
+/* O conteúdo do botão */
+.btn-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Efeito Especial 1: O Reflexo de Luz (Fisheye Shine) */
+.flare {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: skewX(-30deg);
+    transition: 0.8s;
+    animation: shine-loop 4s infinite; /* Reflexo automático */
+}
+
+@keyframes shine-loop {
+    0% { left: -150%; }
+    20% { left: 150%; }
+    100% { left: 150%; }
+}
+
+/* Efeito Especial 2: Aura de Neon Mel ao Hover */
+.btn-special-effect:hover {
+    color: #fff;
+    border-color: var(--gold);
+    box-shadow: 0 0 40px rgba(184, 134, 11, 0.4), inset 0 0 10px rgba(212, 175, 55, 0.2);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.btn-special-effect:hover .flare {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212, 175, 55, 0.4),
+        transparent
+    );
+}
+
+/* Efeito Especial 3: O ícone pulsante */
+.zap-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--gold);
+    filter: drop-shadow(0 0 5px var(--gold));
+}
+
+.btn-special-effect:hover .zap-icon {
+    color: #fff;
+    filter: drop-shadow(0 0 10px #fff);
+    animation: pulse-icon 1s infinite;
+}
+
+@keyframes pulse-icon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Borda Interna Animada */
+.btn-special-effect::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0; height: 1px;
+    background: var(--gold);
+    transition: 0.4s;
+}
+.btn-special-effect:hover::before {
+    width: 100%;
+}
+/* --- ESTILIZAÇÃO FAQ LUXURY --- */
+.faq-luxury {
+    background: #030303;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de luz mel flutuando ao fundo */
+.faq-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(184, 134, 11, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* O Item do FAQ */
+.faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    background: rgba(212, 175, 55, 0.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Sumário / Pergunta */
+summary {
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+summary::-webkit-details-marker { display: none; } /* Remove seta padrão */
+
+.faq-number {
+    font-family: 'Oswald', sans-serif;
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.faq-question {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #eee;
+    flex-grow: 1;
+}
+
+.faq-item:hover .faq-number {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Ícone Personalizado (+) */
+.faq-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.faq-icon::before, .faq-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--gold);
+    transition: 0.5s;
+}
+
+.faq-icon::before { width: 100%; height: 1px; top: 50%; left: 0; }
+.faq-icon::after { width: 1px; height: 100%; left: 50%; top: 0; }
+
+/* Rotação quando aberto */
+details[open] .faq-icon { transform: rotate(45deg); }
+details[open] .faq-question { color: var(--gold); }
+
+/* Conteúdo / Resposta */
+.faq-content {
+    padding: 0 2.5rem 2.5rem 5.5rem;
+    color: #a1a1aa;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    font-style: italic;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.faq-footer p {
+    color: var(--zinc-500);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste do divider para caber no FAQ */
+.faq-header .hero-divider {
+    margin: 2rem auto;
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+}
