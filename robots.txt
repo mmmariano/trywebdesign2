@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Link para o seu sitemap (ajuda o Google a achar o mapa do site)
+Sitemap: https://trywebdesign.com.br/sitemap.xml
