@@ -1057,3 +1057,174 @@ details[open] .faq-question { color: var(--gold); }
     height: 2px;
     background: var(--gold);
 }
+
+/* Hero Layout */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 30px;
+    z-index: 10;
+}
+
+/* --- SISTEMA DO MUNDO --- */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.world-system {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatWorld 6s ease-in-out infinite;
+}
+
+/* 1. Órbita TRYWEBDESIGN */
+.outer-brand-orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateOrbit 30s linear infinite;
+    opacity: 0.4;
+}
+
+.outer-brand-orbit svg { width: 100%; height: 100%; }
+.outer-brand-orbit text {
+    fill: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* 2. O Globo Giratório */
+.main-globe {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background: #050505;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    overflow: hidden;
+    box-shadow: 0 0 60px var(--gold-glow), inset 0 0 40px var(--gold);
+    z-index: 2;
+}
+
+.globe-grid-animation {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(197, 160, 33, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197, 160, 33, 0.2) 1px, transparent 1px);
+    background-size: 25px 25px;
+    animation: rotateGlobe 12s linear infinite;
+}
+
+.globe-shadow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, transparent 0%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+}
+
+/* 3. A Faixa (Banner) - Mais escura para dar base ao texto */
+.impact-marquee-banner {
+    position: absolute;
+    width: 680px; 
+    height: 55px; 
+    
+    /* Fundo escuro sólido com transparência mínima para máximo contraste */
+    background: rgba(5, 5, 5, 0.75); 
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+    
+    border-radius: 100px; /* Bordas totalmente arredondadas */
+    border: 0px solid rgba(197, 160, 33, 0.6); 
+    
+    z-index: 20; 
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transform: rotate(-8deg); /* Inclinação reduzida para facilitar a leitura */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    
+    /* Melhora a renderização de fontes no banner */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* O Texto (Nitidez Extrema) */
+.marquee-content span {
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Fonte mais limpa para leitura em movimento */
+    color: #FFFFFF; /* Branco puro para contraste absoluto */
+    font-size: 15px;
+    font-weight: 800; /* Extra bold */
+    letter-spacing: 1.5px;
+    padding-right: 100px;
+    text-transform: uppercase;
+    
+    /* Contorno técnico para a letra não "sumir" */
+    text-shadow: 
+        1px 1px 0px #000, 
+        -1px -1px 0px #000, 
+        1px -1px 0px #000, 
+        -1px 1px 0px #000,
+        0px 0px 10px rgba(0,0,0,0.8);
+
+    /* Força o navegador a usar a placa de vídeo para não embaçar ao mover */
+    will-change: transform;
+}
+
+/* Animação mais lenta e suave */
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeMove 30s linear infinite; /* 30 segundos = Leitura tranquila */
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeMove 20s linear infinite;
+}
+
+.marquee-content span {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-right: 60px;
+}
+
+/* Animações */
+@keyframes rotateOrbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@keyframes rotateGlobe { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@keyframes marqueeMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@keyframes floatWorld { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+/* Ajuste Mobile */
+@media (max-width: 992px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .hero-divider-left { margin: 30px auto; }
+    .impact-marquee-banner { width: 100vw; }
+    .world-system { width: 350px; height: 350px; margin: 0 auto; }
+}

@@ -120,3 +120,44 @@ document.getElementById('pro-form').addEventListener('submit', function(e) {
 
 });
 lucide.createIcons();
+
+// Conteúdo da esquerda
+gsap.from(".hero-content > *", {
+    x: -50,
+    opacity: 0,
+    duration: 1.2,
+    stagger: 0.15,
+    ease: "power3.out"
+});
+
+// O Globo e o Anel
+gsap.from(".tech-world", {
+    scale: 0.8,
+    opacity: 0,
+    duration: 1.5,
+    delay: 0.5,
+    ease: "expo.out"
+});
+document.addEventListener('DOMContentLoaded', () => {
+    // Entrada Suave do Sistema
+    gsap.from(".world-system", {
+        scale: 0.7,
+        opacity: 0,
+        duration: 2,
+        ease: "expo.out",
+        delay: 0.5
+    });
+
+    // Reação sutil ao movimento do mouse no Globo
+    window.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 15;
+        const y = (e.clientY / window.innerHeight - 0.5) * 15;
+        
+        gsap.to(".world-system", {
+            rotationY: x,
+            rotationX: -y,
+            duration: 1.5,
+            ease: "power2.out"
+        });
+    });
+});
