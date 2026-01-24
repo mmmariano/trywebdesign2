@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TryWebDesign | Engenharia Digital de Luxo</title>
+    <title>TryWebDesign | Criação de Sites e Landing Pages Profissionais</title>
     
     <!-- Fontes Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;1,400&family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
@@ -29,7 +29,9 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-inner">
-            <div class="logo">TRY<span>WEBDESIGN</span></div>
+           <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="cursor: pointer;">
+    TRY<span>WEBDESIGN</span>
+</div>
             <div class="nav-links">
                 <a href="#" class="mag">Inicio</a>
                 <a href="#sobre" class="mag">Sobre</a>
@@ -42,19 +44,18 @@
     </nav>
 
     <main>
-   <!-- HERO ELEVADO -->
 <section class="hero">
-    <!-- Elemento de luz que segue o mouse -->
     <div class="mouse-glow"></div>
     
-    <!-- Linhas decorativas de arquitetura -->
+    <!-- Linhas de Arquitetura -->
     <div class="hero-lines">
         <div class="v-line l"></div>
         <div class="v-line r"></div>
     </div>
 
-    <div class="container text-center hero-inner">
-        <div class="reveal-group">
+    <div class="container hero-inner">
+        <!-- ESQUERDA: TEXTO -->
+        <div class="hero-content">
             <span class="tag-gold-fancy">
                 <i data-lucide="shield-check"></i>
                 ESTRATEGIA & PERFORMANCE
@@ -63,31 +64,62 @@
             <h1 class="title-premium">
                 <span class="line-1">A Arte de ser</span>
                 <span class="line-2 italic-gold">Inesquecível.</span>
+                <p> </p>
             </h1>
             
-            <div class="hero-divider"></div>
-            
-            <p class="subtitle-premium">
-                Fundimos a robustez da <strong>engenharia de sistemas</strong> com a estética do <strong>mercado de luxo</strong>. Projetamos soberania digital.
-            </p>
-            
+            <div class="hero-divider-left"></div> 
+          
             <div class="cta-luxury-group">
                 <a href="#contato" class="btn-titanium mag">
                     <span>Iniciar Projeto</span>
                     <i data-lucide="arrow-right"></i>
                 </a>
                 
-                <div class="status-pill glass">
+                <!--  <div class="status-pill glass">
                     <div class="pulse-container">
                         <span class="pulse-gold"></span>
                         <span class="pulse-ring"></span>
                     </div>
-                    <span class="status-text">Sua marca em outro nivel.</span>
+                    <span class="status-text">On-line agora</span>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- DIREITA: O MUNDO DIGITAL TRYWEBDESIGN -->
+        <div class="hero-visual">
+            <div class="world-system">
+                
+                <!-- 1. Órbita Externa (TRYWEBDESIGN Girando) -->
+                <div class="outer-brand-orbit">
+                    <svg viewBox="0 0 200 200">
+                        <path id="brandPath" d="M 100, 100 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" fill="none"></path>
+                        <text>
+                            <textPath xlink:href="#brandPath">
+                                TRYWEBDESIGN • TRYWEBDESIGN • TRYWEBDESIGN • TRYWEBDESIGN •
+                            </textPath>
+                        </text>
+                    </svg>
                 </div>
+
+                <!-- 2. O Globo Girando (Engenharia) -->
+                <div class="main-globe">
+                    <div class="globe-grid-animation"></div>
+                    <div class="globe-shadow"></div>
+                </div>
+                
+                <!-- 3. A Faixa Central (Marquee Invisível) -->
+                <div class="impact-marquee-banner">
+                    <div class="marquee-content">
+                        <span>NÃO DEIXE SUA EMPRESA INVISÍVEL NO MUNDO DIGITAL • </span>
+                        <span>NÃO DEIXE SUA EMPRESA INVISÍVEL NO MUNDO DIGITAL • </span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
+
 <!-- SERVIÇOS: ENGENHARIA E SOBERANIA -->
 <section class="services-premium section-padding" id="servicos">
     <div class="container">
@@ -101,7 +133,7 @@
             <div class="google-alert reveal">
                 <div class="alert-content">
                     <i data-lucide="search"></i>
-                    <p>Já parou para pensar na fortuna que você perde quando <strong>não encontram sua empresa no Google?</strong> Ser invisível digitalmente é o erro mais caro do mercado de luxo.</p>
+                    <p>Já parou para pensar na fortuna que você perde quando <strong>não encontram sua empresa no Google?</strong> Ser invisível digitalmente é o erro mais caro do mercado.</p>
                 </div>
             </div>
         </div>
@@ -114,7 +146,7 @@
                 <h3>Desenvolvimento Web de <span class="gold-txt">Alta Precisão</span></h3>
                 <p>Não usamos modelos prontos. Criamos interfaces exclusivas que funcionam como uma extensão da sua marca no mundo físico. Cada pixel é posicionado para transmitir autoridade imediata.</p>
                 <ul class="card-list">
-                    <li><i data-lucide="check"></i> UI/UX sob medida para nichos de luxo</li>
+                    <li><i data-lucide="check"></i> UI/UX sob medida para todos os nichos</li>
                     <li><i data-lucide="check"></i> Tipografia editorial e hierarquia visual</li>
                     <li><i data-lucide="check"></i> Identidade digital inesquecível</li>
                     <li><i data-lucide="trending-down"></i> Redução de custos operacionais</li>
