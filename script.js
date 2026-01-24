@@ -138,26 +138,38 @@ gsap.from(".tech-world", {
     delay: 0.5,
     ease: "expo.out"
 });
-document.addEventListener('DOMContentLoaded', () => {
-    // Entrada Suave do Sistema
-    gsap.from(".world-system", {
-        scale: 0.7,
-        opacity: 0,
-        duration: 2,
-        ease: "expo.out",
-        delay: 0.5
-    });
 
-    // Reação sutil ao movimento do mouse no Globo
-    window.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 15;
-        const y = (e.clientY / window.innerHeight - 0.5) * 15;
+
+function createGalaxy() {
+    const container = document.getElementById('stars-galaxy');
+    if(!container) return;
+
+    const starCount = 120; // Aumentei a quantidade de 80 para 120
+    const colors = ['white', 'gold', 'blue', 'purple']; // Lista de cores do CSS
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
         
-        gsap.to(".world-system", {
-            rotationY: x,
-            rotationX: -y,
-            duration: 1.5,
-            ease: "power2.out"
-        });
-    });
-});
+        // Sorteia uma cor da lista
+        const colorClass = colors[Math.floor(Math.random() * colors.length)];
+        star.className = `star ${colorClass}`;
+        
+        // TAMANHO: Aumentado para variar entre 2px e 6px (antes era 1-3px)
+        const sizeValue = Math.random() * 4 + 2; 
+        star.style.width = sizeValue + 'px';
+        star.style.height = sizeValue + 'px';
+
+        // Posição aleatória
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+
+        // Velocidade do brilho: entre 2 e 5 segundos
+        const duration = Math.random() * 3 + 2 + 's';
+        const delay = Math.random() * 5 + 's';
+        star.style.animation = `twinkle ${duration} infinite ease-in-out ${delay}`;
+
+        container.appendChild(star);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', createGalaxy);

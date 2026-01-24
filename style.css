@@ -1228,3 +1228,41 @@ details[open] .faq-question { color: var(--gold); }
     .impact-marquee-banner { width: 100vw; }
     .world-system { width: 350px; height: 350px; margin: 0 auto; }
 }
+
+/* Container das estrelas */
+.stars-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%; /* Aumentado para expandir a galáxia */
+    height: 150%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8; /* Mais visível por padrão */
+    filter: blur(0.5px); /* Suaviza as bordas para parecer luz real */
+}
+
+/* Cores Vibrantes */
+.star.white { background: #ffffff; box-shadow: 0 0 10px #ffffff; }
+.star.gold { background: #d4af37; box-shadow: 0 0 15px #d4af37; }
+.star.blue { background: #00d4ff; box-shadow: 0 0 15px #00d4ff; }
+.star.purple { background: #bd00ff; box-shadow: 0 0 15px #bd00ff; }
+
+/* Animação de Brilho Intenso */
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.4; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.5); /* A estrela cresce quando brilha */
+    }
+}
