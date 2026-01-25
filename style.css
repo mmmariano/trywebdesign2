@@ -390,7 +390,7 @@ input:focus { border-color: var(--gold); }
 .specialist-info { margin-top: 50px; }
 .cinzel-title { font-family: 'Cinzel'; font-size: 2.5rem; letter-spacing: -1px; }
 .logic-tag { color: var(--gold); font-size: 10px; font-weight: 800; letter-spacing: 4px; }
-.bio-short { color: #666; font-size: 1.1rem; margin: 20px 0; max-width: 450px; font-weight: 300; }
+.bio-short { color: #000000; font-size: 1.1rem; margin: 20px 0; max-width: 450px; font-weight: 300; }
 
 .contact-link {
     display: flex;
@@ -1477,4 +1477,227 @@ details[open] .faq-question { color: var(--gold); }
     .portfolio-grid-wrapper {
         grid-template-columns: 1fr; /* 1 coluna no celular */
     }
+}
+
+
+/* Layout da Grid */
+.services-visual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+/* O Card com efeito de Vidro */
+.s-card-visual {
+    position: relative;
+    height: 480px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.5s ease;
+}
+
+/* Imagem de Fundo com Zoom */
+.bg-card-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Escurece a imagem para o texto aparecer */
+    transition: transform 1s ease;
+    z-index: 1;
+}
+
+.s-card-visual:hover .bg-card-img {
+    transform: scale(1.1);
+    opacity: 0.3;
+}
+
+/* CAMADA TRANSPARENTE (GLASSMORPHISM) */
+.glass-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 30px;
+    z-index: 3;
+    
+    /* Configuração da Transparência */
+    background: rgba(255, 255, 255, 0.03); /* Quase invisível */
+    backdrop-filter: blur(15px); /* Efeito de desfoque luxuoso */
+    -webkit-backdrop-filter: blur(15px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.s-card-visual:hover .glass-overlay {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(212, 175, 55, 0.4); /* Borda brilha em dourado no hover */
+    transform: translateY(-10px);
+}
+
+/* Elementos Internos */
+.card-icon i {
+    color: #d4af37;
+    margin-bottom: 15px;
+    width: 32px;
+    height: 32px;
+}
+
+.glass-overlay h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.glass-overlay p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Mini lista de features dentro do card */
+.mini-features {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.mini-features li {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+/* EFEITO ESPECIAL: BRILHO DE RAIO (SHINE) */
+.shine-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    transform: skewX(-25deg);
+    z-index: 2;
+    transition: 0.7s;
+}
+
+.s-card-visual:hover .shine-effect {
+    left: 150%;
+}
+/* Centralização do Botão */
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 20px;
+}
+
+/* Estrutura do Botão Premium */
+.btn-quote-premium {
+    position: relative;
+    display: inline-block;
+    padding: 20px 45px;
+    background: #d4af37; /* Dourado base */
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: none;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Conteúdo do Botão (Texto e Ícone) */
+.btn-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-content i {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.4s ease;
+}
+
+/* EFEITO 1: Brilho Metálico (Shine) que passa sozinho */
+.btn-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    transition: all 0.6s;
+    animation: btnShineAnim 4s infinite;
+    z-index: 2;
+}
+
+@keyframes btnShineAnim {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* EFEITO 2: Aura de Pulsação (Glow) */
+.btn-aura {
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    animation: btnAuraAnim 2s infinite;
+    z-index: 1;
+}
+
+@keyframes btnAuraAnim {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* INTERAÇÃO NO HOVER */
+.btn-quote-premium:hover {
+    transform: scale(1.05) translateY(-5px);
+    background: #fff; /* Muda para branco no hover */
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.5);
+}
+
+.btn-quote-premium:hover .btn-content {
+    color: #000;
+}
+
+.btn-quote-premium:hover .btn-content i {
+    transform: translateX(5px); /* Setinha move pro lado */
+}
+
+.btn-quote-premium:active {
+    transform: scale(0.98);
 }
