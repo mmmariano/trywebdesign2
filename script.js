@@ -173,3 +173,42 @@ function createGalaxy() {
 }
 
 document.addEventListener('DOMContentLoaded', createGalaxy);
+
+let currentPos = 0;
+const wrapper = document.getElementById('portfolio-wrapper');
+
+function moveSlide(direction) {
+    const cardWidth = document.querySelector('.p-item').offsetWidth + 30;
+    if (direction === 1) {
+        currentPos -= cardWidth;
+    } else {
+        currentPos += cardWidth;
+    }
+    
+    // Limites simples (ajuste conforme o número de projetos)
+    wrapper.style.transform = `translateX(${currentPos}px)`;
+}
+
+// Inicializar ícones do Lucide (caso não tenha feito)
+lucide.createIcons();
+let currentPage = 0;
+
+function moveSlide(direction) {
+    const wrapper = document.getElementById('portfolio-wrapper');
+    const containerWidth = document.querySelector('.portfolio-slider-container').offsetWidth;
+    
+    // Calcula quantas "páginas" existem (considerando 6 itens por página)
+    const totalItems = wrapper.querySelectorAll('.p-item').length;
+    const itemsPerPage = 6;
+    const maxPages = Math.ceil(totalItems / itemsPerPage) - 1;
+
+    currentPage += direction;
+
+    // Trava para não passar do limite
+    if (currentPage < 0) currentPage = 0;
+    if (currentPage > maxPages) currentPage = maxPages;
+
+    // Move o grid lateralmente
+    const moveDistance = currentPage * (containerWidth + 30); // 30 é o gap
+    wrapper.style.transform = `translateX(-${moveDistance}px)`;
+}

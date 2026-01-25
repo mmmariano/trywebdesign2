@@ -36,10 +36,23 @@ body {
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(249, 247, 242, 0.85); /* Cor marfim com transparência */
+    background: rgba(249, 247, 242, 0.8); /* Cor marfim com transparência */
     /* Isso garante que o texto preto/dourado continue legível */
 }
-
+/*
+.video-overlay {
+    position: absolute;
+    inset: 0;
+     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     /* 0.3 é bem transparente. Aumente para 0.5 se ficar difícil de ler os textos 
+    background: rgba(0, 0, 0, 1); 
+    z-index: -1;
+    /*background: rgba(249, 247, 242, 0.85);  Cor marfim com transparência 
+    /* Isso garante que o texto preto/dourado continue legível 
+}*/
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .section-padding { padding: 120px 0; }
 .text-center { text-align: center; }
@@ -1264,5 +1277,204 @@ details[open] .faq-question { color: var(--gold); }
     50% { 
         opacity: 1; 
         transform: scale(1.5); /* A estrela cresce quando brilha */
+    }
+}
+/* CONTAINER DO PORTFOLIO */
+.portfolio-premium {
+    overflow: hidden;
+    position: relative;
+}
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+/* GRID DE 3 COLUNAS E 2 LINHAS */
+.portfolio-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Colunas */
+    grid-template-rows: repeat(2, auto);    /* 2 Linhas */
+    gap: 30px;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* CARD V2 - EFEITOS ESPECIAIS */
+.p-card-v2 {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.p-card-v2:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* IMAGEM SEM CORTAR */
+.p-image-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10; /* Mantém proporção elegante */
+    background: #0a0a0a;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ESSENCIAL: Não corta a imagem */
+    transition: transform 0.5s ease;
+}
+
+.p-card-v2:hover .p-img {
+    transform: scale(1.05);
+}
+
+/* OVERLAY NO HOVER */
+.p-overlay-special {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.p-image-box:hover .p-overlay-special {
+    opacity: 1;
+}
+
+.btn-visit {
+    color: #d4af37;
+    text-decoration: none;
+    border: 1px solid #d4af37;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-visit:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+/* INFO DO PROJETO */
+.p-info-v2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.p-info-v2 h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.p-info-v2 span {
+    font-size: 0.7rem;
+    color: #000000;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* CONTROLES (SETAS) */
+.portfolio-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.control-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.control-btn:hover {
+    background: #d4af37;
+    color: #000;
+    border-color: #d4af37;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    .portfolio-grid-wrapper { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .portfolio-grid-wrapper { grid-template-columns: 1fr; }
+}
+
+/* Container que esconde o excesso se você adicionar mais de 6 */
+.portfolio-slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* A MÁGICA: Grid de 3 colunas e 2 linhas */
+.portfolio-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    grid-template-rows: auto auto; /* 2 linhas */
+    gap: 30px; /* Espaço elegante entre os cards */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ajuste da Imagem para NÃO cortar e NÃO ter borda preta */
+.p-image-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Define uma proporção fixa para todos (ex: 4:3) */
+    overflow: hidden;
+    background: #000; /* Fundo caso a imagem demore a carregar */
+}
+
+.p-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efeito Hover (Opcional - Premium) */
+.p-card-v2:hover .p-img {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE (Celular e Tablet) */
+@media (max-width: 992px) {
+    .portfolio-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid-wrapper {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
     }
 }
