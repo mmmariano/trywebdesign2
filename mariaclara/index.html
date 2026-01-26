@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Clara Silveira | Psicologia Clínica Estruturada</title>
+    
+    <!-- Google Fonts: Bodoni Moda (Luxo) e Montserrat (Corporativo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones e Animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --marrom-corporativo: #3d2b1f;
+            --marrom-accent: #5c4033;
+            --nude-luxo: #e8dccb;
+            --nude-fundo: #f9f5f0;
+            --branco: #ffffff;
+            --texto: #2a2a2a;
+            --transicao: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Configuração Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--texto); background-color: var(--nude-fundo); line-height: 1.8; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Bodoni Moda', serif; font-weight: 700; color: var(--marrom-corporativo); }
+
+        /* HEADER PREMIUM */
+        header {
+            position: fixed; width: 100%; top: 0; z-index: 2000;
+            background: rgba(249, 245, 240, 0.9);
+            backdrop-filter: blur(15px);
+            padding: 25px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(61, 43, 31, 0.1);
+        }
+        .logo-box { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; font-weight: 900; color: var(--marrom-corporativo); text-transform: uppercase; letter-spacing: 2px; }
+        .logo-box span { color: var(--marrom-accent); font-weight: 400; }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { text-decoration: none; color: var(--marrom-corporativo); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; }
+
+        /* HERO - CORPORATIVO ROBUSTO */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; padding: 120px 8% 80px;
+            background: linear-gradient(to right, var(--nude-fundo) 60%, var(--nude-luxo) 40%);
+        }
+        .hero-container { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; width: 100%; }
+        
+        .hero-text h1 { font-size: 4.8rem; line-height: 1; margin-bottom: 35px; }
+        .hero-text h1 span { font-style: italic; color: var(--marrom-accent); }
+        .hero-text p { font-size: 1.3rem; color: var(--marrom-accent); margin-bottom: 50px; border-left: 4px solid var(--marrom-corporativo); padding-left: 25px; }
+        
+        .btn-corporativo {
+            background: var(--marrom-corporativo); color: white; padding: 25px 50px;
+            text-decoration: none; font-weight: 700; text-transform: uppercase; 
+            letter-spacing: 2px; transition: var(--transicao); display: inline-block;
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+        }
+        .btn-corporativo:hover { background: var(--marrom-accent); transform: translateY(-5px); }
+
+        .hero-image-frame { position: relative; }
+        .profile-img {
+            width: 100%; height: 650px; 
+            object-fit: cover; border-radius: 4px;
+            box-shadow: 40px 40px 0px var(--marrom-corporativo);
+        }
+
+        /* STATS BAR */
+        .stats-bar { background: var(--marrom-corporativo); padding: 60px 8%; display: flex; justify-content: space-between; color: white; border-radius: 0 100px 0 0; }
+        .stat-card h2 { color: var(--nude-luxo); font-size: 3rem; margin-bottom: 5px; }
+        .stat-card p { font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; opacity: 0.8; }
+
+        /* ESPECIALIDADES */
+        .publicos { padding: 120px 8%; background: var(--branco); }
+        .grid-publico { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .card-publico { 
+            padding: 50px; background: var(--nude-fundo); border-radius: 4px;
+            transition: var(--transicao); border: 1px solid transparent;
+        }
+        .card-publico:hover { transform: translateY(-10px); border-color: var(--marrom-accent); background: white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+        .card-publico i { font-size: 2.5rem; color: var(--marrom-corporativo); margin-bottom: 25px; }
+        .card-publico h3 { font-size: 1.8rem; margin-bottom: 20px; }
+
+        /* SOBRE - TEXTO ROBUSTO */
+        .sobre { padding: 120px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+        .sobre-content h2 { font-size: 3.5rem; margin-bottom: 35px; }
+        .sobre-content p { font-size: 1.15rem; margin-bottom: 25px; color: #444; }
+
+        /* MÉTODO E ESTRUTURA */
+        .metodo { padding: 120px 8%; background: var(--marrom-corporativo); color: white; }
+        .metodo h2 { color: white; font-size: 3rem; margin-bottom: 80px; text-align: center; }
+        .metodo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+        .metodo-item { border-left: 1px solid var(--nude-luxo); padding-left: 30px; }
+        .metodo-item span { font-size: 0.9rem; color: var(--nude-luxo); font-weight: 700; }
+        .metodo-item h3 { color: white; margin: 15px 0; font-size: 1.6rem; }
+
+        /* FAQ ACORDEÃO */
+        .faq { padding: 120px 8%; background: var(--branco); }
+        .faq-container { max-width: 900px; margin: 0 auto; }
+        details { padding: 30px; border-bottom: 1px solid #eee; cursor: pointer; }
+        summary { font-weight: 700; color: var(--marrom-corporativo); font-size: 1.2rem; display: flex; justify-content: space-between; list-style: none; }
+        summary::after { content: '+'; color: var(--marrom-accent); font-size: 1.5rem; }
+        details[open] summary::after { content: '-'; }
+
+        /* CTA FINAL */
+        .cta-final { 
+            padding: 150px 8%; text-align: center; 
+            background: linear-gradient(rgba(61, 43, 31, 0.8), rgba(61, 43, 31, 0.8)), 
+            url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover; background-attachment: fixed; color: white;
+        }
+        .cta-final h2 { color: white; font-size: 4rem; margin-bottom: 30px; }
+        .cta-final p { font-size: 1.5rem; opacity: 0.9; margin-bottom: 50px; }
+
+        /* FOOTER */
+        footer { padding: 100px 8% 40px; background: #1a1a1a; color: white; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 100px; }
+        .footer-logo { font-family: 'Bodoni Moda', serif; font-size: 2rem; margin-bottom: 25px; }
+        .footer-links h4 { color: var(--nude-luxo); margin-bottom: 25px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        .footer-links li { list-style: none; margin-bottom: 15px; opacity: 0.6; }
+        .footer-links a { color: white; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: var(--nude-luxo); }
+
+        /* WHATSAPP FLOAT PREMIUM */
+        .whatsapp-float {
+            position: fixed; bottom: 40px; right: 40px; background: #25d366;
+            width: 75px; height: 75px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 35px;
+            color: white; z-index: 5000; box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            transition: var(--transicao);
+        }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
+
+        @media (max-width: 1024px) {
+            .hero-container, .sobre, .grid-publico, .metodo-grid, .footer-grid { grid-template-columns: 1fr; }
+            .hero { padding-top: 150px; background: var(--nude-fundo); }
+            .hero-text h1 { font-size: 3.2rem; }
+            .profile-img { height: 450px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">Maria Clara <span>Silveira</span></div>
+        <nav class="nav-links">
+            <a href="#areas">Áreas</a>
+            <a href="#sobre">A Profissional</a>
+            <a href="#metodo">O Método</a>
+            <a href="https://wa.me/5533998219444" class="btn-header">Agendamento</a>
+        </nav>
+    </header>
+
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-text animate__animated animate__fadeInLeft">
+            <span style="text-transform:uppercase; letter-spacing:4px; font-weight:700; color:var(--marrom-accent); font-size:0.8rem;">Psicologia Clínica de Alta Performance</span>
+            <h1>Sua saúde mental <br>merece <span>acolhimento.</span></h1>
+            <p>Atendimento psicológico especializado com foco em resultados, ética e excelência clínica para todas as fases da vida.</p>
+            <a href="https://wa.me/5533998219444" class="btn-corporativo">Agendar Sessão Estruturada</a>
+        </div>
+        <div class="hero-image-frame animate__animated animate__fadeInRight">
+            <!-- Foto de perfil solicitada integrada com moldura robusta -->
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPOIClkntkJXiVUBnlEjIquUeq8q-tJQTAATYgk=s1360-w1360-h1020-rw" alt="Dra. Maria Clara Silveira" class="profile-img">
+        </div>
+    </div>
+</section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="stat-card">
+            <h2>+12</h2>
+            <p>Anos de Prática Clínica</p>
+        </div>
+        <div class="stat-card">
+            <h2>1.5k</h2>
+            <p>Vidas Impactadas</p>
+        </div>
+        <div class="stat-card">
+            <h2>04/XX</h2>
+            <p>Registro Profissional CRP</p>
+        </div>
+        <div class="stat-card">
+            <h2>100%</h2>
+            <p>Sigilo & Ética Corporativa</p>
+        </div>
+    </div>
+
+    <!-- ESPECIALIDADES -->
+    <section id="areas" class="publicos">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-size: 3.5rem;">Especialidades</h2>
+            <p style="opacity: 0.7; margin-top: 20px;">Atendimento individualizado com ferramentas específicas para cada demanda evolutiva.</p>
+        </div>
+        <div class="grid-publico">
+            <div class="card-publico">
+                <i class="fas fa-child"></i>
+                <h3>Infantil</h3>
+                <p>Estruturação emocional e suporte no desenvolvimento lúdico-pedagógico da criança.</p>
+            </div>
+            <div class="card-publico">
+                <i class="fas fa-users"></i>
+                <h3>Adolescentes</h3>
+                <p>Apoio estratégico nas transições, identidade e gestão de conflitos da juventude.</p>
+            </div>
+            <div class="card-publico">
+                <i class="fas fa-briefcase"></i>
+                <h3>Adultos</h3>
+                <p>Foco em inteligência emocional, carreira, ansiedade e alta performance pessoal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <div class="sobre-content">
+            <h2 style="font-size: 4rem;">Maria Clara <br>Silveira</h2>
+            <p>Minha atuação é fundamentada em pilares de <strong>robustez técnica</strong> e <strong>seriedade profissional</strong>. No consultório, unimos o acolhimento necessário à psicologia com a objetividade de um processo estruturado de evolução.</p>
+            <p>Especialista em comportamento humano, desenvolvo um trabalho que permite ao paciente identificar gargalos emocionais e construir uma base sólida para decisões futuras.</p>
+            <div style="margin-top: 40px; display: flex; gap: 30px;">
+                <div style="text-align:center"><i class="fas fa-university fa-2x" style="color:var(--marrom-accent)"></i><p style="font-size:0.7rem; font-weight:700; margin-top:10px;">FORMAÇÃO<br>ACADÊMICA</p></div>
+                <div style="text-align:center"><i class="fas fa-medal fa-2x" style="color:var(--marrom-accent)"></i><p style="font-size:0.7rem; font-weight:700; margin-top:10px;">EXCELÊNCIA<br>CLÍNICA</p></div>
+            </div>
+        </div>
+        <div style="background: var(--nude-luxo); padding: 20px; border-radius: 4px;">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1000" style="width:100%; height:100%; object-fit:cover;" alt="Consultório">
+        </div>
+    </section>
+
+    <!-- MÉTODO -->
+    <section id="metodo" class="metodo">
+        <h2>Processo Terapêutico Estruturado</h2>
+        <div class="metodo-grid">
+            <div class="metodo-item">
+                <span>FASE 01</span>
+                <h3>Diagnóstico Profundo</h3>
+                <p>Mapeamento das estruturas emocionais e identificação das demandas centrais.</p>
+            </div>
+            <div class="metodo-item">
+                <span>FASE 02</span>
+                <h3>Plano de Ação</h3>
+                <p>Estabelecimento de metas terapêuticas com marcos de evolução claros.</p>
+            </div>
+            <div class="metodo-item">
+                <span>FASE 03</span>
+                <h3>Consolidação</h3>
+                <p>Aplicação de ferramentas de enfrentamento para autonomia e saúde mental perene.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="faq-container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Diretrizes de Atendimento</h2>
+            <details>
+                <summary>Como funcionam as sessões?</summary>
+                <p style="margin-top:20px;">Sessões de 50 minutos, semanais, pautadas pelo Código de Ética Profissional e sigilo absoluto.</p>
+            </details>
+            <details>
+                <summary>Atendimento Online é eficaz?</summary>
+                <p style="margin-top:20px;">Sim. Utilizamos plataformas criptografadas que garantem a mesma robustez e proximidade do consultório físico.</p>
+            </details>
+            <details>
+                <summary>Trabalha com convênios?</summary>
+                <p style="margin-top:20px;">Atendimento exclusivamente particular para garantir tempo e dedicação total a cada caso, com fornecimento de recibos para reembolso.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <h2>Decisão e Estrutura.</h2>
+        <p>A sua jornada de saúde mental começa com uma escolha profissional robusta.</p>
+        <a href="https://wa.me/5533998219444" class="btn-corporativo" style="background:var(--nude-luxo); color:var(--marrom-corporativo);">Agendar Consultoria Inicial</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Maria Clara <span>Silveira</span></div>
+                <p style="opacity:0.6;">Psicóloga Clínica - Especialista em Saúde Mental e Desenvolvimento Humano. Foco em ética e resultados clínicos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#areas">Áreas de Atuação</a></li>
+                    <li><a href="#metodo">Metodologia</a></li>
+                    <li><a href="https://wa.me/5533998219444">Falar com a Dra.</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Informações</h4>
+                <ul>
+                    <li>(33) 99821-9444</li>
+                    <li>CRP: 04/XXXXX</li>
+                    <li>Governador Valadares - MG</li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.1); margin-top:80px; padding-top:30px; text-align:center; font-size:0.8rem; opacity:0.5;">
+            &copy; 2024 Maria Clara Silveira. Design Premium para Profissionais da Saúde.
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5533998219444" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
