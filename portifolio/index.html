@@ -16,161 +16,217 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 
-    <style>
-        /* Ajuste para o botão Titanium no hover */
-.btn-titanium:hover span, 
-.btn-titanium:hover i {
-    color: #ffffff !important; /* Força a cor branca */
-    transition: color 0.3s ease; /* Deixa a mudança suave */
-}
-
-/* Caso o botão tenha um fundo que muda, garantimos que o texto se destaque */
-.btn-titanium:hover {
-    border-color: #ffffff; /* Opcional: muda a borda para branco também */
-}
-        /* Estilos específicos para a página de Portfólio */
-        .portfolio-page-hero {
-            padding: 180px 0 100px;
-            background: linear-gradient(to bottom, #09090b, #18181b);
-            text-align: center;
+   <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #09090b;
+            --zinc: #18181b;
+            --zinc-light: #a1a1aa;
         }
 
+        body { background-color: var(--dark); color: #fff; overflow-x: hidden; }
+
+        /* NAVBAR - FIX PARA MOBILE */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(9, 9, 11, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 12px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo { font-family: 'Cinzel', serif; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 2px; }
+        .logo span { color: var(--gold); }
+
+        .btn-home {
+            border: 1px solid var(--gold);
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+
+        .btn-home:hover { background: var(--gold); color: #000; }
+
+        /* HERO */
+        .portfolio-page-hero {
+            padding: 160px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at top, #18181b 0%, #09090b 100%);
+        }
+
+        .title-premium { font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 20px; }
+        .italic-gold { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); }
+
+        /* GRID E CARDS - SEM ZOOM E SEM CORTE */
         .portfolio-grid-detailed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
             padding-bottom: 100px;
         }
 
         .project-detail-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            transition: all 0.5s ease;
-            height: 100%;
             display: flex;
             flex-direction: column;
+            transition: 0.4s ease;
         }
 
         .project-detail-card:hover {
-            border-color: #d4af37;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.04);
         }
 
+        /* CONTAINER DA IMAGEM - SEM CORTES */
         .project-image-wrapper {
             position: relative;
-            height: 250px;
+            height: 280px; /* Altura fixa para manter o grid alinhado */
+            background: #000; /* Fundo preto para preencher caso a imagem seja menor */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px; /* Espaçamento interno para a imagem não encostar nas bordas */
             overflow: hidden;
         }
 
         .project-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain; /* GARANTE QUE A IMAGEM APAREÇA INTEIRA */
+            transition: none !important; /* RETIRA QUALQUER EFEITO DE ZOOM */
+            transform: none !important;
         }
 
-        .project-detail-card:hover .project-image-wrapper img {
-            transform: scale(1.1);
-        }
+        .project-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-tag { color: var(--gold); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+        .project-content h3 { font-family: 'Cinzel', serif; font-size: 1.3rem; margin-bottom: 15px; color: #fff; }
+        .project-description { font-size: 14px; color: var(--zinc-light); line-height: 1.6; margin-bottom: 20px; }
 
-        .project-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-tag {
-            color: #d4af37;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .project-content h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 22px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        .project-description {
-            font-size: 14px;
-            color: #a1a1aa;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-
-        .tech-badge {
-            font-size: 10px;
-            padding: 4px 10px;
-            background: rgba(212, 175, 55, 0.1);
-            color: #d4af37;
-            border-radius: 50px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
+        .tech-stack { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 25px; }
+        .tech-badge { font-size: 9px; padding: 4px 10px; background: rgba(212, 175, 55, 0.05); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 50px; }
 
         .btn-view-project {
             margin-top: auto;
+            background: var(--gold);
+            color: #000;
+            padding: 14px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 12px;
+            transition: 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px;
-            background: #d4af37;
-            color: #000;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 13px;
-            border-radius: 10px;
-            transition: 0.3s;
+            gap: 8px;
         }
 
-        .btn-view-project:hover {
-            background: #fff;
+        .btn-view-project:hover { background: #fff; }
+
+        /* CTA FINAL */
+        .btn-titanium {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: 0.3s;
         }
+        .btn-titanium:hover { background: var(--gold); color: #000 !important; }
+        .btn-titanium:hover i, .btn-titanium:hover span { color: #000 !important; }
+
+        @media (max-width: 480px) {
+            .portfolio-grid-detailed { grid-template-columns: 1fr; }
+            .project-image-wrapper { height: 220px; }
+            .title-premium { font-size: 2.2rem; }
+        }
+        /* O título principal */
+.title-premium {
+    font-size: 72px !important; /* Tamanho para Desktop */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* O parágrafo (descrição) */
+.portfolio-page-hero p {
+    font-size: 20px !important;
+    line-height: 1.8;
+}
+
+/* A tag dourada pequena acima do título */
+.tag-gold-fancy {
+    font-size: 16px !important;
+    letter-spacing: 4px !important;
+}
+
+/* Ajuste para telas de celular (não deixar gigante no telefone) */
+@media (max-width: 768px) {
+    .title-premium {
+        font-size: 38px !important;
+    }
+    .portfolio-page-hero p {
+        font-size: 18px !important;
+    }
+}
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR (MANTIDA) -->
- <nav class="navbar">
-    <div class="container nav-inner">
-        <!-- Logo: Melhor usar tag <a> para SEO do que apenas onclick -->
-        <a href="/" class="logo" style="text-decoration: none;">
-            <span>TRYWEBDESIGN</span>
-        </a>
-        
-        <div class="nav-links">
-            <!-- Correção: Adicionado o / para voltar à raiz ou https:// completo -->
-            <a href="/" class="btn-nav mag">PÁGINA PRINCIPAL</a>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo"><span>TRYWEBDESIGN</span></a>
+            <a href="/" class="btn-home"><i data-lucide="home"></i> PÁGINA INICIAL</a>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main>
-        <!-- HERO DO PORTFÓLIO -->
-        <section class="portfolio-page-hero">
-            <div class="container">
-                <span class="tag-gold-fancy reveal">PORTIFÓLIO</span>
-                <h1 class="title-premium reveal" style="color: #fff;">Projetos<span class="italic-gold">Desenvolvidos.</span></h1>
-                <p class="reveal" style="color: #a1a1aa; max-width: 700px; margin: 20px auto;">
-                    Explore nossa seleção de interfaces exclusivas, onde cada pixel é planejado para gerar autoridade e conversão.
-                </p>
-            </div>
-        </section>
+ <!-- HERO DO PORTFÓLIO -->
+<section class="portfolio-page-hero" style="padding: 180px 0 100px;">
+    <div class="container">
+        <!-- Aumentei de ~12px para 16px -->
+        <span class="tag-gold-fancy reveal" style="font-size: 16px; letter-spacing: 5px;">PORTFÓLIO</span>
+        
+        <!-- Aumentei o título para 72px (4.5rem) -->
+        <h1 class="title-premium reveal" style="color: #fff; font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1;">
+            Projetos <span class="italic-gold">Desenvolvidos.</span>
+        </h1>
+        
+        <!-- Aumentei o parágrafo de 16px para 20px -->
+        <p class="reveal" style="color: #a1a1aa; max-width: 800px; margin: 25px auto; font-size: 20px; line-height: 1.8;">
+            Explore nossa seleção de interfaces exclusivas, onde cada pixel é planejado para gerar autoridade e conversão.
+        </p>
+    </div>
+</section>
 
         <!-- GRID DETALHADA -->
         <section class="section-padding" style="background: #09090b;">
