@@ -381,7 +381,7 @@
 
     /* Card Apple Style (Totalmente Branco e Redondo) */
     #portfolio-premium .p-item {
-        min-width: 360px;
+        min-width: 500px;
         flex: 0 0 auto;
     }
 
@@ -645,22 +645,35 @@
     let currentScroll = 0;
 
     function movePortfolio(direction) {
-        const wrapper = document.getElementById('js-portfolio-wrapper');
-        const items = document.querySelectorAll('#portfolio-premium .p-item');
-        const gap = 30;
-        const itemWidth = items[0].offsetWidth + gap;
-        
-        const containerWidth = document.querySelector('#portfolio-premium .container-central').offsetWidth;
-        const maxScroll = (items.length * itemWidth) - containerWidth;
+    const wrapper = document.getElementById('js-portfolio-wrapper');
+    const items = document.querySelectorAll('#portfolio-premium .p-item');
+    const gap = 30;
+    const itemWidth = items[0].offsetWidth + gap;
+    
+    const containerWidth = document.querySelector('#portfolio-premium .container-central').offsetWidth;
+    // O scroll máximo permitido antes de sobrar espaço vazio
+    const maxScroll = (items.length * itemWidth) - containerWidth;
 
-        currentScroll -= (direction * itemWidth);
-
-        // Bloqueios de limite
-        if (currentScroll > 0) currentScroll = 0;
-        if (Math.abs(currentScroll) > maxScroll) currentScroll = -maxScroll;
-
-        wrapper.style.transform = `translateX(${currentScroll}px)`;
+    if (direction === 1) { // Indo para a DIREITA (Próximo)
+        // Se o scroll atual já é o limite (ou passou dele), volta ao início
+        if (Math.abs(currentScroll) >= maxScroll - 10) { 
+            currentScroll = 0;
+        } else {
+            currentScroll -= itemWidth;
+        }
+    } else { // Indo para a ESQUERDA (Anterior)
+        // Se está no início e clica em voltar, vai direto para o fim
+        if (currentScroll >= 0) {
+            currentScroll = -maxScroll;
+        } else {
+            currentScroll += itemWidth;
+        }
     }
+
+    // Aplica o movimento
+    wrapper.style.transform = `translateX(${currentScroll}px)`;
+}
+
 </script>
 
 
