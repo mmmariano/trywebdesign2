@@ -196,8 +196,10 @@
         <!-- HEADER -->
         <div class="section-header text-center">
             <span class="tag-gold reveal">ELEVANDO O PADRÃO</span>
-            <h2 class="title-premium reveal">Soluções Digitais para quem <br><span class="italic-gold">Domina o Mercado.</span></h2>
-            
+          <h2 class="title-premium reveal main-headline title-small">
+    Soluções Digitais para quem <br>
+    <span class="italic-gold">Domina o Mercado.</span>
+</h2> 
             <div class="google-alert reveal">
                 <div class="alert-content">
                     <i data-lucide="search"></i>
@@ -520,27 +522,116 @@
         scroll-snap-align: center; /* Garante a simetria: o card para no meio */
     }
 }
-</style>
+/* Cabeçalho Centralizado */
+.section-header-central {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
+/* Tag Dourada Fixa */
+.tag-gold-fixed {
+    color: #d4af37 !important; /* Dourado vibrante como você pediu */
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Título Centralizado */
+#portfolio-premium .title-premium {
+    color: #1d1d1f;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Container para posicionar as setas */
+.portfolio-slider-container {
+    position: relative;
+    padding: 0 60px; /* Espaço para as setas não ficarem em cima do conteúdo */
+}
+
+/* Botões Laterais Grandes */
+.nav-btn-side {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* Maiores */
+    height: 60px;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 50%;
+    color: #1d1d1f;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-btn-side i {
+    width: 30px; /* Ícone maior */
+    height: 30px;
+}
+
+.nav-btn-side.prev { left: 0; }
+.nav-btn-side.next { right: 0; }
+
+.nav-btn-side:hover {
+    background: #f5f5f7;
+    color: #d4af37;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Viewport com Fade nas pontas */
+#portfolio-premium .portfolio-slider-viewport {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+/* Ajuste Mobile para as setas não atrapalharem */
+@media (max-width: 768px) {
+    .portfolio-slider-container { padding: 0; }
+    .nav-btn-side { display: none; } /* No mobile Apple usa o dedo, não setas */
+    #portfolio-premium .portfolio-slider-viewport {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+</style>
 <section id="portfolio-premium">
     <div class="container-central">
         
-        <div class="section-header-flex">
-            <div class="header-left">
-                <span class="tag-gold">Trabalhos em Destaque</span>
-                <h2 class="title-premium">Portfólio <span class="italic-gold">Selecionado.</span></h2>
-            </div>
-            
-            <div class="portfolio-controls">
-                <button class="control-btn" onclick="movePortfolio(-1)"><i data-lucide="chevron-left"></i></button>
-                <button class="control-btn" onclick="movePortfolio(1)"><i data-lucide="chevron-right"></i></button>
-            </div>
+        <!-- Cabeçalho Centralizado -->
+        <div class="section-header-central">
+            <span class="tag-gold-fixed">Trabalhos em Destaque</span>
+            <h2 class="title-premium">Portfólio <span class="italic-gold">Selecionado.</span></h2>
         </div>
 
-        <div class="portfolio-slider-viewport">
-            <div class="portfolio-grid-wrapper" id="js-portfolio-wrapper">
-                
-                <!-- Projeto 01 -->
+        <!-- Container do Slider com Setas nas Laterais -->
+        <div class="portfolio-slider-container">
+            
+            <!-- Setas Grandes nas Laterais -->
+            <button class="nav-btn-side prev" onclick="movePortfolio(-1)" aria-label="Anterior">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="nav-btn-side next" onclick="movePortfolio(1)" aria-label="Próximo">
+                <i data-lucide="chevron-right"></i>
+            </button>
+
+            <div class="portfolio-slider-viewport">
+                <div class="portfolio-grid-wrapper" id="js-portfolio-wrapper">
+                      <!-- Projeto 01 -->
                 <div class="p-item">
                     <div class="p-card-v2">
                         <div class="p-image-box">
@@ -636,44 +727,44 @@
                     </div>
                 </div>
 
+
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-    let currentScroll = 0;
+  let currentScroll = 0;
 
-    function movePortfolio(direction) {
+function movePortfolio(direction) {
     const wrapper = document.getElementById('js-portfolio-wrapper');
     const items = document.querySelectorAll('#portfolio-premium .p-item');
+    if (!wrapper || items.length === 0) return;
+
     const gap = 30;
     const itemWidth = items[0].offsetWidth + gap;
     
-    const containerWidth = document.querySelector('#portfolio-premium .container-central').offsetWidth;
-    // O scroll máximo permitido antes de sobrar espaço vazio
-    const maxScroll = (items.length * itemWidth) - containerWidth;
+    // Calcula a largura visível do container centralizado
+    const viewport = document.querySelector('#portfolio-premium .portfolio-slider-viewport');
+    const maxScroll = (items.length * itemWidth) - viewport.offsetWidth;
 
     if (direction === 1) { // Indo para a DIREITA (Próximo)
-        // Se o scroll atual já é o limite (ou passou dele), volta ao início
         if (Math.abs(currentScroll) >= maxScroll - 10) { 
-            currentScroll = 0;
+            currentScroll = 0; // Volta ao início
         } else {
             currentScroll -= itemWidth;
         }
     } else { // Indo para a ESQUERDA (Anterior)
-        // Se está no início e clica em voltar, vai direto para o fim
         if (currentScroll >= 0) {
-            currentScroll = -maxScroll;
+            currentScroll = -maxScroll; // Vai para o fim
         } else {
             currentScroll += itemWidth;
         }
     }
 
-    // Aplica o movimento
     wrapper.style.transform = `translateX(${currentScroll}px)`;
 }
-
 </script>
 
 
@@ -683,13 +774,13 @@
     <div class="faq-bg-glow"></div>
     
     <div class="container relative z-10">
-        <div class="faq-header text-center" data-aos="fade-up">
-            <span class="tag-gold-fancy">INTELIGÊNCIA ESTRATÉGICA</span>
-            <h2 class="title-premium">
-    <span style="color: #ffffff;">Dúvidas</span> <span class="italic-gold">Frequentes.</span>
-</h2>
-            <div class="hero-divider"></div>
-        </div>
+        
+<div class="header-centralizado">
+    <!-- <span class="tag-gold reveal">INTELIGÊNCIA ESTRATÉGICA</span> -->
+    <h2 class="title-premium reveal main-headline title-small">
+        <span class="italic-gold">Dúvidas Frequentes.</span>
+    </h2>
+</div>
 
         <div class="faq-grid">
             

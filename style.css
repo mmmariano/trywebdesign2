@@ -1701,3 +1701,33 @@ details[open] .faq-question { color: var(--gold); }
 .btn-quote-premium:active {
     transform: scale(0.98);
 }
+/* Ajuste Fino: Diminui o tamanho sem afetar outras seções */
+.title-small {
+    /* Mínimo: 1.6rem | Ideal: 3.5vw | Máximo: 2.3rem */
+    font-size: clamp(1.6rem, 3.5vw, 2.3rem) !important; 
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.header-centralizado {
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column; /* Coloca a tag em cima e o título embaixo */
+    align-items: center;    /* Centraliza os itens no eixo horizontal */
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;    /* Espaço para o conteúdo que vem abaixo */
+}
+
+/* Garante que a tag dourada se comporte como um bloco centralizado */
+.header-centralizado .tag-gold {
+    display: inline-block;
+    margin: 0 auto 15px auto; /* Centraliza e dá espaço para o título */
+}
+
+/* Garante que o título não fique "preso" em uma largura lateral */
+.header-centralizado .title-premium {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Evita que o título fique largo demais em telas grandes */
+}
