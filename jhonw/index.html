@@ -3,1029 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TryWebDesign | Criação de Sites e Landing Pages Profissionais</title>
+    <title>John Moura | Joias de Luxo e Renovação</title>
     
-    <!-- Fontes Premium -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;1,400&family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <!-- Fontes Magníficas -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <!-- Bibliotecas -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- Biblioteca de Animação -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<!-- SEO Principal -->
-<meta name="description" content="TryWebDesign - Criação de sites de luxo, landing pages de alta conversão e sistemas sob medida em Maringá. Eleve sua soberania digital com engenharia de precisão.">
-<meta name="keywords" content="criação de sites, landing pages, e-commerce, identidade visual, web design premium, Maringá, SEO">
-<meta name="author" content="Mateus M. Mariano">
+    <style>
+        :root {
+            --dourado: #D4AF37;
+            --dourado-claro: #f1d592;
+            --preto: #000000;
+            --preto-suave: #111111;
+            --branco: #ffffff;
+        }
 
-<!-- Open Graph (Como seu site aparece quando compartilhado no WhatsApp/Instagram) -->
- <meta property="og:type" content="website">
-<meta property="og:title" content="TryWebDesign | Engenharia de Software e Estética Superior">
-<meta property="og:description" content="Transforme sua presença digital. Sites e Landing Pages que vendem e geram autoridade imediata.">
-<meta property="og:image" content="sitesinstitucionais.web"> 
-<meta property="og:url" content="https://www.trywebdesign.com.br">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--branco); font-family: 'Montserrat', sans-serif; color: var(--preto); overflow-x: hidden; }
 
+        /* --- ANIMAÇÃO DE BRILHO DOURADO --- */
+        .shimmer {
+            background: linear-gradient(to right, #bf953f 20%, #fcf6ba 40%, #b38728 60%, #fcf6ba 80%, #bf953f 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
 
-<!-- TALVES RETIRAR ISSO DAQUI -->
-<!-- TALVES RETIRAR ISSO DAQUI -->
-<!-- TALVES RETIRAR ISSO DAQUI -->
-<link rel="canonical" href="https://www.trywebdesign.com.br" />
-<!-- TALVES RETIRAR ISSO DAQUI -->
-<!-- TALVES RETIRAR ISSO DAQUI -->
-<!-- TALVES RETIRAR ISSO DAQUI -->
+        /* --- CABEÇALHO MONUMENTAL --- */
+        .mega-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #000 40%, #1a1a1a 100%);
+            padding: 0 5%;
+            color: white;
+            position: relative;
+        }
 
+        .hero-logo-area {
+            flex: 1.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .hero-logo-area img {
+            width: 90%;
+            max-width: 650px;
+            filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.4));
+            animation: float 6s ease-in-out infinite;
+        }
 
-<!-- Open Graph (Como seu site aparece quando compartilhado no WhatsApp/Instagram) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "TryWebDesign",
-  "image": "https://www.trywebdesign.com.br/favicon.png",
-  "@id": "",
-  "url": "https://www.trywebdesign.com.br",
-  "telephone": "+55-44-99976-1842",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "",
-    "addressLocality": "Maringá",
-    "addressRegion": "PR",
-    "postalCode": "87000-000",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -23.4209,
-    "longitude": -51.9331
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:00",
-    "closes": "18:00"
-  },
-  "sameAs": [
-    "https://www.instagram.com/try.web.design/",
-    "https://www.facebook.com/profile.php?id=61579022016363"
-  ]
-}
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
 
-</script>
+        .hero-text-area {
+            flex: 1;
+            padding-left: 50px;
+        }
 
+        .hero-text-area h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero-text-area p {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: #ddd;
+        }
+
+        /* --- SEÇÕES GERAIS --- */
+        .section { padding: 120px 10%; position: relative; }
+        .dark { background-color: var(--preto); color: white; }
+        .gold-bg { background: linear-gradient(45deg, #000, #1a1a1a); border-top: 2px solid var(--dourado); border-bottom: 2px solid var(--dourado); }
+
+        h2 { font-family: 'Cinzel', serif; font-size: 3.5rem; margin-bottom: 30px; text-align: center; }
+        .sub-titulo { text-align: center; font-size: 1.2rem; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 4px; color: var(--dourado); display: block; }
+
+        /* --- CARDS DE SERVIÇOS --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 50px;
+            border-radius: 20px;
+            transition: 0.5s;
+            text-align: center;
+        }
+
+        .glass-card:hover {
+            border-color: var(--dourado);
+            transform: translateY(-15px);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .glass-card h3 { font-size: 2rem; margin-bottom: 20px; color: var(--dourado); }
+        .glass-card p { font-size: 1.1rem; line-height: 1.8; color: #ccc; }
+
+        /* --- VITRINE DE IMAGENS --- */
+        .gallery-strip {
+            display: flex;
+            overflow: hidden;
+            height: 400px;
+            margin: 50px 0;
+        }
+
+        .gallery-strip img {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(70%);
+            transition: 0.8s;
+        }
+
+        .gallery-strip img:hover {
+            filter: grayscale(0%) brightness(100%);
+            width: 40%;
+        }
+
+        /* --- BOTÃO WHATSAPP --- */
+        .btn-lux {
+            background: linear-gradient(45deg, var(--dourado), var(--dourado-claro));
+            color: black;
+            padding: 25px 60px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.3rem;
+            display: inline-block;
+            transition: 0.5s;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+        }
+
+        .btn-lux:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
+        }
+
+        /* --- FOOTER --- */
+        footer { padding: 100px 10%; background: #000; color: white; text-align: center; border-top: 1px solid #222; }
+
+        .floating-zap {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #25d366;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .mega-hero { flex-direction: column; text-align: center; padding-top: 50px; }
+            .hero-text-area { padding-left: 0; margin-top: 40px; }
+            .hero-text-area h1 { font-size: 3rem; }
+            .gallery-strip { flex-wrap: wrap; height: auto; }
+            .gallery-strip img { width: 50%; height: 250px; }
+        }
+    </style>
 </head>
 <body>
 
-   <div class="video-container">
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="link-do-seu-video.mp4" type="video/mp4">
-    </video>
-    <div class="video-overlay"></div> <!-- Camada para o vídeo ficar suave -->
-</div>
+    <!-- 1. HEADER MONUMENTAL -->
+    <section class="mega-hero">
+        <div class="hero-logo-area" data-aos="zoom-out">
+            <img src="../logo.png" alt="John Moura Piercer">
+        </div>
+        <div class="hero-text-area" data-aos="fade-left">
+            <h1 class="shimmer">A Joia Perfeita <br>Para Você.</h1>
+            <p>O luxo do Ouro e do Titânio em peças exclusivas, feitas para brilhar no seu corpo e durar a vida inteira.</p>
+            <a href="https://wa.me/5561981725865" class="btn-lux">Quero ver o catálogo</a>
+        </div>
+    </section>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-inner">
-           <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="cursor: pointer;">
-    TRY<span>WEBDESIGN</span>
-</div>
-            <div class="nav-links">
-                <a href="#" class="mag">Início</a>
-                <a href="#sobre" class="mag">Sobre</a>
-                <a href="#servicos" class="mag">Serviços</a>
-                <a href="#portfolio-premium" class="mag">Portifólio</a>
-                <a href="#faq" class="mag">Dúvidas</a>
-                <a href="#contato" class="btn-nav mag">Fale Conosco</a>
+    <!-- 2. APRESENTAÇÃO -->
+    <section class="section">
+        <span class="sub-titulo">Beleza e Qualidade</span>
+        <h2 data-aos="fade-up">Muito mais que um acessório</h2>
+        <div class="grid-container">
+            <div class="glass-card" style="background: #f9f9f9; color: black;" data-aos="fade-up" data-aos-delay="100">
+                <h3>Estilo Único</h3>
+                <p>Nossas joias são escolhidas para destacar sua personalidade. Seja para o dia a dia ou para uma festa, você estará sempre radiante.</p>
+            </div>
+            <div class="glass-card" style="background: #f9f9f9; color: black;" data-aos="fade-up" data-aos-delay="200">
+                <h3>Conforto Total</h3>
+                <p>Usamos metais nobres que não causam alergia e não machucam sua pele. É luxo com bem-estar.</p>
+            </div>
+            <div class="glass-card" style="background: #f9f9f9; color: black;" data-aos="fade-up" data-aos-delay="300">
+                <h3>Durabilidade</h3>
+                <p>Peças que não descascam e não perdem a cor. O investimento certo para quem ama joias de verdade.</p>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main>
+    <!-- 3. VITRINE VISUAL -->
+    <div class="gallery-strip">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800" alt="Joia 1">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=800" alt="Joia 2">
+        <img src="https://images.unsplash.com/photo-1617114919297-3c8ddb01f599?q=80&w=800" alt="Joia 3">
+                   <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=800" alt="Joia 4">
 
-<section class="hero">
-
-    <div class="mouse-glow"></div>
-    
-    <!-- Linhas de Arquitetura -->
-    <div class="hero-lines">
-        <div class="v-line l"></div>
-        <div class="v-line r"></div>
     </div>
 
-    <div class="container hero-inner">
-        <!-- ESQUERDA: TEXTO -->
-        <div class="hero-content">
-            <span class="tag-gold-fancy">
-                <i data-lucide="shield-check"></i>
-                DESENVOLVIMENTO DE ALTA PERFORMANCE - WEB & MOBILE
-            </span>
-            
-            <h1 class="title-premium">
-                <span class="line-1">A Arte de Criar</span>
-                <span class="line-2 italic-gold">Sites Inesquecíveis.</span>
-                <p> </p>
-            </h1>
-            
-            <div class="hero-divider-left"></div> 
-          
-            <div class="cta-luxury-group">
-                <a href="queroumaprevia/" class="btn-titanium mag">
-                    <span>Iniciar Projeto</span>
-                    <i data-lucide="arrow-right"></i>
-                </a>
-                
-                <!--  <div class="status-pill glass">
-                    <div class="pulse-container">
-                        <span class="pulse-gold"></span>
-                        <span class="pulse-ring"></span>
-                    </div>
-                    <span class="status-text">On-line agora</span>
-                </div>-->
+    <!-- 4. MANUTENÇÃO (O CORAÇÃO DO SITE) -->
+    <section class="section dark gold-bg">
+        <span class="sub-titulo">Sua Joia Nova de Novo</span>
+        <h2 data-aos="fade-down">Serviços Especializados</h2>
+        <div class="grid-container">
+            <div class="glass-card" data-aos="flip-left">
+                <h3>Limpeza VIP</h3>
+                <p>Sua joia está opaca ou escura? Nossa limpeza retira toda a sujeira acumulada e devolve o brilho original em minutos.</p>
+            </div>
+            <div class="glass-card" data-aos="flip-left" data-aos-delay="100">
+                <h3>Ajustes e Soldas</h3>
+                <p>A corrente quebrou? O brinco entortou? Nós consertamos sua peça com ferramentas de alta precisão.</p>
+            </div>
+            <div class="glass-card" data-aos="flip-left" data-aos-delay="200">
+                <h3>Polimento Espelhado</h3>
+                <p>Removemos riscos e marcas de uso do metal, deixando a superfície lisinha e brilhante como um espelho.</p>
             </div>
         </div>
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="https://wa.me/5561981725865" class="btn-lux">Agendar Manutenção</a>
+        </div>
+    </section>
 
-        <!-- DIREITA: O MUNDO DIGITAL TRYWEBDESIGN -->
-        <div class="hero-visual">
-            <div class="world-system">
-                <div id="stars-galaxy" class="stars-container"></div>
-                <!-- 1. Órbita Externa (TRYWEBDESIGN Girando) -->
-                <div class="outer-brand-orbit">
-                    <svg viewBox="0 0 200 200">
-                        <path id="brandPath" d="M 100, 100 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" fill="none"></path>
-                        <text>
-                            <textPath xlink:href="#brandPath">
-                                TRYWEBDESIGN • TRYWEBDESIGN • TRYWEBDESIGN • TRYWEBDESIGN •
-                            </textPath>
-                        </text>
-                    </svg>
-                </div>
-
-                <!-- 2. O Globo Girando (Engenharia) -->
-                <div class="main-globe">
-                    <div class="globe-grid-animation"></div>
-                    <div class="globe-shadow"></div>
-                </div>
-                
-                <!-- 3. A Faixa Central (Marquee Invisível) -->
-                <div class="impact-marquee-banner">
-                    <div class="marquee-content">
-                        <span>NÃO DEIXE SUA EMPRESA INVISÍVEL NO MUNDO DIGITAL • </span>
-                        <span>NÃO DEIXE SUA EMPRESA INVISÍVEL NO MUNDO DIGITAL • </span>
-                    </div>
-                </div>
-
+    <!-- 5. POR QUE O OURO E O TITÂNIO? -->
+    <section class="section">
+        <h2 data-aos="fade-up">Materiais que Amamos</h2>
+        <div class="grid-container">
+            <div style="text-align: left;" data-aos="fade-right">
+                <h3 style="color: var(--dourado); font-size: 2.5rem; font-family: 'Cinzel';">Ouro 18K</h3>
+                <p style="font-size: 1.2rem; line-height: 2;">O clássico absoluto. Não oxida, não causa alergia e é um bem que você terá para o resto da vida. O brilho do ouro é inconfundível e eterno.</p>
+            </div>
+            <div style="text-align: left;" data-aos="fade-left">
+                <h3 style="color: var(--dourado); font-size: 2.5rem; font-family: 'Cinzel';">Titânio PVD</h3>
+                <p style="font-size: 1.2rem; line-height: 2;">O material do futuro. Extremamente leve e resistente. É a escolha perfeita para quem quer estilo com a segurança de um material cirúrgico.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ! ! ! ! S E R V I C O S ! ! ! ! !  -->
-
-<section class="services-premium section-padding" id="servicos">
-    <div class="container">
-        
-        <!-- HEADER -->
-        <div class="section-header text-center">
-            <span class="tag-gold reveal">ELEVANDO O PADRÃO</span>
-          <h2 class="title-premium reveal main-headline title-small">
-    Soluções Digitais para quem <br>
-    <span class="italic-gold">Domina o Mercado.</span>
-</h2> 
-            <div class="google-alert reveal">
-                <div class="alert-content">
-                    <i data-lucide="search"></i>
-                    <p> <!-- Ser invisível no Google é o erro mais caro do mercado. --><strong>Imagina não ser encontrado por seus clientes no Google ?</strong> Ser invisível digitalmente é o erro mais caro do mercado.</p>
-                </div>
+    <!-- 6. DEPOIMENTOS SIMPLES -->
+    <section class="section dark" style="background: #111;">
+        <h2 data-aos="fade-up">Quem usa, recomenda</h2>
+        <div class="grid-container">
+            <div style="font-style: italic; border-left: 4px solid var(--dourado); padding-left: 20px;">
+                <p>"Levei meu colar que estava preto e o John deixou ele brilhando como novo! Atendimento nota 10."</p>
+                <strong style="color: var(--dourado);">— Mariana S.</strong>
+            </div>
+            <div style="font-style: italic; border-left: 4px solid var(--dourado); padding-left: 20px;">
+                <p>"As joias são lindas demais. Comprei um piercing de ouro e não tiro mais por nada. Muito confortável."</p>
+                <strong style="color: var(--dourado);">— Fernanda L.</strong>
+            </div>
+            <div style="font-style: italic; border-left: 4px solid var(--dourado); padding-left: 20px;">
+                <p>"O melhor lugar de Brasília para cuidar das suas joias. Preço justo e trabalho impecável."</p>
+                <strong style="color: var(--dourado);">— Cláudia R.</strong>
             </div>
         </div>
+    </section>
 
-        <!-- GRID DE SERVIÇOS -->
-        <div class="services-visual-grid">
-            
-            <!-- 1. LANDING PAGES -->
-            <div class="s-card-visual reveal">
-                <img src="landingpages.webp" alt="Exemplo de Landing Page de alta conversão com design moderno e foco em vendas" class="bg-card-img" alt="Exemplo de Landing Page de alta conversão com design moderno e foco em vendas" >
-                <div class="shine-effect"></div>
-                <div class="glass-overlay">
-                    <div class="card-icon"><i data-lucide="zap"></i></div>
-                    <h3>Landing <span class="gold-txt">Pages</span></h3>
-                    <p>Páginas de alta conversão projetadas para transformar tráfego em lucro real.</p>
-                    <ul class="mini-features">
-                        <li>Foco em Vendas</li>
-                        <li>Carregamento < 1s</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 2. SITES INSTITUCIONAIS -->
-            <div class="s-card-visual reveal">
-                <img src="sitesinstitucionais.webp" alt="Sites Institucionais" class="bg-card-img" alt="Site institucional profissional para empresas que buscam autoridade e liderança no mercado digital" >
-                <div class="shine-effect"></div>
-                <div class="glass-overlay">
-                    <div class="card-icon"><i data-lucide="globe"></i></div>
-                    <h3>Sites <span class="gold-txt">Institucionais</span></h3>
-                    <p>Autoridade e presença digital sólida para empresas que buscam liderança.</p>
-                    <ul class="mini-features">
-                        <li>Design Exclusivo</li>
-                        <li>SEO Avançado</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 3. LOJAS VIRTUAIS -->
-            <div class="s-card-visual reveal">
-                <img src="criacao-de-loja-virtual.png" alt="Plataforma de E-commerce personalizada com checkout rápido e design de boutique online" class="bg-card-img">
-                <div class="shine-effect"></div>
-                <div class="glass-overlay">
-                    <div class="card-icon"><i data-lucide="shopping-bag"></i></div>
-                    <h3>Lojas <span class="gold-txt">Virtuais</span></h3>
-                    <p>Criação de e-commerce com meios de pagamento integrados e painel administrativo fácil de usar.</p>
-                    <ul class="mini-features">
-                        <li>Gestão de Estoque</li>
-                        <li>Pagamento Seguro</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 4. SISTEMAS WEB -->
-            <div class="s-card-visual reveal">
-                <img src="sistemasweb.webp" alt="Interface de sistema web personalizado com dashboard de gestão e automação de processos" class="bg-card-img">
-                <div class="shine-effect"></div>
-                <div class="glass-overlay">
-                    <div class="card-icon"><i data-lucide="cpu"></i></div>
-                    <h3>Sistemas <span class="gold-txt">Web</span></h3>
-                    <p>Engenharia de software personalizada para automatizar e escalar sua operação.</p>
-                    <ul class="mini-features">
-                        <li>Dashboards</li>
-                        <li>Automação</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 5. APLICATIVOS MOBILE -->
-            <div class="s-card-visual reveal">
-                <img src="appsmobile.png" alt="Desenvolvimento de aplicativos móveis iOS e Android com interface intuitiva e luxuosa" class="bg-card-img">
-                <div class="shine-effect"></div>
-                <div class="glass-overlay">
-                    <div class="card-icon"><i data-lucide="smartphone"></i></div>
-                    <h3>Apps <span class="gold-txt">Mobile</span></h3>
-                    <p>Sua marca no bolso do cliente com aplicativos nativos e intuitivos.</p>
-                    <ul class="mini-features">
-                        <li>iOS & Android</li>
-                        <li>UX Mobile-First</li>
-                    </ul>
-                </div>
-            </div>
-
-<!-- 6. BRANDING & IDENTIDADE VISUAL -->
-<div class="s-card-visual reveal">
-    <img src="criacao-identidade-visual-branding-luxo.png" alt="Criação de logotipo e manual de identidade visual de luxo para marcas de elite" class="bg-card-img">
-    <div class="shine-effect"></div>
-    <div class="glass-overlay">
-        <div class="card-icon"><i data-lucide="diamond"></i></div>
-        <h3>Identidade <span class="gold-txt">Visual</span></h3>
-        <p>Não criamos apenas logos. Criamos símbolos de poder que comandam respeito e desejo imediato.</p>
-        <ul class="mini-features">
-            <li>Design Atemporal</li>
-            <li>Posicionamento</li>
-        </ul>
-    </div>
-</div>
+    <!-- 7. FAQ - DÚVIDAS SIMPLES -->
+    <section class="section">
+        <h2 data-aos="fade-up">Dúvidas Comuns</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <details style="padding: 20px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                <summary style="font-weight: bold; font-size: 1.2rem;">Vocês atendem joias de qualquer marca?</summary>
+                <p style="padding-top: 10px;">Sim! Fazemos manutenção em qualquer joia, seja ela nossa ou de outra loja.</p>
+            </details>
+            <details style="padding: 20px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                <summary style="font-weight: bold; font-size: 1.2rem;">Quanto tempo demora a limpeza?</summary>
+                <p style="padding-top: 10px;">A limpeza profissional é rápida. Na maioria das vezes, você recebe sua peça brilhando no mesmo dia.</p>
+            </details>
+            <details style="padding: 20px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                <summary style="font-weight: bold; font-size: 1.2rem;">Onde fica o atendimento?</summary>
+                <p style="padding-top: 10px;">Atendemos em Brasília - DF, com hora marcada para te dar total atenção e segurança.</p>
+            </details>
         </div>
-    </div>
-     <div class="cta-wrapper reveal">
-            <a href="#contato" class="btn-quote-premium">
-                <div class="btn-content">
-                    <span>SOLICITAR UM ORÇAMENTO</span>
-                    <i data-lucide="chevron-right"></i>
-                </div>
-                <!-- Camadas de efeitos especiais -->
-                <div class="btn-shine"></div>
-                <div class="btn-aura"></div>
-            </a>
+    </section>
+
+    <!-- 8. CHAMADA FINAL GIGANTE -->
+    <section class="section dark" style="text-align: center; background: url('https://images.unsplash.com/photo-1588444837495-c6cfaf504670?q=80&w=1920') center; background-size: cover; padding: 150px 10%;">
+        <div style="background: rgba(0,0,0,0.7); padding: 50px; display: inline-block; border-radius: 20px;">
+            <h2 class="shimmer" style="font-size: 4rem;">Pronta para brilhar?</h2>
+            <p style="font-size: 1.5rem; margin-bottom: 40px;">Fale agora com o John e transforme seu visual com as melhores joias de Brasília.</p>
+            <a href="https://wa.me/5561981725865" class="btn-lux">Chamar no WhatsApp</a>
         </div>
+    </section>
 
-</section>
-
-<!-- DESIGN APPLE LIGHT - CLEAN, WHITE & SOPHISTICATED -->
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-    #portfolio-premium {
-        background-color: #f5f5f7; /* Background Apple Light */
-        padding: 100px 0;
-        overflow: hidden;
-        position: relative;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    #portfolio-premium .container-central {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 5px;
-    }
-
-    /* Cabeçalho Apple Light */
-    #portfolio-premium .section-header-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 50px;
-    }
-
-    #portfolio-premium .tag-gold {
-        color: #86868b; /* Cinza secundário Apple */
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        display: block;
-    }
-
-    #portfolio-premium .title-premium {
-        color: #1d1d1f; /* Grafite Apple (não é preto) */
-        font-size: clamp(2rem, 5vw, 2.8rem);
-        margin: 0;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-    }
-
-    #portfolio-premium .italic-gold {
-        color: #6e6e73;
-        font-style: normal;
-        font-weight: 400;
-    }
-
-    /* Viewport com Fade Suave nas laterais */
-    #portfolio-premium .portfolio-slider-viewport {
-        position: relative;
-        padding: 40px 0 60px 0;
-        /* Máscara de transparência para os cards não cortarem seco */
-        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-
-    #portfolio-premium .portfolio-grid-wrapper {
-        display: flex;
-        gap: 30px;
-        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Card Apple Style (Totalmente Branco e Redondo) */
-    #portfolio-premium .p-item {
-        min-width: 500px;
-        flex: 0 0 auto;
-    }
-
-    #portfolio-premium .p-card-v2 {
-        background: #ffffff;
-        border-radius: 30px; /* Cantos arredondados característicos */
-        position: relative;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.03);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    }
-
-    /* Hover Suave: Elevação e Sombra */
-    #portfolio-premium .p-card-v2:hover {
-        transform: scale(1.03);
-        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-        background: #ffffff;
-    }
-  #portfolio-premium .portfolio-controls {
-        display: none; /* Apple Style: No mobile, use apenas o deslize do dedo */
-    }
-    /* Box da Imagem */
-    #portfolio-premium .p-image-box {
-        width: 100%;
-        height: 200px;
-        background: #ffffff; /* Fundo branco para as imagens */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1px;
-    }
-
-    #portfolio-premium .p-img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain; /* NUNCA CORTA A IMAGEM */
-        transition: transform 0.8s ease;
-    }
-
-    /* Overlay Minimalista (Botão de Ação Azul Apple) */
-    #portfolio-premium .p-overlay-special {
-        position: absolute;
-        inset: 0;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(4px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: 0.4s;
-    }
-
-    #portfolio-premium .p-card-v2:hover .p-overlay-special {
-        opacity: 1;
-    }
-
-    #portfolio-premium .btn-visit {
-        padding: 14px 28px;
-        background: #0071e3; /* Azul Apple */
-        color: #ffffff;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        box-shadow: 0 4px 15px rgba(0, 113, 227, 0.3);
-        transition: transform 0.2s ease;
-    }
-
-    #portfolio-premium .btn-visit:hover {
-        background: #0077ed;
-        transform: scale(1.05);
-    }
-
-    /* Info do Projeto */
-    #portfolio-premium .p-info-v2 {
-        padding: 0px;
-        background: #fbfbfd; /* Cinza claríssimo */
-        border-top: 1px solid rgba(0, 0, 0, 0.03);
-    }
-
-    #portfolio-premium .p-info-v2 h3 {
-        color: #1d1d1f;
-        font-size: 1.2rem;
-        margin: 0 0 0px 0;
-        font-weight: 600;
-    }
-
-    #portfolio-premium .p-info-v2 span {
-        color: #86868b;
-        font-size: 0.8rem;
-        font-weight: 400;
-        text-transform: none;
-    }
-
-    /* Controles (Pílulas de Vidro) */
-    #portfolio-premium .portfolio-controls {
-        display: flex;
-        gap: 12px;
-    }
-
-    #portfolio-premium .control-btn {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        border: none;
-        background: #e8e8ed;
-        color: #1d1d1f;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-    }
-
-    #portfolio-premium .control-btn:hover {
-        background: #d2d2d7;
-    }
-/* Cabeçalho Centralizado */
-.section-header-central {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-/* Tag Dourada Fixa */
-.tag-gold-fixed {
-    color: #d4af37 !important; /* Dourado vibrante como você pediu */
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    display: block;
-}
-
-/* Título Centralizado */
-#portfolio-premium .title-premium {
-    color: #1d1d1f;
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    margin: 0 auto;
-    font-weight: 600;
-    text-align: center;
-}
-
-/* Container para posicionar as setas */
-.portfolio-slider-container {
-    position: relative;
-    padding: 0 60px; /* Espaço para as setas não ficarem em cima do conteúdo */
-}
-
-/* Botões Laterais Grandes */
-.nav-btn-side {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px; /* Maiores */
-    height: 60px;
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 50%;
-    color: #1d1d1f;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.nav-btn-side i {
-    width: 30px; /* Ícone maior */
-    height: 30px;
-}
-
-.nav-btn-side.prev { left: 0; }
-.nav-btn-side.next { right: 0; }
-
-.nav-btn-side:hover {
-    background: #f5f5f7;
-    color: #d4af37;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
-}
-
-/* Viewport com Fade nas pontas */
-#portfolio-premium .portfolio-slider-viewport {
-    position: relative;
-    overflow: hidden;
-    padding: 00px 0;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-}
-
-/* Ajuste Mobile para as setas não atrapalharem */
-@media (max-width: 768px) {
-    .portfolio-slider-container { padding: 0; }
-    .nav-btn-side { display: none; } /* No mobile Apple usa o dedo, não setas */
-    #portfolio-premium .portfolio-slider-viewport {
-        overflow-x: auto;
-        -webkit-mask-image: none;
-        mask-image: none;
-    }
-     #portfolio-premium .p-item {
-        /* No mobile, deixamos o card com quase a largura total da tela */
-        min-width: 85vw; /* 85% da largura da tela, permitindo ver um pedaço do próximo card */
-        flex: 0 0 auto;
-    }
-}
-
-</style>
-<section id="portfolio-premium">
-    <div class="container-central">
-        
-        <!-- Cabeçalho Centralizado -->
-        <div class="section-header-central">
-            <span class="tag-gold-fixed">Trabalhos em Destaque</span>
-            <h2 class="title-premium">Portfólio <span class="italic-gold">Selecionado.</span></h2>
+    <!-- RODAPÉ -->
+    <footer>
+        <h2 style="font-size: 2rem; color: var(--dourado);">John Moura Piercer</h2>
+        <p>Especialista em Joias e Cuidados de Luxo</p>
+        <p style="margin-top: 20px;">Brasília - DF | (61) 98172-5865</p>
+        <div style="margin-top: 30px;">
+            <a href="https://www.instagram.com/johnmoura.piercer" target="_blank" style="color: var(--dourado); text-decoration: none; margin: 0 10px;">Instagram</a>
+            <a href="#" style="color: var(--dourado); text-decoration: none; margin: 0 10px;">Facebook</a>
         </div>
+        <p style="margin-top: 50px; opacity: 0.3; font-size: 0.8rem;">&copy; 2024 John Moura. Todos os direitos reservados.</p>
+    </footer>
 
-        <!-- Container do Slider com Setas nas Laterais -->
-        <div class="portfolio-slider-container">
-            
-            <!-- Setas Grandes nas Laterais -->
-            <button class="nav-btn-side prev" onclick="movePortfolio(-1)" aria-label="Anterior">
-                <i data-lucide="chevron-left"></i>
-            </button>
-            <button class="nav-btn-side next" onclick="movePortfolio(1)" aria-label="Próximo">
-                <i data-lucide="chevron-right"></i>
-            </button>
-
-            <div class="portfolio-slider-viewport">
-                <div class="portfolio-grid-wrapper" id="js-portfolio-wrapper">
-                      <!-- Projeto 01 -->
-                <div class="p-item">
-                    <div class="p-card-v2">
-                        <div class="p-image-box">
-                            <img src="solarportifolio.webp" alt="Solar São Paulo" class="p-img">
-                            <div class="p-overlay-special">
-                                <a href="https://www.solarsaopaulo.com" target="_blank" class="btn-visit">Explorar Projeto</a>
-                            </div>
-                        </div>
-                        <div class="p-info-v2">
-                            <h3>Solar São Paulo</h3>
-                            <span>Engenharia & Energia</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 02 -->
-                <div class="p-item">
-                    <div class="p-card-v2">
-                        <div class="p-image-box">
-                            <img src="flaviaportifolio.webp" alt="Flavia Cavalcante" class="p-img">
-                            <div class="p-overlay-special">
-                                <a href="https://www.flaviacavalcante.com.br" target="_blank" class="btn-visit">Explorar Projeto</a>
-                            </div>
-                        </div>
-                        <div class="p-info-v2">
-                            <h3>Flavia Cavalcante</h3>
-                            <span>Tattoo & Art Artística</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 03 -->
-                <div class="p-item">
-                    <div class="p-card-v2">
-                        <div class="p-image-box">
-                            <img src="imaportifolio.webp" alt="I.M.A Soluções" class="p-img">
-                            <div class="p-overlay-special">
-                                <a href="https://www.ima-marketing-digital.com.br" target="_blank" class="btn-visit">Explorar Projeto</a>
-                            </div>
-                        </div>
-                        <div class="p-info-v2">
-                            <h3>I.M.A Soluções</h3>
-                            <span>Marketing Estratégico Digital</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 04 -->
-                <div class="p-item">
-                    <div class="p-card-v2">
-                        <div class="p-image-box">
-                            <img src="vrindaportifolio.webp" alt="Vrinda Bhumi" class="p-img">
-                            <div class="p-overlay-special">
-                                <a href="https://www.vrindabhumi.org" target="_blank" class="btn-visit">Explorar Projeto</a>
-                            </div>
-                        </div>
-                        <div class="p-info-v2">
-                            <h3>Vrinda Bhumi</h3>
-                            <span>Ecosistema Yoga & Retiro</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 05 -->
-                <div class="p-item">
-                    <div class="p-card-v2">
-                        <div class="p-image-box">
-                            <img src="karinaportifolio.webp" alt="Psicóloga Karina" class="p-img">
-                            <div class="p-overlay-special">
-                                <a href="https://www.psikarina.com.br" target="_blank" class="btn-visit">Explorar Projeto</a>
-                            </div>
-                        </div>
-                        <div class="p-info-v2">
-                            <h3>Psicóloga Karina</h3>
-                            <span>Desenvolvimento Humano</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 06 -->
-                <div class="p-item">
-                    <div class="p-card-v2">
-                        <div class="p-image-box">
-                            <img src="paolaportifolio.webp" alt="Psicóloga Paola Barbosa" class="p-img">
-                            <div class="p-overlay-special">
-                                <a href="https://www.psicologapaolabarbosa.com.br" target="_blank" class="btn-visit">Explorar Projeto</a>
-                            </div>
-                        </div>
-                        <div class="p-info-v2">
-                            <h3>Psicóloga Paola Barbosa</h3>
-                            <span>Saúde Mental & Clínica</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-  let currentScroll = 0;
-
-function movePortfolio(direction) {
-    const wrapper = document.getElementById('js-portfolio-wrapper');
-    const items = document.querySelectorAll('#portfolio-premium .p-item');
-    if (!wrapper || items.length === 0) return;
-
-    const gap = 30;
-    const itemWidth = items[0].offsetWidth + gap;
-    
-    // Calcula a largura visível do container centralizado
-    const viewport = document.querySelector('#portfolio-premium .portfolio-slider-viewport');
-    const maxScroll = (items.length * itemWidth) - viewport.offsetWidth;
-
-    if (direction === 1) { // Indo para a DIREITA (Próximo)
-        if (Math.abs(currentScroll) >= maxScroll - 10) { 
-            currentScroll = 0; // Volta ao início
-        } else {
-            currentScroll -= itemWidth;
-        }
-    } else { // Indo para a ESQUERDA (Anterior)
-        if (currentScroll >= 0) {
-            currentScroll = -maxScroll; // Vai para o fim
-        } else {
-            currentScroll += itemWidth;
-        }
-    }
-
-    wrapper.style.transform = `translateX(${currentScroll}px)`;
-}
-</script>
-
-
-<!-- SEÇÃO FAQ: INTELIGÊNCIA E ESTRATÉGIA -->
-<section id="faq" class="faq-luxury">
-    <!-- Efeito Especial: Partículas de Luz ao Fundo -->
-    <div class="faq-bg-glow"></div>
-    
-    <div class="container relative z-10">
-        
-<div class="header-centralizado">
-    <!-- <span class="tag-gold reveal">INTELIGÊNCIA ESTRATÉGICA</span> -->
-    <h2 class="title-premium reveal main-headline title-small">
-        <span class="italic-gold">Dúvidas Frequentes.</span>
-    </h2>
-</div>
-
-        <div class="faq-grid">
-            
-            <!-- Pergunta 01 -->
-            <div class="faq-item" data-aos="fade-up">
-                <details>
-                    <summary>
-                        <span class="faq-number">01</span>
-                        <span class="faq-question">O que define a Soberania Digital?</span>
-                        <div class="faq-icon"></div>
-                    </summary>
-                    <div class="faq-content">
-                        <p>É o domínio absoluto da sua marca sobre a concorrência. Não entregamos apenas um site, mas um <strong>ecossistema de alta performance</strong> que projeta autoridade imediata, carregamento instantâneo e design editorial que converte visitantes em clientes de alto ticket.</p>
-                    </div>
-                </details>
-            </div>
-
-            <!-- Pergunta 02 -->
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                <details>
-                    <summary>
-                        <span class="faq-number">02</span>
-                        <span class="faq-question">Por que não usar templates prontos?</span>
-                        <div class="faq-icon"></div>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Templates limitam sua marca e prejudicam o SEO. Nossa engenharia é <strong>Hand-Coded</strong>: código limpo, exclusivo e otimizado para os algoritmos do Google. Se sua marca é única, seu código também deve ser.</p>
-                    </div>
-                </details>
-            </div>
-
-            <!-- Pergunta 03 -->
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <details>
-                    <summary>
-                        <span class="faq-number">03</span>
-                        <span class="faq-question">Como funciona a Gestão de Tráfego Pago?</span>
-                        <div class="faq-icon"></div>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Focamos no <strong>Fundo de Funil</strong>. Utilizamos Google Ads e Meta Ads para conectar sua interface com pessoas que já possuem intenção de compra e poder aquisitivo para o seu serviço. É precisão matemática aplicada ao lucro.</p>
-                    </div>
-                </details>
-            </div>
-
-            <!-- Pergunta 04 -->
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <details>
-                    <summary>
-                        <span class="faq-number">04</span>
-                        <span class="faq-question">O site terá suporte após a entrega?</span>
-                        <div class="faq-icon"></div>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Sim. Oferecemos o <strong>Selo de Governança Digital</strong>, que inclui monitoramento de performance, segurança contra ataques e atualizações estruturais para manter sua plataforma sempre no topo.</p>
-                    </div>
-                </details>
-            </div>
-
-            <!-- Pergunta 05 -->
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <details>
-                    <summary>
-                        <span class="faq-number">05</span>
-                        <span class="faq-question">Qual o investimento para um projeto personalizado?</span>
-                        <div class="faq-icon"></div>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Cada projeto é uma peça de engenharia única. O investimento é calculado com base na complexidade das automações e no nível de exclusividade visual solicitado. O foco não é o custo, mas o <strong>ROI (Retorno sobre Investimento)</strong> gerado pela nova autoridade da marca.</p>
-                    </div>
-                </details>
-            </div>
-
-        </div>
-<div class="faq-footer">
-    <p style="color: #f8f6f6; font-size: 12px; letter-spacing: 4px; margin-bottom: 20px;">
-        Ainda tem dúvidas?
-    </p>
-    
-    <a href="https://wa.me/5544999761842" class="btn-special-effect mag">
-        <div class="btn-content">
-            <span>Falar com o Especialista</span>
-            <i data-lucide="zap" class="zap-icon" style="margin-left: 10px;"></i>
-        </div>
-        <div class="flare"></div>
-    </a>
-</div>
-    </div>
-</section>
-  <!-- SESSAO DE CONTATO -->
-       <section class="final-conversion section-padding" id="contato">
-    <div class="container conversion-grid">
-        
-        <!-- LADO ESQUERDO: O ESPECIALISTA (DESIGN EDITORIAL) -->
-        <div class="specialist-side reveal" id="sobre">
-            <div class="image-stack">
-                <div class="gold-layer"></div>
-                <!-- Garante que o nome do arquivo esteja exato -->
-                <img src="foto_perfil_mateus.jpeg" alt="Mateus Maranho Mariano, Web Designer e Analista de Sistemas da TryWebDesign" class="main-profile-img">
-                <div class="titanium-stamp">WEB DESIGNER</div>
-            </div>
-            
-            <div class="specialist-info">
-                <span class="logic-tag">WEB DESIGNER & ANALISTA DE SISTEMA</span>
-                <h2 class="cinzel-title">Mateus M. Mariano</h2>
-                <p class="bio-short">Com trajetória iniciada aos 12 anos de idade e graduado em Análise e Desenvolvimento de Sistemas, encaro cada projeto como um desafio único. Unindo décadas de experiência técnica a uma visão estética apurada, meu objetivo é posicionar sua marca no topo do mercado digital.</p>
-                
-                <div class="contact-footer">
-                    <a href="https://wa.me/5544999761842" class="contact-link mag">
-                        <i data-lucide="message-circle"></i> (44) 99976-1842
-                    </a>
-                    <a href="mailto:atendimentotrywebdesign@gmail.com" class="contact-link mag">
-                        <i data-lucide="mail"></i> atendimentotrywebdesign@gmail.com
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- LADO DIREITO: O MÓDULO DE BRIEFING -->
-        <div class="briefing-side reveal">
-            <div class="glass-card" id="form-container">
-                <div class="card-header">
-                    <h3>Entre em contato</h3>
-                    <div class="gold-line-short"></div>
-                </div>
-
-                <form id="pro-form" class="pro-form">
-                    <input type="hidden" name="access_key" value="0b16ed46-9c5c-4f5b-b192-89c76fce3640">
-                    
-                    <div class="field">
-                        <input type="text" name="name" placeholder="Seu nome ou marca">
-                    </div>
-                    
-                    <div class="field">
-                        <input type="text" name="contact" placeholder="WhatsApp ou E-mail">
-                    </div>
-                    
-                    <div class="field">
-                        <textarea name="message" placeholder="Descreva brevemente sua visão..." rows="3"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit-luxury mag" id="btn-text">
-                        <span>ENVIAR SOLICITAÇÃO</span>
-                        <i data-lucide="chevron-right"></i>
-                    </button>
-                </form>
-
-                <!-- ESTADO DE SUCESSO (OCULTO) -->
-                <div id="success-box" class="success-wrap" style="display: none;">
-                    <div class="success-icon">
-                        <div class="ring"></div>
-                        <i data-lucide="check"></i>
-                    </div>
-                    <h4>Contato Recebido</h4>
-                    <p>Sua marca acaba de dar o primeiro passo para a soberania digital.</p>
-                    <div class="success-details">
-                        <span>Retorno em até 24h</span>
-                        <div class="small-divider"></div>
-                        <a href="https://wa.me/5544999761842" class="direct-wa">Acelerar pelo WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-    </main>
-
-<footer class="footer-premium">
-    <div class="footer-glow"></div> <!-- Brilho sutil de fundo -->
-    
-    <div class="container footer-grid">
-        <!-- COLUNA 1: BRANDING -->
-        <div class="footer-brand">
-            <div class="logo-premium">TRY<span>WEBDESIGN</span></div>
-            <p class="brand-pitch">Engenharia de precisão para marcas que não aceitam o comum. Construindo a soberania digital através do design editorial e sistemas robustos.</p>
-            <div class="social-links">
-             <div class="flex gap-8 items-center">
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/try.web.design/" target="_blank" 
-       class="text-zinc-500 hover:text-gold transition-all duration-300 transform hover:scale-120" 
-       aria-label="Instagram">
-        <i data-lucide="instagram" class="w-6 h-6"></i>
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5561981725865" class="floating-zap" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Zap" width="40">
     </a>
 
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/profile.php?id=61579022016363" target="_blank" 
-       class="text-zinc-500 hover:text-gold transition-all duration-300 transform hover:scale-120" 
-       aria-label="Facebook">
-        <i data-lucide="facebook" class="w-6 h-6"></i>
-    </a>
-</div>
-
-<!-- Script necessário para carregar os ícones (caso não tenha no seu rodapé) -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
-            </div>
-        </div>
-
-        <!-- COLUNA 2: NAVEGAÇÃO -->
-        <div class="footer-nav">
-            <h4>Navegação</h4>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Orçamento</a></li>
-            </ul>
-        </div>
-
-        <!-- COLUNA 3: ESPECIALIDADES -->
-        <div class="footer-nav">
-            <h4>Soluções</h4>
-            <ul>
-                <li>Landing Pages High-End</li>
-                <li>Sistemas Web</li>
-                <li>Identidade Visual</li>
-                <li>Otimização SEO</li>
-            </ul>
-        </div>
-
-        <!-- COLUNA 4: LOCALIZAÇÃO/CONTATO -->
-        <div class="footer-contact">
-            <h4>Localização</h4>
-            <p><i data-lucide="map-pin"></i> Maringá - PR | Brasil</p>
-            <div class="status-badge">
-                <span class="dot"></span>Disponível para novos projetos
-            </div>
-        </div>
-    </div>
-
-    <!-- BARRA INFERIOR (COPYRIGHT) -->
-    <div class="footer-bottom">
-        <div class="container bottom-inner">
-            <p>© 2025 TRYWEBDESIGN. Todos os direitos reservados.</p>
-            <div class="legal-links">
-                <!-- <a href="#">Privacidade</a>-->
-                <!--<span class="divider">|</span>
-                <p>Designed by <strong>TryWebDesign</strong></p>-->
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-
-<!-- Botão WhatsApp Premium com Ícone Oficial e Mensagem -->
-<a href="https://wa.me/5544999761842?text=Olá%20TryWebDesign,%20quero%20um%20atendimento."  aria-label="Chamar no WhatsApp" class="whatsapp-luxury-btn" target="_blank" rel="noopener noreferrer">
-    <div class="wa-content">
-        <!-- ÍCONE OFICIAL WHATSAPP -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#d4af37" class="wa-icon-official">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 0 5.414 0 12.05c0 2.123.552 4.197 1.602 6.02L0 24l6.137-1.611a11.774 11.774 0 005.908 1.573h.005c6.634 0 12.05-5.414 12.05-12.05 0-3.217-1.252-6.242-3.525-8.514z"/>
-        </svg>
-        <span class="wa-text">Solicitar Atendimento</span>
-    </div>
-</a>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
-
 </html>
