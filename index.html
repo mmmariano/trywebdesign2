@@ -657,6 +657,33 @@
         -webkit-mask-image: none !important;
         mask-image: none !important;
     }
+      /* 1. Reset de Proporção: Isso impede que a caixa seja "achatada" */
+    #portfolio-premium .p-image-box {
+        height: 380px !important;   /* Aumentamos a altura da caixa branca */
+        aspect-ratio: auto !important; /* Mata a proporção horizontal do PC */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px !important;
+        background: #ffffff !important;
+    }
+
+    /* 2. Forçar a imagem a aparecer inteira (Sem Zoom e Sem Corte) */
+    #portfolio-premium .p-img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important; /* A regra de ouro: Encaixa sem cortar */
+        display: block !important;
+        transform: none !important; /* Remove qualquer zoom que tenha sobrado */
+    }
+
+    /* 3. Ajuste do Card para não ficar muito magro */
+    #portfolio-premium .p-item {
+        min-width: 310px !important; 
+        padding: 0 10px !important;
+    }
 }
 </style>
 <section id="portfolio-premium">
