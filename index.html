@@ -102,7 +102,7 @@
                 <a href="#" class="mag">Início</a>
                 <a href="#sobre" class="mag">Sobre</a>
                 <a href="#servicos" class="mag">Serviços</a>
-                <a href="#portfolio" class="mag">Portifólio</a>
+                <a href="#portfolio-premium" class="mag">Portifólio</a>
                 <a href="#faq" class="mag">Dúvidas</a>
                 <a href="#contato" class="btn-nav mag">Fale Conosco</a>
             </div>
@@ -313,6 +313,7 @@
         </div>
 
 </section>
+
 <!-- DESIGN APPLE LIGHT - CLEAN, WHITE & SOPHISTICATED -->
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
@@ -400,16 +401,18 @@
         box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
         background: #ffffff;
     }
-
+  #portfolio-premium .portfolio-controls {
+        display: none; /* Apple Style: No mobile, use apenas o deslize do dedo */
+    }
     /* Box da Imagem */
     #portfolio-premium .p-image-box {
         width: 100%;
-        height: 400px;
+        height: 260px;
         background: #ffffff; /* Fundo branco para as imagens */
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 30px;
+        padding: 15px;
     }
 
     #portfolio-premium .p-img {
@@ -497,14 +500,26 @@
     #portfolio-premium .control-btn:hover {
         background: #d2d2d7;
     }
-
-    @media (max-width: 768px) {
-        #portfolio-premium .p-item { min-width: 85vw; }
-        #portfolio-premium .portfolio-slider-viewport {
-            -webkit-mask-image: none;
-            mask-image: none;
-        }
+@media (max-width: 768px) {
+    /* Diminua o respiro lateral do container para ganhar espaço */
+    #portfolio-premium .container-central { 
+        padding: 0 20px; 
     }
+
+    /* Permita que o dedo arraste os cards (Scroll Nativo) */
+    #portfolio-premium .portfolio-slider-viewport {
+        overflow-x: auto; /* Habilita o arrastar com o dedo */
+        scroll-snap-type: x mandatory; /* Faz o card "travar" no centro */
+        -webkit-mask-image: none; /* Remova o fade no mobile para evitar bugs de visão */
+        mask-image: none;
+    }
+
+    /* Ajuste o tamanho do card para ele não ocupar a tela toda */
+    #portfolio-premium .p-item { 
+        min-width: 280px; /* Um tamanho que cabe em qualquer celular */
+        scroll-snap-align: center; /* Garante a simetria: o card para no meio */
+    }
+}
 </style>
 
 <section id="portfolio-premium">
@@ -647,6 +662,8 @@
         wrapper.style.transform = `translateX(${currentScroll}px)`;
     }
 </script>
+
+
 <!-- SEÇÃO FAQ: INTELIGÊNCIA E ESTRATÉGIA -->
 <section id="faq" class="faq-luxury">
     <!-- Efeito Especial: Partículas de Luz ao Fundo -->
@@ -920,4 +937,5 @@
     </div>
 </a>
 </body>
+
 </html>
