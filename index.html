@@ -415,9 +415,6 @@
         align-items: center;
         justify-content: center;
         padding: 15px;
-         max-width: 95% !important;
-        max-height: 95% !important;
-        object-fit: contain !important; /* Isso impede o corte da imagem */
     }
 
     #portfolio-premium .p-img {
@@ -425,7 +422,6 @@
         max-height: 100%;
         object-fit: contain; /* NUNCA CORTA A IMAGEM */
         transition: transform 0.8s ease;
-        min-width: 300px !important; 
     }
 
     /* Overlay Minimalista (Botão de Ação Azul Apple) */
@@ -582,107 +578,14 @@
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
-/* --- CORREÇÃO MOBILE PORTFÓLIO (APPLE STYLE) --- */
+/* Ajuste Mobile para as setas não atrapalharem */
 @media (max-width: 768px) {
-    /* 1. Reduz o espaço gigante no topo e embaixo da seção */
-    #portfolio-premium { 
-        padding: 40px 0 !important; 
-    }
-
-    /* 2. Centraliza o cabeçalho e ajusta tamanhos */
-    .section-header-central {
-        margin-bottom: 30px;
-        padding: 0 20px;
-    }
-
-    #portfolio-premium .title-premium {
-        font-size: 1.8rem !important;
-        text-align: center;
-    }
-
-    /* 3. Ajusta o container para não ter recuo exagerado */
-    #portfolio-premium .container-central { 
-        padding: 0 !important; /* Tiramos o padding lateral para o card respirar */
-    }
-
-    /* 4. TRANSFORMA O SLIDER EM ARRASTE DE DEDO (SNAP) */
+    .portfolio-slider-container { padding: 0; }
+    .nav-btn-side { display: none; } /* No mobile Apple usa o dedo, não setas */
     #portfolio-premium .portfolio-slider-viewport {
-        overflow-x: auto !important; /* Habilita o arrastar */
-        scroll-snap-type: x mandatory; /* Faz o card prender no centro */
-        -webkit-overflow-scrolling: touch; /* Suavidade no iPhone */
-        padding: 20px 0 40px 0;
-        display: flex;
-        scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
-    }
-
-    #portfolio-premium .portfolio-slider-viewport::-webkit-scrollbar {
-        display: none; /* Esconde a barra de rolagem no Chrome/Safari */
-    }
-
-    /* 5. AJUSTA O CARD PARA CABER NA TELA */
-    #portfolio-premium .portfolio-grid-wrapper {
-        gap: 15px; /* Menos espaço entre os cards no celular */
-        padding: 0 20px; /* Dá um respiro inicial para o primeiro card */
-    }
-
-    #portfolio-premium .p-item { 
-        min-width: 80vw !important; /* Card ocupa 80% da largura da tela */
-        max-width: 300px;
-        scroll-snap-align: center; /* MÁGICA: O card para sempre no meio */
-    }
-
-     /* Aumente este valor (ex: de 200px para 300px) */
-    #portfolio-premium .p-image-box {
-        height: 280px !important; /* Teste 280px ou 300px até ficar perfeito */
-        padding: 10px !important;
-    }
-
-
-    /* 7. AJUSTA O TEXTO DO CARD */
-    #portfolio-premium .p-info-v2 {
-        padding: 15px !important;
-    }
-
-    #portfolio-premium .p-info-v2 h3 {
-        font-size: 1rem !important;
-    }
-
-    /* 8. ESCONDE AS SETAS NO CELULAR */
-    .nav-btn-side {
-        display: none !important;
-    }
-
-    /* 9. REMOVE O FADE (MÁSCARA) NO MOBILE */
-    #portfolio-premium .portfolio-slider-viewport {
-        -webkit-mask-image: none !important;
-        mask-image: none !important;
-    }
-      /* 1. Reset de Proporção: Isso impede que a caixa seja "achatada" */
-    #portfolio-premium .p-image-box {
-        height: 380px !important;   /* Aumentamos a altura da caixa branca */
-        aspect-ratio: auto !important; /* Mata a proporção horizontal do PC */
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 10px !important;
-        background: #ffffff !important;
-    }
-
-    /* 2. Forçar a imagem a aparecer inteira (Sem Zoom e Sem Corte) */
-    #portfolio-premium .p-img {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        object-fit: contain !important; /* A regra de ouro: Encaixa sem cortar */
-        display: block !important;
-        transform: none !important; /* Remove qualquer zoom que tenha sobrado */
-    }
-
-    /* 3. Ajuste do Card para não ficar muito magro */
-    #portfolio-premium .p-item {
-        min-width: 310px !important; 
-        padding: 0 10px !important;
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 }
 </style>
