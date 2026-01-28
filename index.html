@@ -415,6 +415,9 @@
         align-items: center;
         justify-content: center;
         padding: 15px;
+         max-width: 95% !important;
+        max-height: 95% !important;
+        object-fit: contain !important; /* Isso impede o corte da imagem */
     }
 
     #portfolio-premium .p-img {
@@ -422,6 +425,7 @@
         max-height: 100%;
         object-fit: contain; /* NUNCA CORTA A IMAGEM */
         transition: transform 0.8s ease;
+        min-width: 300px !important; 
     }
 
     /* Overlay Minimalista (Botão de Ação Azul Apple) */
@@ -577,6 +581,7 @@
     -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
+
 /* --- CORREÇÃO MOBILE PORTFÓLIO (APPLE STYLE) --- */
 @media (max-width: 768px) {
     /* 1. Reduz o espaço gigante no topo e embaixo da seção */
@@ -626,10 +631,12 @@
         scroll-snap-align: center; /* MÁGICA: O card para sempre no meio */
     }
 
-    /* 6. REDUZ A ALTURA DA CAIXA BRANCA (Simetria) */
+     /* Aumente este valor (ex: de 200px para 300px) */
     #portfolio-premium .p-image-box {
-        height: 200px !important; /* Imagem menor para não ocupar a tela toda */
+        height: 280px !important; /* Teste 280px ou 300px até ficar perfeito */
+        padding: 10px !important;
     }
+
 
     /* 7. AJUSTA O TEXTO DO CARD */
     #portfolio-premium .p-info-v2 {
