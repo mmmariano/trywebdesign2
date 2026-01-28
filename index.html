@@ -577,46 +577,78 @@
     -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
-/* --- AJUSTES PARA CELULAR (MOBILE) --- */
+/* --- CORREÇÃO MOBILE PORTFÓLIO (APPLE STYLE) --- */
 @media (max-width: 768px) {
-    /* 1. Diminui o espaço gigante no topo e base da seção */
+    /* 1. Reduz o espaço gigante no topo e embaixo da seção */
     #portfolio-premium { 
         padding: 40px 0 !important; 
     }
 
-    /* 2. Diminui o recuo lateral do container */
-    #portfolio-premium .container-central { 
-        padding: 0 20px !important; 
-    }
-
-    /* 3. Ajusta o cabeçalho (Título centralizado no mobile) */
+    /* 2. Centraliza o cabeçalho e ajusta tamanhos */
     .section-header-central {
         margin-bottom: 30px;
+        padding: 0 20px;
     }
 
-    /* 4. O segredo para não cortar: Viewport com Scroll Nativo */
+    #portfolio-premium .title-premium {
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+
+    /* 3. Ajusta o container para não ter recuo exagerado */
+    #portfolio-premium .container-central { 
+        padding: 0 !important; /* Tiramos o padding lateral para o card respirar */
+    }
+
+    /* 4. TRANSFORMA O SLIDER EM ARRASTE DE DEDO (SNAP) */
     #portfolio-premium .portfolio-slider-viewport {
-        overflow-x: auto; /* Permite arrastar com o dedo */
-        scroll-snap-type: x mandatory; /* Faz o card 'travar' no centro */
-        padding: 10px 0 30px 0;
-        -webkit-mask-image: none; /* Remove o fade lateral no mobile para evitar bugs */
-        mask-image: none;
+        overflow-x: auto !important; /* Habilita o arrastar */
+        scroll-snap-type: x mandatory; /* Faz o card prender no centro */
+        -webkit-overflow-scrolling: touch; /* Suavidade no iPhone */
+        padding: 20px 0 40px 0;
+        display: flex;
+        scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
     }
 
-    /* 5. Ajusta o tamanho do Card para caber na tela */
+    #portfolio-premium .portfolio-slider-viewport::-webkit-scrollbar {
+        display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+    }
+
+    /* 5. AJUSTA O CARD PARA CABER NA TELA */
+    #portfolio-premium .portfolio-grid-wrapper {
+        gap: 15px; /* Menos espaço entre os cards no celular */
+        padding: 0 20px; /* Dá um respiro inicial para o primeiro card */
+    }
+
     #portfolio-premium .p-item { 
-        min-width: 290px !important; /* Largura perfeita para celular */
-        scroll-snap-align: center;   /* O card para exatamente no meio da tela */
+        min-width: 80vw !important; /* Card ocupa 80% da largura da tela */
+        max-width: 300px;
+        scroll-snap-align: center; /* MÁGICA: O card para sempre no meio */
     }
 
-    /* 6. Diminui a altura da imagem para o site não ficar 'infinito' verticalmente */
+    /* 6. REDUZ A ALTURA DA CAIXA BRANCA (Simetria) */
     #portfolio-premium .p-image-box {
-        height: 220px !important;
+        height: 200px !important; /* Imagem menor para não ocupar a tela toda */
     }
 
-    /* 7. Esconde as setas laterais no mobile (Usuário usa o dedo) */
+    /* 7. AJUSTA O TEXTO DO CARD */
+    #portfolio-premium .p-info-v2 {
+        padding: 15px !important;
+    }
+
+    #portfolio-premium .p-info-v2 h3 {
+        font-size: 1rem !important;
+    }
+
+    /* 8. ESCONDE AS SETAS NO CELULAR */
     .nav-btn-side {
         display: none !important;
+    }
+
+    /* 9. REMOVE O FADE (MÁSCARA) NO MOBILE */
+    #portfolio-premium .portfolio-slider-viewport {
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
     }
 }
 </style>
