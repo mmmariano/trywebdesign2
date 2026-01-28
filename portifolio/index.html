@@ -17,339 +17,319 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
 
     <style>
-        /* Ajuste para o botão Titanium no hover */
-.btn-titanium:hover span, 
-.btn-titanium:hover i {
-    color: #ffffff !important; /* Força a cor branca */
-    transition: color 0.3s ease; /* Deixa a mudança suave */
-}
-
-/* Caso o botão tenha um fundo que muda, garantimos que o texto se destaque */
-.btn-titanium:hover {
-    border-color: #ffffff; /* Opcional: muda a borda para branco também */
-}
-        /* Estilos específicos para a página de Portfólio */
-        .portfolio-page-hero {
-            padding: 180px 0 100px;
-            background: linear-gradient(to bottom, #09090b, #18181b);
-            text-align: center;
+        :root {
+            --gold: #d4af37;
+            --dark: #09090b;
+            --zinc: #18181b;
+            --zinc-light: #a1a1aa;
         }
 
+        body { background-color: var(--dark); color: #fff; overflow-x: hidden; }
+
+        /* NAVBAR MOBILE-FIRST FIX */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 12px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo { font-family: 'Cinzel', serif; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 2px; }
+        .logo span { color: var(--gold); }
+
+        .btn-nav-home {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold) !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-nav-home:hover { background: var(--gold); color: #000 !important; }
+
+        /* HERO AJUSTADO */
+        .portfolio-page-hero {
+            padding: 140px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at top, #18181b 0%, #09090b 100%);
+        }
+
+        .title-premium { font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 15px; }
+        .italic-gold { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); }
+
+        /* GRID E CARDS - SEM CORTE DE IMAGEM */
         .portfolio-grid-detailed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            padding-bottom: 100px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding-bottom: 80px;
         }
 
         .project-detail-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            transition: all 0.5s ease;
-            height: 100%;
             display: flex;
             flex-direction: column;
+            transition: 0.4s;
         }
 
-        .project-detail-card:hover {
-            border-color: #d4af37;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
+        .project-detail-card:hover { border-color: var(--gold); transform: translateY(-5px); }
 
+        /* AQUI ESTÁ A MÁGICA PARA NÃO CORTAR A IMAGEM */
         .project-image-wrapper {
             position: relative;
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .project-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-
-        .project-detail-card:hover .project-image-wrapper img {
-            transform: scale(1.1);
-        }
-
-        .project-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-tag {
-            color: #d4af37;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .project-content h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 22px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        .project-description {
-            font-size: 14px;
-            color: #a1a1aa;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-
-        .tech-badge {
-            font-size: 10px;
-            padding: 4px 10px;
-            background: rgba(212, 175, 55, 0.1);
-            color: #d4af37;
-            border-radius: 50px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .btn-view-project {
-            margin-top: auto;
+            height: 250px; /* Altura fixa para alinhar o grid */
+            background: rgba(0, 0, 0, 0.2); /* Fundo para preencher espaços se a foto for vertical */
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px;
-            background: #d4af37;
+            padding: 10px;
+        }
+
+        .project-image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* REDIMENSIONA SEM CORTAR E SEM DAR ZOOM */
+            transition: 0.5s;
+        }
+
+        .project-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-tag { color: var(--gold); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+        .project-content h3 { font-family: 'Cinzel', serif; font-size: 20px; margin-bottom: 12px; }
+        .project-description { font-size: 14px; color: var(--zinc-light); line-height: 1.6; margin-bottom: 20px; }
+
+        .tech-stack { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+        .tech-badge { font-size: 9px; padding: 4px 10px; background: rgba(212, 175, 55, 0.05); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 50px; }
+
+        .btn-view-project {
+            margin-top: auto;
+            background: var(--gold);
             color: #000;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .btn-view-project:hover { background: #fff; }
+
+        /* BOTÃO TITANIUM HOVER FIX */
+        .btn-titanium {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: #000;
+            border: 1px solid var(--gold);
+            color: #fff;
             text-decoration: none;
             font-weight: 700;
-            font-size: 13px;
             border-radius: 10px;
             transition: 0.3s;
         }
 
-        .btn-view-project:hover {
-            background: #fff;
+        .btn-titanium:hover { background: var(--gold); border-color: #fff; }
+        .btn-titanium:hover span, .btn-titanium:hover i { color: #fff !important; }
+
+        @media (max-width: 480px) {
+            .portfolio-grid-detailed { grid-template-columns: 1fr; }
+            .project-image-wrapper { height: 200px; }
+            .title-premium { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR (MANTIDA) -->
- <nav class="navbar">
-    <div class="container nav-inner">
-        <!-- Logo: Melhor usar tag <a> para SEO do que apenas onclick -->
-        <a href="/" class="logo" style="text-decoration: none;">
-            <span>TRYWEBDESIGN</span>
-        </a>
-        
-        <div class="nav-links">
-            <!-- Correção: Adicionado o / para voltar à raiz ou https:// completo -->
-            <a href="/" class="btn-nav mag">PÁGINA PRINCIPAL</a>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">TRY<span>WEBDESIGN</span></a>
+            <a href="/" class="btn-nav-home"><i data-lucide="home"></i> PÁGINA INICIAL</a>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main>
-        <!-- HERO DO PORTFÓLIO -->
         <section class="portfolio-page-hero">
             <div class="container">
-                <span class="tag-gold-fancy reveal">PORTIFÓLIO</span>
-                <h1 class="title-premium reveal" style="color: #fff;">Projetos<span class="italic-gold">Desenvolvidos.</span></h1>
-                <p class="reveal" style="color: #a1a1aa; max-width: 700px; margin: 20px auto;">
-                    Explore nossa seleção de interfaces exclusivas, onde cada pixel é planejado para gerar autoridade e conversão.
-                </p>
+                <span class="tag-gold-fancy reveal">EXCLUSIVIDADE</span>
+                <h1 class="title-premium reveal">Projetos <span class="italic-gold">Selecionados.</span></h1>
+                <p class="reveal" style="color: var(--zinc-light); max-width: 600px; margin: 0 auto;">Interface de alto impacto para marcas que dominam o mercado.</p>
             </div>
         </section>
 
-        <!-- GRID DETALHADA -->
         <section class="section-padding" style="background: #09090b;">
             <div class="container">
                 <div class="portfolio-grid-detailed">
 
-                    <!-- Projeto 01: Solar São Paulo -->
+                    <!-- Projeto 01 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="solarportifolio.webp" alt="Solar São Paulo">
-                        </div>
+                        <div class="project-image-wrapper"><img src="solarportifolio.webp" alt="Solar São Paulo"></div>
                         <div class="project-content">
                             <span class="project-tag">Engenharia & Energia</span>
                             <h3>Solar São Paulo</h3>
-                            <p class="project-description">Website institucional robusto desenvolvido para uma das maiores empresas de energia fotovoltaica. Foco em autoridade e captação de leads corporativos.</p>
+                            <p class="project-description">Website institucional robusto. Foco em autoridade e captação de leads corporativos.</p>
                             <div class="tech-stack">
                                 <span class="tech-badge">SEO Avançado</span>
-                                <span class="tech-badge">Performance Gold</span>
                                 <span class="tech-badge">UI/UX Premium</span>
                             </div>
-                            <a href="https://www.solarsaopaulo.com" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                            <a href="https://www.solarsaopaulo.com" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
 
-                    <!-- Projeto 02: Flavia Cavalcante -->
+                    <!-- Projeto 02 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="flaviaportifolio.webp" alt="Flavia Cavalcante">
-                        </div>
+                        <div class="project-image-wrapper"><img src="flaviaportifolio.webp" alt="Flavia Cavalcante"></div>
                         <div class="project-content">
                             <span class="project-tag">Tattoo & Art</span>
                             <h3>Flavia Cavalcante</h3>
-                            <p class="project-description">Portfólio artístico de alto impacto visual. Galeria otimizada para carregar fotos em alta resolução sem perder velocidade.</p>
+                            <p class="project-description">Portfólio artístico de alto impacto visual. Galeria otimizada para fotos em alta resolução.</p>
                             <div class="tech-stack">
                                 <span class="tech-badge">Design Imersivo</span>
-                                <span class="tech-badge">Galeria Pro</span>
                                 <span class="tech-badge">Mobile First</span>
                             </div>
-                            <a href="https://www.flaviacavalcante.com.br" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                            <a href="https://www.flaviacavalcante.com.br" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
 
-                    <!-- Projeto 03: I.M.A Soluções -->
+                    <!-- Projeto 03 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="imaportifolio.webp" alt="I.M.A Soluções">
-                        </div>
+                        <div class="project-image-wrapper"><img src="imaportifolio.webp" alt="I.M.A Soluções"></div>
                         <div class="project-content">
                             <span class="project-tag">Marketing Estratégico</span>
                             <h3>I.M.A Soluções</h3>
-                            <p class="project-description">Landing Page de alta conversão para agência de tráfego pago. Estrutura focada em gatilhos mentais e agendamento direto.</p>
+                            <p class="project-description">Landing Page de alta conversão para agência de tráfego pago. Estrutura de vendas.</p>
                             <div class="tech-stack">
                                 <span class="tech-badge">Alta Conversão</span>
                                 <span class="tech-badge">Copywriting</span>
-                                <span class="tech-badge">Geração de Leads</span>
                             </div>
-                            <a href="https://www.ima-marketing-digital.com.br" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                            <a href="https://www.ima-marketing-digital.com.br" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
 
-                    <!-- Projeto 04: Vrinda Bhumi -->
+                    <!-- Projeto 04 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="vrindaportifolio.webp" alt="Vrinda Bhumi">
-                        </div>
+                        <div class="project-image-wrapper"><img src="vrindaportifolio.webp" alt="Vrinda Bhumi"></div>
                         <div class="project-content">
                             <span class="project-tag">Ecosistema Yoga</span>
                             <h3>Vrinda Bhumi</h3>
-                            <p class="project-description">Um portal espiritual com design zen. Integração de informações sobre retiros e filosofia com navegação fluida.</p>
+                            <p class="project-description">Portal espiritual com design zen. Integração de retiros e filosofia espiritual.</p>
                             <div class="tech-stack">
                                 <span class="tech-badge">Design Zen</span>
-                                <span class="tech-badge">Multilíngue</span>
                                 <span class="tech-badge">Institucional</span>
                             </div>
-                            <a href="https://www.vrindabhumi.org" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                            <a href="https://www.vrindabhumi.org" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
 
-                    <!-- Projeto 05: Psicóloga Karina -->
+                    <!-- Projeto 05 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="karinaportifolio.jpg" alt="Psicóloga Karina">
-                        </div>
+                        <div class="project-image-wrapper"><img src="karinaportifolio.jpg" alt="Psicóloga Karina"></div>
                         <div class="project-content">
                             <span class="project-tag">Design Clínico</span>
                             <h3>Psicóloga Karina</h3>
-                            <p class="project-description">Interface acolhedora projetada para transmitir segurança e profissionalismo no atendimento clínico online.</p>
+                            <p class="project-description">Interface acolhedora projetada para transmitir segurança no atendimento online.</p>
                             <div class="tech-stack">
-                                <span class="tech-badge">Acolhimento Visual</span>
-                                <span class="tech-badge">Botão WhatsApp</span>
+                                <span class="tech-badge">Acolhimento</span>
                                 <span class="tech-badge">Clean Design</span>
                             </div>
-                            <a href="https://www.psikarina.com.br" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                            <a href="https://www.psikarina.com.br" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
 
-                    <!-- Projeto 06: Paola Barbosa -->
+                    <!-- Projeto 06 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="paolaportifolio.webp" alt="Paola Barbosa">
-                        </div>
+                        <div class="project-image-wrapper"><img src="paolaportifolio.webp" alt="Paola Barbosa"></div>
                         <div class="project-content">
                             <span class="project-tag">Saúde Mental</span>
                             <h3>Paola Barbosa</h3>
-                            <p class="project-description">Estratégia digital completa para captação de pacientes de psicoterapia, unindo estética minimalista e autoridade.</p>
+                            <p class="project-description">Estratégia digital completa para psicoterapia, unindo estética e autoridade.</p>
                             <div class="tech-stack">
                                 <span class="tech-badge">Minimalismo</span>
-                                <span class="tech-badge">SEO Local</span>
                                 <span class="tech-badge">Conversão</span>
                             </div>
-                            <a href="https://www.psicologapaolabarbosa.com.br" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
-                        </div>
-                    </div>
-                                        
-                    <!-- Projeto 07: Maria Clara Silveira -->
-                    <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="/portifolio/mariaclara.webp" alt="Psicóloga Maria Clara Silveira - Psicologia Clínica Estruturada">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-tag">Psicologia Corporativa</span>
-                            <h3>Maria Clara Silveira</h3>
-                            <p class="project-description">Desenvolvimento de ecossistema digital com estética robusta e sóbria. Interface projetada para transmitir autoridade máxima e segurança na captação de pacientes.</p>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Design Robusto</span>
-                                <span class="tech-badge">Autoridade Digital</span>
-                                <span class="tech-badge">Arquitetura de Conversão</span>
-                            </div>
-                            <a href="https://trywebdesign.com.br/mariaclara" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
-                        </div>
-                    </div>
-      
-                    <!-- Projeto 07: Maria Clara Silveira -->
-                    <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="/portifolio/amapaenergiasolar.webp" alt="Amapa Energia Solar - Energia Fotovoltaica">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-tag">Energia Fotovoltaica</span>
-                            <h3>Amapa Energia Solar</h3>
-                            <p class="project-description">Transformamos o sol do Amapá em liberdade financeira e sustentabilidade para o seu imóvel. Tecnologia fotovoltaica de alta eficiência.</p>
-                            <div class="tech-stack">
-    <span class="tech-badge">Eficiência Energética</span>
-    <span class="tech-badge">Tecnologia Fotovoltaica</span>
-    <span class="tech-badge">Alta Performance</span>
-</div>
-                            <a href="https://www.trywebdesign.com.br/amapaenergiasolar" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                            <a href="https://www.psicologapaolabarbosa.com.br" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
 
-                    <!-- Projeto 07: Maria Clara Silveira -->
+                    <!-- Projeto 07 -->
                     <div class="project-detail-card reveal">
-                        <div class="project-image-wrapper">
-                            <img src="/portifolio/glauciaserio.webp" alt="Psicóloga Gláucia Serio">
+                        <div class="project-image-wrapper"><img src="/portifolio/mariaclara.webp" alt="Maria Clara"></div>
+                        <div class="project-content">
+                            <span class="project-tag">Psicologia Corporativa</span>
+                            <h3>Maria Clara Silveira</h3>
+                            <p class="project-description">Ecossistema digital robusto com estética sóbria para captação de pacientes.</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Design Robusto</span>
+                                <span class="tech-badge">Autoridade</span>
+                            </div>
+                            <a href="https://trywebdesign.com.br/mariaclara" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
+                    </div>
+
+                    <!-- Projeto 08 -->
+                    <div class="project-detail-card reveal">
+                        <div class="project-image-wrapper"><img src="/portifolio/amapaenergiasolar.webp" alt="Amapá Solar"></div>
+                        <div class="project-content">
+                            <span class="project-tag">Energia Fotovoltaica</span>
+                            <h3>Amapá Energia Solar</h3>
+                            <p class="project-description">Transformamos o sol em liberdade financeira. Tecnologia de alta eficiência.</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Eficiência</span>
+                                <span class="tech-badge">Performance</span>
+                            </div>
+                            <a href="https://www.trywebdesign.com.br/amapaenergiasolar" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 09 -->
+                    <div class="project-detail-card reveal">
+                        <div class="project-image-wrapper"><img src="/portifolio/glauciaserio.webp" alt="Gláucia Serio"></div>
                         <div class="project-content">
                             <span class="project-tag">Gláucia Serio</span>
                             <h3>Psicóloga Gláucia Serio</h3>
-                            <p class="project-description">Reconstruindo a
-Conexão através
-do Diálogo.</p>
+                            <p class="project-description">Reconstruindo a Conexão através do Diálogo e acolhimento clínico.</p>
                             <div class="tech-stack">
-    <span class="tech-badge">Tratamento de Ansiedade</span>
-    <span class="tech-badge">Gestão de Conflitos</span>
-    <span class="tech-badge">Autoconhecimento</span>
-</div>
-                            <a href="https://www.trywebdesign.com.br/glauciaserio" target="_blank" class="btn-view-project">ACESSAR PROJETO <i data-lucide="external-link"></i></a>
+                                <span class="tech-badge">Ansiedade</span>
+                                <span class="tech-badge">Conflitos</span>
+                            </div>
+                            <a href="https://www.trywebdesign.com.br/glauciaserio" target="_blank" class="btn-view-project">VER PROJETO ONLINE</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- CTA FINAL (OPCIONAL) -->
+        <!-- CTA FINAL -->
         <section class="section-padding" style="background: #18181b; text-align: center;">
             <div class="container">
-                <h2 class="title-premium reveal" style="color: #fff;">Sua marca é o <br><span class="italic-gold">Próximo Sucesso.</span></h2>
-                <div class="cta-luxury-group" style="justify-content: center; margin-top: 40px;">
-                    <a href="https://www.trywebdesign.com.br/queroumaprevia" class="btn-titanium mag">
+                <h2 class="title-premium reveal">Sua marca é o <br><span class="italic-gold">Próximo Sucesso.</span></h2>
+                <div style="margin-top: 40px;">
+                    <a href="https://www.trywebdesign.com.br/queroumaprevia" class="btn-titanium">
                         <span>SOLICITAR PRÉVIA GRÁTIS</span>
                         <i data-lucide="arrow-right"></i>
                     </a>
@@ -357,134 +337,22 @@ do Diálogo.</p>
             </div>
         </section>
     </main>
-<!-- FOOTER PREMIUM (FOCO EM CONVERSÃO) -->
-<footer class="footer-premium">
-    <div class="footer-glow"></div>
-    <div class="container footer-grid">
-        
-        <!-- COLUNA 1: BRANDING -->
-        <div class="footer-brand">
-            <div class="logo-premium">TRY<span>WEBDESIGN</span></div>
-            <p class="brand-pitch">Transformamos interfaces em símbolos de poder. Sua soberania digital começa com um design que não apenas impressiona, mas domina o mercado.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/try.web.design/" target="_blank" class="mag"><i data-lucide="instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61579022016363" target="_blank" class="mag"><i data-lucide="facebook"></i></a>
-            </div>
+
+    <!-- FOOTER MANTIDO -->
+    <footer class="footer-premium" style="background: #050505; padding: 60px 0 20px; border-top: 1px solid rgba(212, 175, 55, 0.1);">
+        <div class="container" style="text-align: center;">
+            <div class="logo">TRY<span>WEBDESIGN</span></div>
+            <p style="color: var(--zinc-light); font-size: 14px; margin-top: 15px;">Maringá/PR para todo o Brasil.</p>
+            <p style="color: #444; font-size: 11px; margin-top: 30px;">© 2025 Todos os direitos reservados.</p>
         </div>
+    </footer>
 
-        <!-- COLUNA 2: CONTEÚDO QUE VENDE (POR QUE NÓS?) -->
-        <div class="footer-sell-content">
-            <h4>Engenharia de Resultados</h4>
-            <ul class="sell-list">
-                <li>
-                    <i data-lucide="trending-up" class="gold-icon"></i>
-                    <span><strong>Foco em Lucro:</strong> Landing Pages estruturadas para converter tráfego em clientes de alto ticket.</span>
-                </li>
-                <li>
-                    <i data-lucide="zap" class="gold-icon"></i>
-                    <span><strong>Performance Extrema:</strong> Código limpo e otimizado para carregamento em menos de 1 segundo.</span>
-                </li>
-                <li>
-                    <i data-lucide="shield-check" class="gold-icon"></i>
-                    <span><strong>Autoridade Imediata:</strong> Estética de luxo editorial que posiciona sua marca no topo do setor.</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- COLUNA 3: CONTATO DIRETO -->
-        <div class="footer-contact">
-            <h4>Pronto para o Próximo Nível?</h4>
-            <p>Maringá - PR | Projetos em todo o Brasil</p>
-            <div class="status-badge">
-                <span class="dot"></span> Atendimento On-line Agora
-            </div>
-            <a href="https://wa.me/5544999761842" class="footer-cta-link mag">
-                Falar com Mateus Mariano <i data-lucide="arrow-up-right"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container bottom-inner">
-            <p>© 2025 TRYWEBDESIGN. Todos os direitos reservados. Maringá/PR.</p>
-        </div>
-    </div>
-</footer>
-
-<!-- CSS Necessário para as novas seções do Footer -->
-<style>
-    .footer-sell-content h4 {
-        color: #fff;
-        font-family: 'Cinzel', serif;
-        font-size: 18px;
-        margin-bottom: 25px;
-        letter-spacing: 1px;
-    }
-
-    .sell-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .sell-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 15px;
-        margin-bottom: 20px;
-        color: #a1a1aa;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .gold-icon {
-        color: #d4af37;
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-    }
-
-    .sell-list span strong {
-        color: #fff;
-        display: block;
-        margin-bottom: 2px;
-    }
-
-    .footer-cta-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 20px;
-        color: #d4af37;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 15px;
-        border-bottom: 1px solid transparent;
-        transition: 0.3s;
-    }
-
-    .footer-cta-link:hover {
-        border-color: #d4af37;
-        gap: 12px;
-    }
-
-    @media (max-width: 992px) {
-        .footer-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-    }
-</style>
-    <script src="script.js"></script>
     <script>
         lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.from(el, { scrollTrigger: { trigger: el, start: "top 90%" }, y: 30, opacity: 0, duration: 0.8 });
+        });
     </script>
-
-    <!-- WHATSAPP (MANTIDO) -->
-    <a href="https://wa.me/5544999761842" class="whatsapp-luxury-btn" target="_blank">
-        <div class="wa-content">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#d4af37"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 0 5.414 0 12.05c0 2.123.552 4.197 1.602 6.02L0 24l6.137-1.611a11.774 11.774 0 005.908 1.573h.005c6.634 0 12.05-5.414 12.05-12.05 0-3.217-1.252-6.242-3.525-8.514z"/></svg>
-            <span class="wa-text">Solicitar Atendimento</span>
-        </div>
-    </a>
 </body>
 </html>
