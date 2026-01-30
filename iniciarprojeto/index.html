@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Prévia Estratégica | TryWebDesign</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --white: #ffffff;
+            --text-muted: #aaaaaa;
+            --bg-dark: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        body { background-color: var(--bg-dark); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        .briefing-hero {
+            padding: 140px 0 80px;
+            background: radial-gradient(circle at top center, #151515 0%, #050505 100%);
+            min-height: 100vh;
+        }
+
+        .tag-gold {
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .title-premium { font-family: 'Cinzel', serif; font-size: 2.5rem; margin-bottom: 20px; color: #fff; }
+        .italic-gold { font-style: italic; color: var(--gold); }
+
+        .form-grid-preview {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        /* Sidebar de Passos */
+        .step-indicator {
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 40px 30px;
+            border-radius: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .step-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 30px; }
+        .step-num {
+            width: 32px; height: 32px; border: 1px solid var(--gold);
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; color: var(--gold); font-family: 'Cinzel', serif; font-size: 0.8rem;
+            flex-shrink: 0; margin-top: 3px;
+        }
+        .step-info h4 { color: #fff; margin: 0; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
+        .step-info p { color: var(--text-muted); margin: 5px 0 0; font-size: 0.75rem; line-height: 1.4; }
+
+        /* Card do Formulário */
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 60px;
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-section-title {
+            font-family: 'Cinzel', serif; color: var(--gold);
+            font-size: 1rem; margin-bottom: 30px;
+            display: flex; align-items: center; gap: 15px;
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* Melhoria nos Campos para evitar "Preto no Preto" */
+        label {
+            display: block;
+            color: #efefef;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            padding: 16px 20px !important;
+            color: #ffffff !important;
+            border-radius: 12px !important;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--gold) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            outline: none;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        select option { background: #111; color: #fff; }
+
+        /* Estado de Sucesso */
+        #success-message {
+            display: none;
+            text-align: center;
+            padding: 60px 0;
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-icon {
+            width: 90px; height: 90px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 30px; color: var(--gold);
+        }
+
+        @media (max-width: 992px) {
+            .form-grid-preview { grid-template-columns: 1fr; }
+            .step-indicator { display: none; }
+            .glass-card { padding: 35px 25px; }
+            .title-premium { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="logo" onclick="window.location.href='../'" style="cursor: pointer;">
+                TRY<span>WEBDESIGN</span>
+            </div>
+            <a href="../" class="btn-nav">Voltar ao Início</a>
+        </div>
+    </nav>
+
+    <main class="briefing-hero">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="tag-gold reveal">ETAPA INICIAL</span>
+                <h1 class="title-premium reveal">Iniciar Projeto <br></h1>
+            </div>
+
+            <div class="form-grid-preview">
+                
+                <!-- PASSOS -->
+                <aside class="step-indicator">
+                    <div class="step-item">
+                        <div class="step-num">01</div>
+                        <div class="step-info"><h4>Essência</h4><p>Dados vitais da sua marca.</p></div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">02</div>
+                        <div class="step-info"><h4>Estética</h4><p>Cores e tons desejados.</p></div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">03</div>
+                        <div class="step-info"><h4>Análise</h4><p>Desenvolvimento do seu projeto.</p></div>
+                    </div>
+                </aside>
+
+                <!-- FORMULÁRIO -->
+                <div class="glass-card">
+                    <form id="preview-form">
+
+                        <input type="hidden" name="subject" value="INICIAR PROJETO - TRYWEBDESIGN">
+
+                        <!-- SEÇÃO 1 -->
+                        <div class="form-section-title"><i data-lucide="user-plus"></i> Dados de Contato</div>
+                        
+                        <label>Como podemos te chamar?</label>
+                        <input type="text" name="name" placeholder="Seu nome completo" >
+                        
+                        <label>Nome da sua Marca ou Negócio</label>
+                        <input type="text" name="brand" placeholder="Ex: Clínica Alpha / Studio 22" >
+
+                        <label>WhatsApp para contato</label>
+                        <input type="text" name="whatsapp" placeholder="(00) 00000-0000" >
+
+                        <label>Link ou @ do Instagram</label>
+                        <input type="text" name="instagram" placeholder="ex: @suamarca ou instagram.com/suamarca">
+
+                        <label>Link do Facebook (Opcional)</label>
+                        <input type="text" name="facebook" placeholder="ex: facebook.com/suamarca">
+
+                        <!-- SEÇÃO 2 -->
+                        <div class="form-section-title" style="margin-top: 40px;"><i data-lucide="palette"></i> Identidade Visual</div>
+
+                        <label>Personalidade da Marca (Tom de voz)</label>
+                       <select name="brand_personality" id="brand_personality">
+    <option value="" disabled selected>Escolha o estilo que mais te agrada...</option>
+    
+    <option value="Soberana/Luxuosa">💎 Elegante e Exclusiva (Para produtos de alto valor/Luxo)</option>
+    
+    <option value="Moderna/Inovadora">🚀 Moderna e "Clean" (Visual estilo Apple, direto e tecnológico)</option>
+    
+    <option value="Corporativa/Robusta">💼 Séria e Profissional (Para passar máxima confiança e tradição)</option>
+    
+    <option value="Criativa/Vibrante">🎨 Alegre e Criativa (Cores vivas e visual que chama atenção)</option>
+</select>
+                        <label>Cores de sua preferência</label>
+                        <input type="text" name="colors" placeholder="Ex: Preto e Dourado / Azul Marinho e Cinza" >
+
+                        <label>Público-alvo</label>
+                        <input type="text" name="audience" placeholder="Ex: Mulheres 25-40 anos / Investidores">
+
+                        <!-- SEÇÃO 3 -->
+                        <div class="form-section-title" style="margin-top: 40px;"><i data-lucide="layout"></i> Estrutura</div>
+
+                        <label>Qual o objetivo principal deste site?</label>
+                        <textarea name="goal" placeholder="Ex: Captar agendamentos pelo WhatsApp, vender um curso, mostrar portfólio..." rows="3" ></textarea>
+
+                        <label>Link de referência (Algum site que você goste muito)</label>
+                        <input type="text" name="reference_link" placeholder="https://exemplo.com.br">
+
+                        <button type="submit" class="btn-submit-luxury mag" id="submit-btn" style="width: 100%; padding: 22px;">
+                            <span id="btn-text">GERAR SOLICITAÇÃO</span>
+                            <i data-lucide="zap"></i>
+                        </button>
+                    </form>
+                    
+<div id="success-message">
+    <!-- Cabeçalho de Confirmação -->
+    <div class="activation-header">
+        <div class="success-icon" style="width: 60px; height: 60px; margin: 0 auto 20px;">
+            <i data-lucide="check"></i>
+        </div>
+        <h2>Projeto Iniciado</h2>
+        <p style="color: var(--text-muted);">Sua visão foi capturada com sucesso.</p>
+    </div>
+
+    <!-- Justificativa Técnica -->
+    <div class="why-pay-section">
+        <h4>Aporte de Reserva Técnica</h4>
+        <p>Para iniciarmos o <strong>desenvolvimento</strong> do seu site, é necessária a ativação do projeto.</p>
+    </div>
+<!-- Card de Pagamento Pix -->
+    <!-- MUDANÇA 1: Adicionado display flex e align-items center no container pai -->
+    <div class="pix-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        
+        <span class="pix-label">Taxa</span>
+        <span class="pix-value">R$ 150,00</span>
+
+        <!-- MUDANÇA 2: qr-code-frame agora centraliza o conteúdo interno -->
+        <div class="qr-code-frame" style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
+            <img src="/iniciarprojeto/qrcodepix.png" alt="QR Code Pix" style="width: 50%; height: auto; display: block;">
+        </div>
+
+        <!-- MUDANÇA 3: Garantimos que o container do botão tenha margem auto -->
+        <div class="copy-button-container" style="width: 100%; max-width: 280px; margin: 0 auto;">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px;">Chave Pix (CPF)</p>
+            
+            <div class="copy-box" onclick="copyPix()" style="display: flex; justify-content: space-between; align-items: center; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; cursor: pointer;">
+                <span id="pix-key" style="font-family: monospace; color: #fff;">09328901995</span>
+                <i data-lucide="copy" size="16" style="color: var(--gold);"></i>
+            </div>
+            
+            <p id="copy-status" style="font-size: 0.7rem; color: var(--gold); margin-top: 8px; display: none;">Copiado para a área de transferência.</p>
+        </div>
+    </div>
+
+    <!-- Ação Final -->
+    <div style="margin-top: 40px; text-align: center;">
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px;">
+            Envie o comprovante para o nosso WhatsApp para validar seu cronograma.
+        </p>
+        <a href="https://www.trywebdesign.com.br" class="btn-nav" style="font-size: 0.8rem; letter-spacing: 1px; padding: 12px 25px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 8px;">RETORNAR AO SITE</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function copyPix() {
+    const key = document.getElementById('pix-key').innerText;
+    navigator.clipboard.writeText(key).then(() => {
+        const status = document.getElementById('copy-status');
+        status.style.display = 'block';
+        setTimeout(() => { status.style.display = 'none'; }, 2500);
+    });
+}
+        lucide.createIcons();
+
+        const form = document.getElementById('preview-form');
+        const successMsg = document.getElementById('success-message');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            submitBtn.style.opacity = "0.7";
+            submitBtn.disabled = true;
+            btnText.innerText = "PROCESSANDO BRIEFING...";
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://formspree.io/f/xnjvzdzj', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: json
+            })
+            .then(async (response) => {
+                if (response.status == 200) {
+                    form.style.display = "none";
+                    successMsg.style.display = "block";
+                    window.scrollTo({ top: 150, behavior: 'smooth' });
+                } else {
+                    alert("Erro ao enviar. Verifique sua conexão.");
+                }
+            })
+            .catch(error => {
+                alert("Ocorreu um erro técnico.");
+            })
+            .finally(() => {
+                submitBtn.style.opacity = "1";
+                submitBtn.disabled = false;
+                btnText.innerText = "GERAR SOLICITAÇÃO";
+            });
+        });
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
